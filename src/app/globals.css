@@ -14,6 +14,7 @@
   --accent: #f97316;      /* acento opcional (orange-500) */
   --overlay: rgba(0,0,0,0.35);        /* overlay para modales/menus */
   --menu: rgba(241,245,249,0.94);     /* panel móvil */
+  --button: #1e293b;
 }
 
 /* ===== Dark Theme ===== */
@@ -22,14 +23,15 @@
   --fg: #f1f5f9;          /* texto principal (slate-50) */
   --surface: #1e293b;     /* superficies / tarjetas (slate-800) */
   --header: #1e293b;      /* header */
-  --footer: #0f172a;      /* footer */
+  --footer: #1e293b;      /* footer */
   --border: #334155;      /* bordes (slate-700) */
   --muted: #94a3b8;       /* texto secundario (slate-400) */
-  --primary: #3b82f6;     /* highlight / brand (blue-500) */
+  --primary: #195ac4;     /* highlight / brand (blue-500) */
   --on-primary: #0f172a;  /* texto sobre primary claro */
   --accent: #fb923c;      /* acento opcional (orange-400) */
   --overlay: rgba(0,0,0,0.5);         /* overlay más fuerte */
   --menu: rgba(30,41,59,0.94);        /* panel móvil */
+  --button: #ffffff;      /* botón en dark */
 }
 
 /* Base */

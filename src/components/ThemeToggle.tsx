@@ -46,9 +46,8 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`relative w-35 h-12 border-2 rounded-full overflow-hidden cursor-pointer
-        ${isLight ? "border-black bg-white" : "border-white bg-black"} 
-        transition-colors duration-300`}
+      className="relative w-35 h-12 border-2 rounded-full overflow-hidden cursor-pointer
+        transition-colors duration-300 bg-[var(--bg)] border-[var(--fg)]"
     >
       <div
         className="absolute top-0 left-0 flex h-full w-fit transition-transform duration-500"
