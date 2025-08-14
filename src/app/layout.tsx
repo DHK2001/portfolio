@@ -47,9 +47,9 @@ export default function RootLayout({
           <NavBar />
           <ThemeToggle />
         </header>
-        <main className="flex-1 p-4">{children}</main>
+        <main className="flex-1 p-4 sm:px-12">{children}</main>
         <footer className="p-4 bg-[color:var(--footer)]  bottom-0 left-0 w-full h-16 flex justify-center items-center">
-          Footer
+          © 2025 Derek Galeas
         </footer>
       </body>
     </html>
