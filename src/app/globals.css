@@ -1,27 +1,40 @@
 @import "tailwindcss";
 
-.dark-theme {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --header-footer-bg: #1f2937;
-  --secondary-color: "white";
-  --highlight: #60a5fa;
-  --lines: #616161;
-  --mobile-menu-bg: rgba(62, 61, 61, 0.478);
-}
-
+/* ===== Light Theme ===== */
 .light-theme {
-  --background: #ffffff;
-  --foreground: #000000;
-  --header-footer-bg: #f3f4f6;
-  --secondary-color: "black";
-  --highlight: #2563eb;
-  --lines: #a2a2a2;
-  --mobile-menu-bg: #cccccc88;
+  --bg: #fafafa;          /* fondo base (gris muy claro) */
+  --fg: #1e293b;          /* texto principal (slate-800) */
+  --surface: #ffffff;     /* superficies / tarjetas */
+  --header: #f1f5f9;      /* header (slate-50) */
+  --footer: #f1f5f9;      /* footer (slate-50) */
+  --border: #d1d5db;      /* bordes (gray-300) */
+  --muted: #64748b;       /* texto secundario (slate-500) */
+  --primary: #2563eb;     /* highlight / brand (blue-600) */
+  --on-primary: #ffffff;  /* texto sobre primary */
+  --accent: #f97316;      /* acento opcional (orange-500) */
+  --overlay: rgba(0,0,0,0.35);        /* overlay para modales/menus */
+  --menu: rgba(241,245,249,0.94);     /* panel móvil */
 }
 
+/* ===== Dark Theme ===== */
+.dark-theme {
+  --bg: #0f172a;          /* fondo base oscuro (slate-900) */
+  --fg: #f1f5f9;          /* texto principal (slate-50) */
+  --surface: #1e293b;     /* superficies / tarjetas (slate-800) */
+  --header: #1e293b;      /* header */
+  --footer: #0f172a;      /* footer */
+  --border: #334155;      /* bordes (slate-700) */
+  --muted: #94a3b8;       /* texto secundario (slate-400) */
+  --primary: #3b82f6;     /* highlight / brand (blue-500) */
+  --on-primary: #0f172a;  /* texto sobre primary claro */
+  --accent: #fb923c;      /* acento opcional (orange-400) */
+  --overlay: rgba(0,0,0,0.5);         /* overlay más fuerte */
+  --menu: rgba(30,41,59,0.94);        /* panel móvil */
+}
+
+/* Base */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--fg);
   font-family: Arial, Helvetica, sans-serif;
 }

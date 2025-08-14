@@ -43,12 +43,12 @@ export default function RootLayout({
       <body
         className={`flex h-dvh flex-col  ${geistSans.variable} ${geistMono.variable}`}
       >
-        <header className="sticky top-0 left-0 w-full h-16 flex justify-between gap-6 items-center py-4 px-1  sm:px-12 bg-[color:var(--header-footer-bg)] z-50">
+        <header className="sticky top-0 left-0 w-full h-16 flex justify-between gap-6 items-center py-4 px-1  sm:px-12 bg-[color:var(--header)] z-50">
           <NavBar />
           <ThemeToggle />
         </header>
         <main className="flex-1 p-4">{children}</main>
-        <footer className="p-4 bg-[color:var(--header-footer-bg)]  bottom-0 left-0 w-full h-16 flex justify-center items-center">
+        <footer className="p-4 bg-[color:var(--footer)]  bottom-0 left-0 w-full h-16 flex justify-center items-center">
           Footer
         </footer>
       </body>
