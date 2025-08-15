@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
 
-const UserAvatar = () => {
-  let imageUrl = null;
+const UserAvatar = ({imageUrl}:{imageUrl: string}) => {
+
   const profileAvatar = () => {
     return imageUrl ? (
       <Image
@@ -15,7 +15,7 @@ const UserAvatar = () => {
         className="object-cover"
       />
     ) : (
-      <FontAwesomeIcon icon={faUser} size="10x" className="text-[var(--fg)]" />
+      <FontAwesomeIcon icon={faUser} size="10x" className="text-[var(--fg)]  h-40 w-40" />
     );
   };
 
