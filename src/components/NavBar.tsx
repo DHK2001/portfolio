@@ -18,8 +18,8 @@ const NavBar = () => {
     return (
       <li
         key={name}
-        className={`hover:text-[var(--primary)] transition-colors duration-300 ${
-          pathname === link ? "text-[var(--primary)]" : ""
+        className={`hover:text-[var(--highlight)] transition-colors duration-300 ${
+          pathname === link ? "text-[var(--highlight)]" : ""
         } `}
         onClick={() => setIsOpen(false)}
       >
@@ -41,7 +41,7 @@ const NavBar = () => {
         aria-label="Open menu"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
-        className="sm:hidden p-2 rounded hover:bg-[color:var(--header)] cursor-pointer"
+        className="sm:hidden p-2 rounded hover:bg-[color:var(--header-footer)] cursor-pointer"
         onClick={() => setIsOpen((v) => !v)}
       >
         <FontAwesomeIcon
@@ -62,7 +62,7 @@ const NavBar = () => {
       <div
         id="mobile-menu"
         className={`fixed top-16 left-0 h-full w-1/2 max-w-xs
-          bg-[var(--menu)] shadow-xl border-r border-[var(--muted)]
+          bg-[var(--menu)] shadow-xl 
           sm:hidden z-50
           transition-transform duration-300 ease-out
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}

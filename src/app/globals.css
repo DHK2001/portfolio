@@ -2,36 +2,38 @@
 
 /* ===== Light Theme ===== */
 .light-theme {
-  --bg: #fafafa;          /* fondo base (gris muy claro) */
-  --fg: #1e293b;          /* texto principal (slate-800) */
-  --surface: #ffffff;     /* superficies / tarjetas */
-  --header: #f1f5f9;      /* header (slate-50) */
-  --footer: #f1f5f9;      /* footer (slate-50) */
-  --border: #d1d5db;      /* bordes (gray-300) */
-  --muted: #64748b;       /* texto secundario (slate-500) */
-  --primary: #2563eb;     /* highlight / brand (blue-600) */
-  --on-primary: #ffffff;  /* texto sobre primary */
-  --accent: #f97316;      /* acento opcional (orange-500) */
-  --overlay: rgba(0,0,0,0.35);        /* overlay para modales/menus */
-  --menu: rgba(241,245,249,0.94);     /* panel móvil */
-  --button: #1e293b;
+  --bg: #f9fafb; /* fondo base claro */
+  --fg: #1e293b; /* texto principal oscuro */
+  --header-footer: #f1f5f9cc; /* claro, con un poco de transparencia */
+  --primary: #0b1220; /* elementos destacados oscuros */
+  --secondary-text: #64748b; /* texto secundario gris medio */
+  --primary-text: #0f172a; /* texto principal profundo */
+  --button-text: #ffffff; /* texto claro para botones oscuros */
+  --menu: rgba(241, 245, 249, 0.94); /* menú claro */
+  --highlight: #2563eb; /* azul accesible y vibrante (blue-600) */
+
+  /* blobs más oscuros para que resalten en fondo claro */
+  --follow-blobs-1: #1e40afcc; /* blue-900 @ 80% */
+  --follow-blobs-2: #7c3aedb3; /* violet-600 @ 70% */
+  --follow-blobs-3: #0d9488b3; /* teal-600 @ 70% */
 }
 
 /* ===== Dark Theme ===== */
 .dark-theme {
-  --bg: #0f172a;          /* fondo base oscuro (slate-900) */
-  --fg: #f1f5f9;          /* texto principal (slate-50) */
-  --surface: #1e293b;     /* superficies / tarjetas (slate-800) */
-  --header: #1e293b;      /* header */
-  --footer: #1e293b;      /* footer */
-  --border: #334155;      /* bordes (slate-700) */
-  --muted: #94a3b8;       /* texto secundario (slate-400) */
-  --primary: #195ac4;     /* highlight / brand (blue-500) */
-  --on-primary: #0f172a;  /* texto sobre primary claro */
-  --accent: #fb923c;      /* acento opcional (orange-400) */
-  --overlay: rgba(0,0,0,0.5);         /* overlay más fuerte */
-  --menu: rgba(30,41,59,0.94);        /* panel móvil */
-  --button: #ffffff;      /* botón en dark */
+  --bg: #0b1220; /* fondo más profundo y uniforme */
+  --fg: #e6edf7; /* texto principal: alto contraste sin ser blanco puro */
+  --header-footer: #121a2bcc; /* un poco más oscuro para separar mejor */
+  --primary: #ffffff; /* destacado en blanco puro (si te deslumbra, prueba #f8fafc) */
+  --secondary-text: #9fb1c7; /* secundario con mejor legibilidad */
+  --primary-text: #f1f5f9; /* texto principal suave (ligeramente menos brillante que blanco) */
+  --button-text: #0b1220; /* texto de botón oscuro para botones claros */
+  --menu: rgba(11, 18, 32, 0.94); /* consistente con el nuevo fondo */
+  --highlight: #60a5fa; /* azul accesible y vibrante (blue-400) */
+
+  /* blobs luminosos que destacan en oscuro */
+  --follow-blobs-1: #3b83f671;
+  --follow-blobs-2: #a855f740;
+  --follow-blobs-3: #06b6d433;
 }
 
 /* Base */
