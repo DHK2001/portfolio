@@ -5,8 +5,8 @@ import { useEffect } from "react";
 function FollowBlob({ size, className }: { size: number; className?: string }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 120, damping: 20, mass: 0.6 });
-  const springY = useSpring(y, { stiffness: 120, damping: 20, mass: 0.6 });
+  const sx = useSpring(x, { stiffness: 120, damping: 20, mass: 0.6 });
+  const sy = useSpring(y, { stiffness: 120, damping: 20, mass: 0.6 });
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
@@ -20,8 +20,14 @@ function FollowBlob({ size, className }: { size: number; className?: string }) {
   return (
     <motion.div
       aria-hidden
-      className={`pointer-events-none fixed -z-10 rounded-full blur-3xl mix-blend-screen ${className}`}
-      style={{ width: size, height: size, x: springX, y: springY }}
+      className={`
+        z-[9999] 
+        pointer-events-none fixed inset-0
+        rounded-full blur-xl
+        ${className}
+        mix-blend-screen
+      `}
+      style={{ width: size, height: size, x: sx, y: sy }}
     />
   );
 }
@@ -29,9 +35,9 @@ function FollowBlob({ size, className }: { size: number; className?: string }) {
 export default function BlobsBackground() {
   return (
     <>
-      <FollowBlob size={400} className="bg-[color:var(--follow-blobs-1)]" />
-      <FollowBlob size={300} className="bg-[color:var(--follow-blobs-2)]" />
-      <FollowBlob size={240} className="bg-[color:var(--follow-blobs-3)]" />
+      <FollowBlob size={420} className="bg-[var(--follow-blobs-1)]" />
+      <FollowBlob size={320} className="bg-[var(--follow-blobs-2)]" />
+      <FollowBlob size={260} className="bg-[var(--follow-blobs-3)]" />
     </>
   );
 }

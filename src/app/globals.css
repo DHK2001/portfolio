@@ -1,39 +1,42 @@
 @import "tailwindcss";
 
+
 /* ===== Light Theme ===== */
 .light-theme {
-  --bg: #f9fafb; /* fondo base claro */
-  --fg: #1e293b; /* texto principal oscuro */
-  --header-footer: #f1f5f9cc; /* claro, con un poco de transparencia */
-  --primary: #0b1220; /* elementos destacados oscuros */
-  --secondary-text: #64748b; /* texto secundario gris medio */
-  --primary-text: #0f172a; /* texto principal profundo */
-  --button-text: #ffffff; /* texto claro para botones oscuros */
-  --menu: rgba(241, 245, 249, 0.94); /* menú claro */
-  --highlight: #2563eb; /* azul accesible y vibrante (blue-600) */
+  --bg: #f7f7fb;                 /* soft light base */
+  --fg: #111827;                 /* main text (near-black) */
+  --header-footer: #f3f4f6d9;    /* light gray w/ translucency */
+  --primary: #6d28d9;            /* violet-700 for brand/actions */
+  --secondary-text: #6b7280;     /* neutral secondary text */
+  --primary-text: #0b1020;       /* headings / high-emphasis */
+  --button-text: #ffffff;        /* on primary buttons */
+  --menu: rgba(255, 255, 255, 0.94);
+  --highlight: #8b5cf6;          /* violet-500 for accents/links */
 
-  /* blobs más oscuros para que resalten en fondo claro */
-  --follow-blobs-1: #1e40afcc; /* blue-900 @ 80% */
-  --follow-blobs-2: #7c3aedb3; /* violet-600 @ 70% */
-  --follow-blobs-3: #0d9488b3; /* teal-600 @ 70% */
+  /* Follow blobs — bright but controlled; Screen blend keeps it soft */
+  --follow-blobs-1: #6d28d9cc;   /* deep violet (80% alpha) */
+  --follow-blobs-2: #22d3ee80;   /* cyan glow (50%) */
+  --follow-blobs-3: #f472b680;   /* pink glow (50%) */
+  --follow-blobs-4: #facc1580;   /* small amber “radiance” (50%) */
 }
 
 /* ===== Dark Theme ===== */
 .dark-theme {
-  --bg: #0b1220; /* fondo más profundo y uniforme */
-  --fg: #e6edf7; /* texto principal: alto contraste sin ser blanco puro */
-  --header-footer: #121a2bcc; /* un poco más oscuro para separar mejor */
-  --primary: #ffffff; /* destacado en blanco puro (si te deslumbra, prueba #f8fafc) */
-  --secondary-text: #9fb1c7; /* secundario con mejor legibilidad */
-  --primary-text: #f1f5f9; /* texto principal suave (ligeramente menos brillante que blanco) */
-  --button-text: #0b1220; /* texto de botón oscuro para botones claros */
-  --menu: rgba(11, 18, 32, 0.94); /* consistente con el nuevo fondo */
-  --highlight: #60a5fa; /* azul accesible y vibrante (blue-400) */
+  --bg: #0b0a10;                 /* near-black with a hint of purple */
+  --fg: #e5e7eb;                 /* main text (light slate) */
+  --header-footer: #1a1228b3;    /* dark purple glass */
+  --primary: #7c3aed;            /* vivid violet-600 */
+  --secondary-text: #94a3b8;     /* muted slate for secondary */
+  --primary-text: #ffffff;       /* headings / high-emphasis */
+  --button-text: #ffffff;        /* on primary buttons */
+  --menu: rgba(16, 12, 24, 0.94);/* deep purple-tinted panel */
+  --highlight: #c084fc;          /* lavender pop for links/CTAs */
 
-  /* blobs luminosos que destacan en oscuro */
-  --follow-blobs-1: #3b83f671;
-  --follow-blobs-2: #a855f740;
-  --follow-blobs-3: #06b6d433;
+  /* Follow blobs — rich on black; adds depth without overpowering */
+  --follow-blobs-1: #5b21b6cc;   /* indigo-800 (80%) */
+  --follow-blobs-2: #9333ea99;   /* violet-600 (60%) */
+  --follow-blobs-3: #22d3ee80;   /* cyan 400 (50%) */
+  --follow-blobs-4: #e879f980;   /* fuchsia 400 (50%) for the small “radiant” blob */
 }
 
 /* Base */

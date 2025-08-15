@@ -47,7 +47,7 @@ const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className="relative w-35 h-12 border-2 rounded-full overflow-hidden cursor-pointer
-        transition-colors duration-300 bg-[var(--bg)] border-[var(--fg)]"
+        transition-colors duration-300 bg-transparent border-[var(--primary)]"
     >
       <div
         className="absolute top-0 left-0 flex h-full w-fit transition-transform duration-500"
@@ -58,7 +58,7 @@ const ThemeToggle = () => {
         {/* Light Mode */}
         <div className="flex items-center justify-between gap-1 w-1/2 px-4">
           <h2 className="whitespace-nowrap">Light Mode</h2>
-          <div className="rounded-full flex items-center justify-center h-8 w-8 bg-black">
+          <div className="rounded-full flex items-center justify-center h-8 w-8 bg-[var(--primary)]">
             <FontAwesomeIcon icon={faSun} size="lg" color="white" />
           </div>
         </div>
@@ -66,7 +66,7 @@ const ThemeToggle = () => {
         {/* Dark Mode */}
         <div className="flex items-center justify-between gap-1 w-1/2 px-4">
           <h2 className="whitespace-nowrap">Dark Mode</h2>
-          <div className="rounded-full flex items-center justify-center h-8 w-8 bg-white">
+          <div className="rounded-full flex items-center justify-center h-8 w-8 bg-[var(--primary)]">
             <FontAwesomeIcon icon={faMoon} size="lg" color="black" />
           </div>
         </div>

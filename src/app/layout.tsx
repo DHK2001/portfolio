@@ -50,7 +50,7 @@ export default function RootLayout({
           <ThemeToggle />
         </header>
         <main className="flex-1 p-4 sm:px-12 sm:py-8">{children}</main>
-        <footer className="p-4 bg-[color:var(--header-footer)]  bottom-0 left-0 w-full h-16 flex justify-center items-center text-[color:var(--primary-text)] text-sm">
+        <footer className="p-4 bg-[color:var(--header-footer)]  bottom-0 left-0 w-full h-16 flex justify-center items-center text-[color:var(--secondary-text)] text-sm">
           © 2025 Derek Galeas
         </footer>
       </body>

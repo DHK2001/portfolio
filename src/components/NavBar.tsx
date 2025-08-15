@@ -19,7 +19,7 @@ const NavBar = () => {
       <li
         key={name}
         className={`hover:text-[var(--highlight)] transition-colors duration-300 ${
-          pathname === link ? "text-[var(--highlight)]" : ""
+          pathname === link ? "text-[var(--highlight)] font-bold" : ""
         } `}
         onClick={() => setIsOpen(false)}
       >

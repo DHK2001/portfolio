@@ -15,12 +15,12 @@ const UserAvatar = ({imageUrl}:{imageUrl: string}) => {
         className="object-cover"
       />
     ) : (
-      <FontAwesomeIcon icon={faUser} size="10x" className="text-[var(--fg)]  h-40 w-40" />
+      <FontAwesomeIcon icon={faUser} size="10x" className="text-[var(--primary)]  h-40 w-40" />
     );
   };
 
   return (
-    <div className="relative rounded-full border-6 border-[var(--fg)] h-60 w-60 flex items-center justify-center">
+    <div className="relative rounded-full border-6 border-[var(--primary)] h-60 w-60 flex items-center justify-center">
       {profileAvatar()}
     </div>
   );
