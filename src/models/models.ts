@@ -7,6 +7,7 @@ export interface Skill {
 export interface Profile {
   name: string;
   description: string;
+  profilePicture: string;
 }
 
 export interface Project {

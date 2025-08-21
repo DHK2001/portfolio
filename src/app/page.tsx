@@ -17,11 +17,12 @@ export default function Home() {
     name: "Abhinay",
     description:
       "I have 2+ years of experience contributing to a low-code product’s core codebase, combining full-stack and mobile expertise to solve real-world challenges.",
+    profilePicture: ""
   };
 
   return (
     <div className="h-full w-full flex flex-col justify-center items-center gap-4">
-      <UserAvatar imageUrl="" />
+      <UserAvatar imageUrl={profile.profilePicture} />
       <Title text={`Hello, I'm ${profile.name}`} />
       <div className="max-w-2xl text-center">
         <Description text={profile.description} />
