@@ -20,7 +20,7 @@ const UserAvatar = ({imageUrl}:{imageUrl: string}) => {
   };
 
   return (
-    <div className="relative rounded-full border-6 border-[var(--primary)] h-60 w-60 flex items-center justify-center">
+    <div className="relative rounded-full border-6 border-[var(--primary)] h-60 w-60 flex items-center justify-center bg-[var(--bg)]">
       {profileAvatar()}
     </div>
   );

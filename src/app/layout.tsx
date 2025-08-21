@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import NavBar from "@/components/NavBar";
-import BlobsBackground from "@/components/BlobsBackground";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -44,7 +43,6 @@ export default function RootLayout({
       <body
         className={`flex h-dvh flex-col  ${geistSans.variable} ${geistMono.variable}`}
       >
-        <BlobsBackground />
         <header className="sticky top-0 left-0 w-full h-16 flex justify-between gap-6 items-center py-4 px-1  sm:px-12 bg-[color:var(--header-footer)] z-50">
           <NavBar />
           <ThemeToggle />

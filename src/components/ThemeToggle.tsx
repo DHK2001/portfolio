@@ -17,7 +17,7 @@ const ThemeToggle = () => {
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    
+
     document.body.classList.remove(`${theme}-theme`);
     document.body.classList.add(`${newTheme}-theme`);
     setTheme(newTheme);
@@ -28,13 +28,13 @@ const ThemeToggle = () => {
     return (
       <div
         className={`relative w-35 h-12 border-2 overflow-hidden 
-          border-[var(--fg)] rounded-full bg-[var(--bg)] flex items-center justify-between px-4 gap-1`}
+           rounded-full bg-transparent border-[var(--primary)] flex items-center justify-between px-4 gap-1`}
       >
         <h2 className="whitespace-nowrap">Loading...</h2>
         <FontAwesomeIcon
           icon={faSpinner}
           size="lg"
-          className="text-[var(--fg)]"
+          className="text-[var(--primary)]"
           spin
         />
       </div>

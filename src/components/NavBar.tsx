@@ -18,7 +18,7 @@ const NavBar = () => {
     return (
       <li
         key={name}
-        className={`hover:text-[var(--highlight)] transition-colors duration-300 ${
+        className={`hover:text-[var(--highlight)] hover:font-bold transition-colors duration-300 ${
           pathname === link ? "text-[var(--highlight)] font-bold" : ""
         } `}
         onClick={() => setIsOpen(false)}
@@ -32,7 +32,7 @@ const NavBar = () => {
     <nav className="w-fit">
       <ul className="hidden sm:flex items-center gap-6">
         {navButtons("/", "Home")}
-        {navButtons("/about", "About")}
+        {navButtons("/skills", "Skills")}
         {navButtons("/projects", "Projects")}
         {navButtons("/contact", "Contact")}
       </ul>
@@ -71,7 +71,7 @@ const NavBar = () => {
       >
         <ul className="flex flex-col gap-4 p-4">
           {navButtons("/", "Home")}
-          {navButtons("/about", "About")}
+          {navButtons("/skills", "Skills")}
           {navButtons("/projects", "Projects")}
           {navButtons("/contact", "Contact")}
         </ul>
