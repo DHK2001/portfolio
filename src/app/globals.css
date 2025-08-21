@@ -11,6 +11,7 @@
   --button-text: #ffffff;
   --menu: rgba(255, 255, 255, 0.94);
   --highlight: #8b5cf6;
+  --icon: #0b0a10;
 
   /* Blobs más oscuros para que el "screen" resalte */
   --follow-blobs-1: #1f0e4d;  /* indigo oscuro */
@@ -30,6 +31,7 @@
   --button-text: #ffffff;
   --menu: rgba(16, 12, 24, 0.94);
   --highlight: #c084fc;
+  --icon: #f7f7fb;
 
   /* Blobs un poco más vivos para que el "screen" en negro destaque */
   --follow-blobs-1: #6d28d9;  /* violet-700 */

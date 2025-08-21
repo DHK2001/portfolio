@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div className="flex gap-4">
         <IconButton icon={faGithub} onClick={() => iconOnClick("https://github.com/DHK2001?tab=repositories")} />
-        <IconButton icon={faLinkedin} onClick={() => iconOnClick("")} />
+        <IconButton icon={faLinkedin} onClick={() => iconOnClick("https://www.linkedin.com/in/derek-galeas-00ba83358")} />
       </div>
       <Button text="Download CV" />
     </div>
