@@ -8,6 +8,9 @@ export interface Profile {
   name: string;
   description: string;
   profilePicture: string;
+  email: string;
+  githubUrl: string;
+  linkedUrl: string;
 }
 
 export interface Project {

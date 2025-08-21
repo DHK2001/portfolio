@@ -1,37 +1,9 @@
 "use client";
 
 import Title from "@/components/Title";
-
-export interface Project {
-  projectName: string;
-  description: string;
-  image: string;
-}
+import { projectsData } from "@/constants/infoExample";
 
 export default function Projects() {
-  const projects: Project[] = [
-    {
-      projectName: "Portfolio Website",
-      description:
-        "A personal portfolio website built with Next.js, TailwindCSS, and Framer Motion.",
-      image:
-        "https://ayushdas.vercel.app/_next/image?url=%2Fproject1.png&w=828&q=75",
-    },
-    {
-      projectName: "E-commerce App",
-      description:
-        "A full-stack e-commerce application with product listing, cart, and checkout functionality.",
-      image:
-        "https://ayushdas.vercel.app/_next/image?url=%2Fproject2.png&w=828&q=75",
-    },
-    {
-      projectName: "Chat Application",
-      description:
-        "A real-time chat app using WebSockets with support for rooms and private messaging.",
-      image:
-        "https://ayushdas.vercel.app/_next/image?url=%2Fproject3.png&w=828&q=75",
-    },
-  ];
 
   const handleClick = (projectName: string) => {
     console.log(`Clicked project: ${projectName}`);
@@ -42,7 +14,7 @@ export default function Projects() {
       <Title text="My Projects" />
 
       <div className="flex flex-col gap-12 w-full max-w-6xl">
-        {projects.map((project, index) => (
+        {projectsData.map((project, index) => (
           <div
             key={project.projectName}
             onClick={() => handleClick(project.projectName)}
