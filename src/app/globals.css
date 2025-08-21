@@ -2,42 +2,36 @@
 
 /* ===== Light Theme ===== */
 .light-theme {
-  --bg: #f7f7fb;
-  --fg: #111827;
-  --header-footer: #efefefd9;
-  --primary: #6d28d9;
-  --secondary-text: #6b7280;
-  --primary-text: #0b1020;
-  --button-text: #ffffff;
-  --menu: rgba(255, 255, 255, 0.94);
-  --highlight: #8b5cf6;
-  --icon: #0b0a10;
-
-  /* Blobs más oscuros para que el "screen" resalte */
-  --follow-blobs-1: #1f0e4d;  /* indigo oscuro */
-  --follow-blobs-2: #3a106d;  /* violeta oscuro */
-  --follow-blobs-3: #004b56;  /* cyan profundo */
-  --follow-blobs-4: #4d004d;  /* fucsia/morado oscuro */
+  --bg: #f3f8ff;              /* azul muy suave para fondo */
+  --fg: #0f172a;              /* texto general oscuro */
+  --header-footer: #e2e8f0cc; /* gris azulado translúcido */
+  --primary: #2563eb;         /* azul brillante */
+  --secondary-text: #475569;  /* gris azulado */
+  --primary-text: #1e293b;    /* casi negro */
+  --button-text: #ffffff;     /* blanco sobre botones */
+  --menu: rgba(255, 255, 255, 0.95);
+  --highlight: #1d4ed8;       /* azul intenso */
+  --icon: #1e293b;            /* gris azulado oscuro */
+  --cards: #ffffff;           /* blanco puro para tarjetas */
+  --cards-text: #1e293b;      /* gris oscuro con alto contraste */
+  --shadow-color: rgba(37, 99, 235, 0.35);
 }
 
 /* ===== Dark Theme ===== */
 .dark-theme {
-  --bg: #0b0a10;
-  --fg: #e5e7eb;
-  --header-footer: #1a1228b3;
-  --primary: #7c3aed;
-  --secondary-text: #94a3b8;
-  --primary-text: #ffffff;
-  --button-text: #ffffff;
-  --menu: rgba(16, 12, 24, 0.94);
-  --highlight: #c084fc;
-  --icon: #f7f7fb;
-
-  /* Blobs un poco más vivos para que el "screen" en negro destaque */
-  --follow-blobs-1: #6d28d9;  /* violet-700 */
-  --follow-blobs-2: #9333ea;  /* violet-600 */
-  --follow-blobs-3: #00aec9;  /* cyan 400 */
-  --follow-blobs-4: #d946ef;  /* fuchsia 400 */
+  --bg: #0e0a1a;              /* morado casi negro */
+  --fg: #e5e7eb;              /* texto claro */
+  --header-footer: #1c1630cc; /* morado oscuro translúcido */
+  --primary: #8b5cf6;         /* morado brillante */
+  --secondary-text: #a1a1aa;  /* gris claro */
+  --primary-text: #ffffff;    /* blanco */
+  --button-text: #ffffff;     /* blanco */
+  --menu: rgba(20, 16, 30, 0.95);
+  --highlight: #a78bfa;       /* lavanda suave */
+  --icon: #f3f4f6;            /* casi blanco */
+  --cards: #1f1b2e;           /* morado grisáceo oscuro */
+  --cards-text: #f9fafb;      /* gris muy claro para contraste */
+  --shadow-color: rgba(139, 92, 246, 0.45);
 }
 
 /* Base */
