@@ -13,6 +13,15 @@ export default function Home() {
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
+  function downloadPdf(url: string, filename: string) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <div className="h-full w-full flex flex-col justify-center items-center gap-4">
       <UserAvatar imageUrl={profileData.profilePicture} />
@@ -23,18 +32,19 @@ export default function Home() {
       <div className="flex gap-4">
         <IconButton
           icon={faGithub}
-          onClick={() =>
-            iconOnClick(profileData.githubUrl)
-          }
+          onClick={() => iconOnClick(profileData.githubUrl)}
         />
         <IconButton
           icon={faLinkedin}
-          onClick={() =>
-            iconOnClick(profileData.linkedUrl)
-          }
+          onClick={() => iconOnClick(profileData.linkedUrl)}
         />
       </div>
-      <Button text="Download CV" />
+      <Button
+        text="Download CV"
+        onClick={() =>
+          downloadPdf("/docs/CV-Derek Galeas.pdf", `CV-${profileData.name}`)
+        }
+      />
     </div>
   );
 }
