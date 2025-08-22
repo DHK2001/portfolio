@@ -2,6 +2,7 @@ export interface Skill {
   id: number;
   skillName: string;
   imageUrl: string;
+  category: string;
 }
 
 export interface Profile {
