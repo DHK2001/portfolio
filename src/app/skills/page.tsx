@@ -2,8 +2,6 @@ import Title from "@/components/Title";
 import { listSkillsData } from "@/constants/infoExample";
 
 export default function Skills() {
-
-
   return (
     <div className="h-full w-full flex flex-col justify-center items-center gap-6 px-4">
       <Title text="My Skills" />
@@ -23,13 +21,20 @@ export default function Skills() {
         {listSkillsData.map((skill) => (
           <div
             key={skill.id}
-            className="flex flex-col items-center justify-center p-4 bg-[color:var(--cards)] shadow rounded-lg"
+            className="flex flex-col items-center justify-center p-4 bg-[color:var(--cards)] rounded-lg shadow-md
+            transition-transform duration-300 ease-in-out
+            hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2"
           >
-            <img
-              src={skill.imageUrl}
-              alt={skill.skillName}
-              className="w-16 h-16 object-contain mb-3"
-            />
+            <div
+              className="w-20 h-20 flex items-center justify-center rounded-full 
+                       bg-[color:var(--image-bg)] shadow-sm mb-3"
+            >
+              <img
+                src={skill.imageUrl}
+                alt={skill.skillName}
+                className="w-12 h-12 object-contain"
+              />
+            </div>
             <p className="text-center text-sm font-medium text-[color:var(--cards-text)]">
               {skill.skillName}
             </p>
