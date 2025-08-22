@@ -20,7 +20,7 @@ export default function Contact() {
           <span className="flex items-center justify-center h-10 w-10 rounded-full bg-[var(--primary)] text-[var(--button-text)]">
             <FontAwesomeIcon icon={faEnvelope} size="lg" className="h-5 w-5" />
           </span>
-          <span className="truncate">{profileData.email}</span>
+          <span className="whitespace-normal max-sm:w-60">{profileData.email}</span>
         </a>
 
         <a
@@ -34,7 +34,7 @@ export default function Contact() {
           <span className="flex items-center justify-center h-10 w-10 rounded-full bg-[var(--primary)] text-[var(--button-text)]">
             <FontAwesomeIcon icon={faLinkedin} size="lg" className="h-5 w-5" />
           </span>
-          <span className="truncate">
+          <span className="whitespace-normal max-sm:w-60">
             linkedin.com/in/{getLinkedUser(profileData.linkedUrl)}
           </span>
         </a>
