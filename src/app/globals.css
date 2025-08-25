@@ -2,38 +2,40 @@
 
 /* ===== Light Theme ===== */
 .light-theme {
-  --bg: #f3f8ff;              /* azul muy suave para fondo */
-  --fg: #0f172a;              /* texto general oscuro */
+  --bg: #f3f8ff; /* azul muy suave para fondo */
+  --fg: #0f172a; /* texto general oscuro */
   --header-footer: #e2e8f0cc; /* gris azulado translúcido */
-  --primary: #2563eb;         /* azul brillante */
-  --secondary-text: #475569;  /* gris azulado */
-  --primary-text: #1e293b;    /* casi negro */
-  --button-text: #ffffff;     /* blanco sobre botones */
+  --primary: #2563eb; /* azul brillante */
+  --secondary-text: #475569; /* gris azulado */
+  --primary-text: #1e293b; /* casi negro */
+  --button-text: #ffffff; /* blanco sobre botones */
   --menu: rgba(255, 255, 255, 0.95);
-  --highlight: #1d4ed8;       /* azul intenso */
-  --icon: #1e293b;            /* gris azulado oscuro */
-  --cards: #ffffff;           /* blanco puro para tarjetas */
-  --cards-text: #1e293b;      /* gris oscuro con alto contraste */
+  --highlight: #1d4ed8; /* azul intenso */
+  --icon: #1e293b; /* gris azulado oscuro */
+  --cards: #ffffff; /* blanco puro para tarjetas */
+  --cards-text: #1e293b; /* gris oscuro con alto contraste */
   --shadow-color: rgba(37, 99, 235, 0.35);
   --image-bg: #f3f4f6;
+  --display: #000000d1;
 }
 
 /* ===== Dark Theme ===== */
 .dark-theme {
-  --bg: #0e0a1a;              /* morado casi negro */
-  --fg: #e5e7eb;              /* texto claro */
+  --bg: #0e0a1a; /* morado casi negro */
+  --fg: #e5e7eb; /* texto claro */
   --header-footer: #1c1630cc; /* morado oscuro translúcido */
-  --primary: #8b5cf6;         /* morado brillante */
-  --secondary-text: #a1a1aa;  /* gris claro */
-  --primary-text: #ffffff;    /* blanco */
-  --button-text: #ffffff;     /* blanco */
+  --primary: #8b5cf6; /* morado brillante */
+  --secondary-text: #a1a1aa; /* gris claro */
+  --primary-text: #ffffff; /* blanco */
+  --button-text: #ffffff; /* blanco */
   --menu: rgba(20, 16, 30, 0.95);
-  --highlight: #a78bfa;       /* lavanda suave */
-  --icon: #f3f4f6;            /* casi blanco */
-  --cards: #1f1b2e;           /* morado grisáceo oscuro */
-  --cards-text: #f9fafb;      /* gris muy claro para contraste */
+  --highlight: #a78bfa; /* lavanda suave */
+  --icon: #f3f4f6; /* casi blanco */
+  --cards: #1f1b2e; /* morado grisáceo oscuro */
+  --cards-text: #f9fafb; /* gris muy claro para contraste */
   --shadow-color: rgba(139, 92, 246, 0.45);
   --image-bg: #f3f4f6;
+  --display: #000000d1;
 }
 
 /* Base */

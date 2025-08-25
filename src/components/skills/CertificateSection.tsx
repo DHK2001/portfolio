@@ -6,10 +6,12 @@ import Image from "next/image";
 import { profileData } from "@/constants/infoExample";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import ImageDisplay from "../ImageDisplay";
 
 const CertificateSection = () => {
   const certificates = profileData.certificates;
   const [current, setCurrent] = useState(0);
+  const [openDisplay, setOpenDisplay] = useState(false);
 
   if (!certificates?.length) return null;
 
@@ -19,9 +21,21 @@ const CertificateSection = () => {
 
   const currentCert = certificates[current];
 
+  function handleCloseDisplay () {
+    setOpenDisplay(false);
+    console.log("ddddd")
+  }
+
   return (
     <section className="w-full p-6 flex flex-col items-center">
       <Title text="Certificates" />
+      {openDisplay ? (
+        <ImageDisplay
+          imageUrl={currentCert.src}
+          name={currentCert.name}
+          closeDisplay={handleCloseDisplay}
+        />
+      ) : null}
 
       <div
         className="mt-5 relative w-full max-w-[600px] h-[250px] sm:h-[300px] md:h-[400px] rounded-lg  shadow-md
@@ -32,7 +46,11 @@ const CertificateSection = () => {
           src={currentCert.src}
           alt={currentCert.name}
           fill
-          className="object-contain p-4"
+          className="object-contain p-4 cursor-pointer"
+          onClick={() => {
+            setOpenDisplay(true);
+            console.log("ddd");
+          }}
         />
 
         {certificates.length > 1 && (
