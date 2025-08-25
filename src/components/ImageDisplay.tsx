@@ -18,7 +18,7 @@ const ImageDisplay = ({
     <div className="fixed inset-0 z-[900] bg-[color:var(--display)] flex items-center justify-center p-4 sm:p-10">
       <button
         onClick={closeDisplay}
-        className="absolute top-4 right-4 z-[1000] h-10 w-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 transition"
+        className="absolute top-4 right-4 z-[1000] h-10 w-10 flex items-center justify-center rounded-full bg-black/40 hover:opacity-60 transition"
       >
         <FontAwesomeIcon icon={faX} size="lg" color="white" />
       </button>
