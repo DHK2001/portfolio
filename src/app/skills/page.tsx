@@ -10,15 +10,12 @@ import { useMemo } from "react";
 type Section = { title: string; category: Skill["category"] };
 
 export default function Skills() {
-  const sections: Section[] = useMemo(
-    () => [
-      { title: "Languages", category: "Language" },
-      { title: "Frameworks", category: "Framework" },
-      { title: "Tool/IDE", category: "Tool/IDE" },
-      { title: "Databases", category: "Database" },
-    ],
-    []
-  );
+  const sections: Section[] = [
+    { title: "Languages", category: "Language" },
+    { title: "Frameworks", category: "Framework" },
+    { title: "Tool/IDE", category: "Tool/IDE" },
+    { title: "Databases", category: "Database" },
+  ];
 
   const dataByCategory = useMemo(() => {
     const groups = new Map<Skill["category"], Skill[]>();

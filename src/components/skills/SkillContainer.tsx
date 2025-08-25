@@ -10,7 +10,6 @@ type Props = {
 const SkillContainer = ({ data }: Props) => {
   return (
     <div
-      key={data.id}
       className="flex flex-col items-center justify-center p-4 bg-[color:var(--cards)] rounded-lg shadow-md
       transition-transform duration-300 ease-in-out
     hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2"
