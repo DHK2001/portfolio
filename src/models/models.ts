@@ -12,10 +12,18 @@ export interface Profile {
   email: string;
   githubUrl: string;
   linkedUrl: string;
+  certificates: Certificate[];
 }
 
 export interface Project {
-    projectName: string,
-    description: string,
-    image: string,
+  projectName: string;
+  description: string;
+  image: string;
+}
+
+export interface Certificate {
+  name: string;
+  src: string;
+  issuer: string;
+  date: string;
 }
