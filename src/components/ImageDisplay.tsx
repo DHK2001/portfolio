@@ -15,15 +15,21 @@ const ImageDisplay = ({
   closeDisplay?: () => void;
 }) => {
   return (
-    <div className="fixed inset-0 w-screen h-screen z-[900] bg-[color:var(--display)]">
-      <div className="relative w-full h-full">
-        <button
-          onClick={closeDisplay}
-          className="absolute top-5 left-5 z-[1000] h-8 w-8 flex items-center justify-center cursor-pointer hover:opacity-50"
-        >
-          <FontAwesomeIcon icon={faX} size="lg" color="white" />
-        </button>
-        <Image src={imageUrl} alt={name} fill className="object-contain p-4" />
+    <div className="fixed inset-0 z-[900] bg-[color:var(--display)] flex items-center justify-center p-4 sm:p-10">
+      <button
+        onClick={closeDisplay}
+        className="absolute top-4 right-4 z-[1000] h-10 w-10 flex items-center justify-center rounded-full bg-black/40 hover:bg-black/60 transition"
+      >
+        <FontAwesomeIcon icon={faX} size="lg" color="white" />
+      </button>
+
+      <div className="relative w-full max-w-5xl h-[80vh]">
+        <Image
+          src={imageUrl}
+          alt={name}
+          fill
+          className="object-contain rounded-lg"
+        />
       </div>
     </div>
   );
