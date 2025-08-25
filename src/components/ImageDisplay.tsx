@@ -21,7 +21,7 @@ const ImageDisplay = ({
           onClick={closeDisplay}
           className="absolute top-5 left-5 z-[1000] h-8 w-8 flex items-center justify-center cursor-pointer"
         >
-          <FontAwesomeIcon icon={faX} size="lg" />
+          <FontAwesomeIcon icon={faX} size="lg" color="white" />
         </button>
         <Image src={imageUrl} alt={name} fill className="object-contain p-4" />
       </div>
