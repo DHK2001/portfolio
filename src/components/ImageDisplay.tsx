@@ -19,7 +19,7 @@ const ImageDisplay = ({
       <div className="relative w-full h-full">
         <button
           onClick={closeDisplay}
-          className="absolute top-5 left-5 z-[1000] h-8 w-8 flex items-center justify-center cursor-pointer"
+          className="absolute top-5 left-5 z-[1000] h-8 w-8 flex items-center justify-center cursor-pointer hover:opacity-50"
         >
           <FontAwesomeIcon icon={faX} size="lg" color="white" />
         </button>
