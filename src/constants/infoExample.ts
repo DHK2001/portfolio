@@ -118,9 +118,9 @@ export const listSkillsData: Skill[] = [
   },
   {
     id: 14,
-    skillName: "Visual Studio / VS Code",
+    skillName: "VS Code",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/5/5f/Visual_Studio_Logo_%282013-2017%29.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png",
     category: "Tool/IDE",
   },
   {
@@ -135,6 +135,20 @@ export const listSkillsData: Skill[] = [
     skillName: "Xcode",
     imageUrl: "https://upload.wikimedia.org/wikipedia/ru/0/0c/Xcode_icon.png",
     category: "Tool/IDE",
+  },
+  {
+    id: 17,
+    skillName: "TailwindCSS",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+    category: "Framework",
+  },
+  {
+    id: 18,
+    skillName: "React Native",
+    imageUrl:
+      "https://www.cdnlogo.com/logos/r/18/react-native.svg",
+    category: "Framework",
   },
 ];
 
