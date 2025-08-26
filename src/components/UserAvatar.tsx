@@ -4,24 +4,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
 
-const UserAvatar = ({imageUrl}:{imageUrl: string}) => {
-
-  const profileAvatar = () => {
-    return imageUrl ? (
-      <Image
-        src="/images/user-icon.png"
-        alt="Avatar"
-        fill
-        className="object-cover"
-      />
-    ) : (
-      <FontAwesomeIcon icon={faUser} size="10x" className="text-[var(--primary)]  h-40 w-40" />
-    );
-  };
-
+const UserAvatar = ({ imageUrl }: { imageUrl: string }) => {
   return (
-    <div className="relative rounded-full border-6 border-[var(--primary)] h-60 w-60 flex items-center justify-center bg-[var(--bg)]">
-      {profileAvatar()}
+    <div className="relative rounded-full overflow-hidden border-4 border-[var(--primary)] h-60 w-60 flex items-center justify-center bg-[var(--bg)]">
+      {imageUrl ? (
+        <Image
+          src={imageUrl}
+          alt="Avatar"
+          fill
+          className="object-cover"
+        />
+      ) : (
+        <FontAwesomeIcon
+          icon={faUser}
+          size="3x"
+          className="text-[var(--primary)] h-40 w-40"
+        />
+      )}
     </div>
   );
 };
