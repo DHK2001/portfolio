@@ -5,7 +5,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
 
 const NavBar = () => {
-    const pathname = usePathname();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -32,6 +32,7 @@ const NavBar = () => {
     <nav className="w-fit">
       <ul className="hidden sm:flex items-center gap-6">
         {navButtons("/", "Home")}
+        {navButtons("/work-experience", "Work Experience")}
         {navButtons("/skills", "Skills")}
         {navButtons("/projects", "Projects")}
         {navButtons("/contact", "Contact")}
@@ -71,6 +72,7 @@ const NavBar = () => {
       >
         <ul className="flex flex-col gap-4 p-4">
           {navButtons("/", "Home")}
+          {navButtons("/work-experience", "Work Experience")}
           {navButtons("/skills", "Skills")}
           {navButtons("/projects", "Projects")}
           {navButtons("/contact", "Contact")}

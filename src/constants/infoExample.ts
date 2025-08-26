@@ -1,4 +1,4 @@
-import { Profile, Project, Skill } from "@/models/models";
+import { Profile, Project, Skill, WorkExperience } from "@/models/models";
 
 export const profileData: Profile = {
   name: "Derek Galeas",
@@ -17,6 +17,55 @@ export const profileData: Profile = {
     },
   ],
 };
+
+export const workExperienceData: WorkExperience[] = [
+  {
+    role: "Mobile Developer (Flutter)",
+    company: "Grupo Incova",
+    startDate: "August 2022",
+    endDate: "September 2023",
+    description: [
+      "Developed and maintained cross-platform mobile applications for Android and iOS using Flutter.",
+      "Led the introduction of messaging functionality in a pre-existing application, covering both backend and frontend integration.",
+      "Implemented new UI designs provided by the design team, ensuring seamless integration with existing logic and structure.",
+      "Managed and optimized the application's MongoDB database for efficiency and reliability.",
+    ],
+  },
+  {
+    role: "Mobile Developer Intern",
+    company: "Sans Services",
+    startDate: "April 2024",
+    endDate: "September 2024",
+    description: [
+      "Worked as an intern in the mobile development department.",
+      "Maintained iOS and Android applications, fixing bugs and improving UI.",
+      "Collaborated with the development team using Android Studio and Xcode.",
+    ],
+  },
+  {
+    role: "Freelance Web Developer",
+    company: "Independent Contractor",
+    startDate: "January 2025",
+    endDate: "March 2025",
+    description: [
+      "Worked on frontend development projects using React, Next.js, HTML, and CSS.",
+      "Developed a QR code generator tool allowing users to customize QR codes (color, border styles, dot patterns) and download them.",
+      "Fixed frontend issues and improved user experience on an existing web application.",
+      "Collaborated directly with a client, supporting their ongoing projects with web development tasks.",
+    ],
+  },
+  {
+    role: "iOS Developer",
+    company: "Sans Services",
+    startDate: "April 2025",
+    endDate: "Present",
+    description: [
+      "Hired as a full-time iOS Developer while continuing to contribute to Android development.",
+      "Responsible for building and maintaining iOS features in Swift and Xcode.",
+      "Collaborated with cross-functional teams to enhance app performance and user experience.",
+    ],
+  },
+];
 
 export const listSkillsData: Skill[] = [
   // 🚀 Lenguajes de Programación
@@ -146,8 +195,7 @@ export const listSkillsData: Skill[] = [
   {
     id: 18,
     skillName: "React Native",
-    imageUrl:
-      "https://www.cdnlogo.com/logos/r/18/react-native.svg",
+    imageUrl: "https://www.cdnlogo.com/logos/r/18/react-native.svg",
     category: "Framework",
   },
 ];

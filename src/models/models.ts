@@ -27,3 +27,11 @@ export interface Certificate {
   issuer: string;
   date: string;
 }
+
+export interface WorkExperience {
+  role: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  description: string[];
+}
