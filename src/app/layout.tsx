@@ -27,16 +27,15 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function () {
-                try {
-                  var saved = localStorage.getItem('theme');
-                  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  var theme = saved || (prefersDark ? 'dark' : 'light');
-                  document.documentElement.classList.remove('light-theme','dark-theme');
-                  document.documentElement.classList.add(theme + '-theme');
-                } catch (e) {}
-              })();
-            `,
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var theme = saved || 'light';
+          document.documentElement.classList.remove('light-theme','dark-theme');
+          document.documentElement.classList.add(theme + '-theme');
+        } catch (e) {}
+      })();
+    `,
           }}
         />
       </head>
@@ -47,7 +46,9 @@ export default function RootLayout({
           <NavBar />
           <ThemeToggle />
         </header>
-        <main className="flex-1 p-4 sm:px-12 sm:py-8 pt-20 sm:pt-21">{children}</main>
+        <main className="flex-1 p-4 sm:px-12 sm:py-8 pt-20 sm:pt-21">
+          {children}
+        </main>
         <footer className="p-4 bg-[color:var(--header-footer)]  bottom-0 left-0 w-full h-16 flex justify-center items-center text-[color:var(--secondary-text)] text-sm">
           © 2025 Derek Galeas
         </footer>
