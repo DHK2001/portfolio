@@ -26,26 +26,14 @@ export const profileData: Profile = {
 
 export const workExperienceData: WorkExperience[] = [
   {
-    role: "Mobile Developer (Flutter)",
-    company: "Grupo Incova",
-    startDate: "August 2022",
-    endDate: "September 2023",
-    description: [
-      "Developed and maintained cross-platform mobile applications for Android and iOS using Flutter.",
-      "Led the introduction of messaging functionality in a pre-existing application, covering both backend and frontend integration.",
-      "Implemented new UI designs provided by the design team, ensuring seamless integration with existing logic and structure.",
-      "Managed and optimized the application's MongoDB database for efficiency and reliability.",
-    ],
-  },
-  {
-    role: "Mobile Developer Intern",
+    role: "iOS Developer",
     company: "Sans Services",
-    startDate: "April 2024",
-    endDate: "September 2024",
+    startDate: "April 2025",
+    endDate: "Present",
     description: [
-      "Worked as an intern in the mobile development department.",
-      "Maintained iOS and Android applications, fixing bugs and improving UI.",
-      "Collaborated with the development team using Android Studio and Xcode.",
+      "Hired as a full-time iOS Developer while continuing to contribute to Android development.",
+      "Responsible for building and maintaining iOS features in Swift and Xcode.",
+      "Collaborated with cross-functional teams to enhance app performance and user experience.",
     ],
   },
   {
@@ -61,14 +49,26 @@ export const workExperienceData: WorkExperience[] = [
     ],
   },
   {
-    role: "iOS Developer",
+    role: "Mobile Developer Intern",
     company: "Sans Services",
-    startDate: "April 2025",
-    endDate: "Present",
+    startDate: "April 2024",
+    endDate: "September 2024",
     description: [
-      "Hired as a full-time iOS Developer while continuing to contribute to Android development.",
-      "Responsible for building and maintaining iOS features in Swift and Xcode.",
-      "Collaborated with cross-functional teams to enhance app performance and user experience.",
+      "Worked as an intern in the mobile development department.",
+      "Maintained iOS and Android applications, fixing bugs and improving UI.",
+      "Collaborated with the development team using Android Studio and Xcode.",
+    ],
+  },
+  {
+    role: "Mobile Developer (Flutter)",
+    company: "Grupo Incova",
+    startDate: "August 2022",
+    endDate: "September 2023",
+    description: [
+      "Developed and maintained cross-platform mobile applications for Android and iOS using Flutter.",
+      "Led the introduction of messaging functionality in a pre-existing application, covering both backend and frontend integration.",
+      "Implemented new UI designs provided by the design team, ensuring seamless integration with existing logic and structure.",
+      "Managed and optimized the application's MongoDB database for efficiency and reliability.",
     ],
   },
 ];
@@ -211,7 +211,6 @@ export const projectsData: Project[] = [
     projectName: "Portfolio Website",
     description:
       "A personal portfolio website built with Next.js (App Router) and TypeScript. Styled with TailwindCSS and featuring a global layout, responsive design, and a custom light/dark theme toggle. Includes smooth hover transitions for interactive elements, project showcase, and certificate viewer. Designed as my professional developer portfolio to highlight skills, experience, and projects.",
-    image:
-      "/images/projects/portfolio/portfolioHome.png",
-  }
+    image: "/images/projects/portfolio/portfolioHome.png",
+  },
 ];
