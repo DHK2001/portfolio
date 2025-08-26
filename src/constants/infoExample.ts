@@ -43,15 +43,15 @@ export const workExperienceData: WorkExperience[] = [
     ],
   },
   {
-    role: "Freelance Web Developer",
-    company: "Independent Contractor",
+    role: "Frontend Developer (Contract)",
+    company: "Remote Project Collaboration",
     startDate: "January 2025",
     endDate: "March 2025",
     description: [
-      "Worked on frontend development projects using React, Next.js, HTML, and CSS.",
-      "Developed a QR code generator tool allowing users to customize QR codes (color, border styles, dot patterns) and download them.",
-      "Fixed frontend issues and improved user experience on an existing web application.",
-      "Collaborated directly with a client, supporting their ongoing projects with web development tasks.",
+      "Contributed to frontend development on web projects using React, Next.js, HTML, and CSS.",
+      "Developed a QR code generator tool that allowed users to customize QR codes (colors, border styles, dot patterns) and download them.",
+      "Debugged and fixed frontend issues to improve user experience in an existing web application.",
+      "Collaborated remotely under the guidance of a lead freelancer working with multiple client contracts.",
     ],
   },
   {
