@@ -23,7 +23,6 @@ const CertificateSection = () => {
 
   function handleCloseDisplay () {
     setOpenDisplay(false);
-    console.log("ddddd")
   }
 
   return (
@@ -49,7 +48,6 @@ const CertificateSection = () => {
           className="object-contain p-4 cursor-pointer"
           onClick={() => {
             setOpenDisplay(true);
-            console.log("ddd");
           }}
         />
 

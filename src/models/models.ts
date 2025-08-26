@@ -13,6 +13,7 @@ export interface Profile {
   githubUrl: string;
   linkedUrl: string;
   certificates: Certificate[];
+  degree: Degree;
 }
 
 export interface Project {
@@ -34,4 +35,11 @@ export interface WorkExperience {
   startDate: string;
   endDate: string;
   description: string[];
+}
+
+export interface Degree {
+  name: string;
+  src: string;
+  issuer: string;
+  date: string;
 }

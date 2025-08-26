@@ -3,14 +3,22 @@
 import Button from "@/components/Button";
 import Description from "@/components/Description";
 import IconButton from "@/components/IconButton";
+import ImageDisplay from "@/components/ImageDisplay";
 import Title from "@/components/Title";
 import UserAvatar from "@/components/UserAvatar";
 import { profileData } from "@/constants/infoExample";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function Home() {
+  const [openDisplay, setOpenDisplay] = useState(false);
+
   function iconOnClick(url: string) {
     window.open(url, "_blank", "noopener,noreferrer");
+  }
+
+  function handleCloseDisplay() {
+    setOpenDisplay(false);
   }
 
   function downloadPdf(url: string, filename: string) {
@@ -23,7 +31,14 @@ export default function Home() {
   }
 
   return (
-    <div className="h-full w-full flex flex-col justify-center items-center gap-4">
+    <div className="flex flex-col items-center gap-4">
+      {openDisplay ? (
+        <ImageDisplay
+          imageUrl={profileData.degree.src}
+          name={profileData.degree.name}
+          closeDisplay={handleCloseDisplay}
+        />
+      ) : null}
       <UserAvatar imageUrl={profileData.profilePicture} />
       <Title text={`Hello, I'm ${profileData.name}`} />
       <div className="max-w-2xl text-center">
@@ -39,12 +54,15 @@ export default function Home() {
           onClick={() => iconOnClick(profileData.linkedUrl)}
         />
       </div>
-      <Button
-        text="Download CV"
-        onClick={() =>
-          downloadPdf("/docs/CV-Derek Galeas.pdf", `CV-${profileData.name}`)
-        }
-      />
+      <div className="flex gap-4">
+        <Button
+          text="Download CV"
+          onClick={() =>
+            downloadPdf("/docs/CV-Derek Galeas.pdf", `CV-${profileData.name}`)
+          }
+        />
+        <Button text="View Degree" onClick={() => setOpenDisplay(true)} />
+      </div>
     </div>
   );
 }

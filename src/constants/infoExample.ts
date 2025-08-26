@@ -3,7 +3,7 @@ import { Profile, Project, Skill, WorkExperience } from "@/models/models";
 export const profileData: Profile = {
   name: "Derek Galeas",
   description:
-    "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and ensuring seamless integration of designs using technologies such as Flutter, React, Next.js, and MongoDB.",
+    "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and ensuring seamless integration of designs using technologies such as Flutter, React, Next.js, and MongoDB.\nBachelor’s degree in Computer Systems Engineering, Unitec (2019 - 2024)",
   profilePicture: "",
   email: "dhenrygk12@hotmail.com",
   githubUrl: "https://github.com/DHK2001?tab=repositories",
@@ -16,6 +16,12 @@ export const profileData: Profile = {
       date: "07/29/2025",
     },
   ],
+  degree: {
+    name: "Bachelor’s degree in Computer Systems Engineering",
+    src: "/images/certificates/diploma-unitec.jpg",
+    issuer: "Unitec, San Pedro Sula, Honduras",
+    date: "2024-06-15",
+  },
 };
 
 export const workExperienceData: WorkExperience[] = [
@@ -204,22 +210,8 @@ export const projectsData: Project[] = [
   {
     projectName: "Portfolio Website",
     description:
-      "A personal portfolio website built with Next.js, TailwindCSS, and Framer Motion.",
+      "A personal portfolio website built with Next.js (App Router) and TypeScript. Styled with TailwindCSS and featuring a global layout, responsive design, and a custom light/dark theme toggle. Includes smooth hover transitions for interactive elements, project showcase, and certificate viewer. Designed as my professional developer portfolio to highlight skills, experience, and projects.",
     image:
-      "https://ayushdas.vercel.app/_next/image?url=%2Fproject1.png&w=828&q=75",
-  },
-  {
-    projectName: "E-commerce App",
-    description:
-      "A full-stack e-commerce application with product listing, cart, and checkout functionality.",
-    image:
-      "https://ayushdas.vercel.app/_next/image?url=%2Fproject2.png&w=828&q=75",
-  },
-  {
-    projectName: "Chat Application",
-    description:
-      "A real-time chat app using WebSockets with support for rooms and private messaging.",
-    image:
-      "https://ayushdas.vercel.app/_next/image?url=%2Fproject3.png&w=828&q=75",
-  },
+      "/images/projects/portfolio/portfolioHome.png",
+  }
 ];

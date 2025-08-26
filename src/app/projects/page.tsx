@@ -2,9 +2,9 @@
 
 import Title from "@/components/Title";
 import { projectsData } from "@/constants/infoExample";
+import Image from "next/image";
 
 export default function Projects() {
-
   const handleClick = (projectName: string) => {
     console.log(`Clicked project: ${projectName}`);
   };
@@ -28,11 +28,14 @@ export default function Projects() {
               hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2
             `}
           >
-            <img
-              src={project.image}
-              alt={project.projectName}
-              className="w-full md:w-1/2 h-64 object-cover rounded-lg"
-            />
+            <div className="w-full md:w-1/2 h-64 relative">
+              <Image
+                src={project.image}
+                alt={project.projectName}
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
 
             <div className="flex flex-col gap-3 md:w-1/2">
               <h3 className="text-xl font-bold text-[var(--primary)]">
