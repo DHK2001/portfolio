@@ -29,7 +29,7 @@ export const workExperienceData: WorkExperience[] = [
     role: "iOS Developer",
     company: "Sans Services",
     startDate: "April 2025",
-    endDate: "Present",
+    endDate: "Current",
     description: [
       "Hired as a full-time iOS Developer while continuing to contribute to Android development.",
       "Responsible for building and maintaining iOS features in Swift and Xcode.",
