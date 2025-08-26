@@ -41,7 +41,7 @@ export default function Home() {
       ) : null}
       <UserAvatar imageUrl={profileData.profilePicture} />
       <Title text={`Hello, I'm ${profileData.name}`} />
-      <div className="max-w-2xl text-center">
+      <div className="max-w-2xl text-center pb-2">
         <Description text={profileData.description} />
       </div>
       <div className="flex gap-4">

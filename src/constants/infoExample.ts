@@ -3,7 +3,7 @@ import { Profile, Project, Skill, WorkExperience } from "@/models/models";
 export const profileData: Profile = {
   name: "Derek Galeas",
   description:
-    "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and ensuring seamless integration of designs using technologies such as Flutter, React, Next.js, and MongoDB.\nBachelor’s degree in Computer Systems Engineering, Unitec (2019 - 2024)",
+    "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and ensuring seamless integration of designs using technologies such as Flutter, React, Next.js, and MongoDB.\n\nBachelor’s degree in Computer Systems Engineering, Unitec (2019 - 2024)",
   profilePicture: "",
   email: "dhenrygk12@hotmail.com",
   githubUrl: "https://github.com/DHK2001?tab=repositories",
