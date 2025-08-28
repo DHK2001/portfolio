@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
+import { navBarRouterList } from "@/constants/constants";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -31,11 +32,7 @@ const NavBar = () => {
   return (
     <nav className="w-fit">
       <ul className="hidden sm:flex items-center gap-6">
-        {navButtons("/", "Home")}
-        {navButtons("/work-experience", "Work Experience")}
-        {navButtons("/skills", "Skills")}
-        {navButtons("/projects", "Projects")}
-        {navButtons("/contact", "Contact")}
+        {navBarRouterList.map((item) => navButtons(item.path, item.name))}
       </ul>
 
       <button
@@ -71,11 +68,7 @@ const NavBar = () => {
         aria-modal="true"
       >
         <ul className="flex flex-col gap-4 p-4">
-          {navButtons("/", "Home")}
-          {navButtons("/work-experience", "Work Experience")}
-          {navButtons("/skills", "Skills")}
-          {navButtons("/projects", "Projects")}
-          {navButtons("/contact", "Contact")}
+          {navBarRouterList.map((item) => navButtons(item.path, item.name))}
         </ul>
       </div>
     </nav>
