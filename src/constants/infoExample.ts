@@ -37,12 +37,12 @@ export const workExperienceData: WorkExperience[] = [
     ],
   },
   {
-    role: "Frontend Developer (Contract)",
-    company: "Remote Project Collaboration",
+    role: "Frontend Developer",
+    company: "Project Collaboration",
     startDate: "January 2025",
     endDate: "March 2025",
     description: [
-      "Contributed to frontend development on web projects using React, Next.js, HTML, and CSS.",
+      "Contributed to frontend development on web projects using React, Next.js, HTML, CSS, and Tailwind CSS.",
       "Developed a QR code generator tool that allowed users to customize QR codes (colors, border styles, dot patterns) and download them.",
       "Debugged and fixed frontend issues to improve user experience in an existing web application.",
       "Collaborated remotely under the guidance of a lead freelancer working with multiple client contracts.",
