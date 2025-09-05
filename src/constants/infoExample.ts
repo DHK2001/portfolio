@@ -214,6 +214,12 @@ export const projectsData: Project[] = [
     image: "/images/projects/portfolio/portfolioHome.png",
   },
   {
+    projectName: "Weather App (React – Next.js)",
+    description:
+      "A simple weather application built with React, Next.js, and TypeScript that fetches real-time weather data using the OpenWeatherMap API. Users can search for cities across different countries and view current weather conditions, including temperature, humidity, and wind speed. The app demonstrates how to perform API GET requests, handle JSON responses, and display the results in a clean and responsive React UI. TypeScript was used throughout the project to define types and interfaces for the API responses, ensuring type safety. This project was developed to practice React + Next.js development, REST API integration, and responsive UI design.",
+    image: "/images/projects/weatherNextApp/WeatherNextApp1.png",
+  },
+  {
     projectName: "Movie App",
     description:
       "A mobile movie application built with React Native, Expo Go, and TypeScript as a practice project to explore React Native. The app features a bottom navigation bar with sections for Home, Search, Saved, and Profile. The main functionality focuses on Home and Search, both integrated with TMDB APIs. The Search screen allows users to look up movies and displays results dynamically. Selecting a movie opens a detailed view showing overview, votes, genres, budget, revenue, and production companies, all fetched from TMDB. The app uses fetch with async/await promises for API requests and custom hooks for data management. Strongly typed interfaces were created to handle the API responses and ensure type safety throughout the project.",
