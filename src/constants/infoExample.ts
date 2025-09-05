@@ -225,4 +225,10 @@ export const projectsData: Project[] = [
       "A second personal portfolio website built with Next.js and TypeScript as a simpler, more formal design tailored for a biomedical theme. Unlike the first portfolio, this version does not include an App Router or dark/light theme toggle. Navigation is handled through smooth scroll linking within a single-page layout. Each section features subtle animations using Framer Motion, and additional sections like Testimonials and Certificates are included. This project was created as practice to explore alternative approaches to portfolio design by building a single-page scroll-based site. The live version is deployed at https://portfolio-2-indol-seven.vercel.app/#home.",
     image: "/images/projects/portfolio2/portfolio1.png",
   },
+  {
+    projectName: "Favorite Places App",
+    description:
+      "A simple mobile application built with React Native, Expo Go, and JavaScript, created to practice the essentials of React Native and native device features. The app allows users to add favorite places by tapping the + icon, which opens a form to enter a title, capture a photo, and set a location. It integrates native mobile capabilities such as camera access for taking photos and geolocation. For location services, the app uses the free LocationIQ API to retrieve the user’s address when choosing 'Use Location,' or alternatively, users can pick a spot on a map with a live preview. Once saved, the place is added to the favorites list and displayed on the home screen. While small and simple in design, this project served as practice for working with native features like camera and location handling in both Android and iOS.",
+    image: "/images/projects/FavoritePlacesApp/FavoritePlaces1.png",
+  }
 ];
