@@ -207,23 +207,12 @@ export const listSkillsData: Skill[] = [
 ];
 
 export const projectsData: Project[] = [
+  // 🌐 Web Projects
   {
     projectName: "Portfolio Website",
     description:
       "A personal portfolio website built with Next.js (App Router) and TypeScript. Styled with TailwindCSS and featuring a global layout, responsive design, and a custom light/dark theme toggle. Includes smooth hover transitions for interactive elements, project showcase, and certificate viewer. Designed as my professional developer portfolio to highlight skills, experience, and projects.",
     image: "/images/projects/portfolio/portfolioHome.png",
-  },
-  {
-    projectName: "Weather App (React – Next.js)",
-    description:
-      "A simple weather application built with React, Next.js, and TypeScript that fetches real-time weather data using the OpenWeatherMap API. Users can search for cities across different countries and view current weather conditions, including temperature, humidity, and wind speed. The app demonstrates how to perform API GET requests, handle JSON responses, and display the results in a clean and responsive React UI. TypeScript was used throughout the project to define types and interfaces for the API responses, ensuring type safety. This project was developed to practice React + Next.js development, REST API integration, and responsive UI design.",
-    image: "/images/projects/weatherNextApp/WeatherNextApp1.png",
-  },
-  {
-    projectName: "Movie App",
-    description:
-      "A mobile movie application built with React Native, Expo Go, and TypeScript as a practice project to explore React Native. The app features a bottom navigation bar with sections for Home, Search, Saved, and Profile. The main functionality focuses on Home and Search, both integrated with TMDB APIs. The Search screen allows users to look up movies and displays results dynamically. Selecting a movie opens a detailed view showing overview, votes, genres, budget, revenue, and production companies, all fetched from TMDB. The app uses fetch with async/await promises for API requests and custom hooks for data management. Strongly typed interfaces were created to handle the API responses and ensure type safety throughout the project.",
-    image: "/images/projects/movieApp/AppMovie.png",
   },
   {
     projectName: "Portfolio Website 2",
@@ -232,52 +221,18 @@ export const projectsData: Project[] = [
     image: "/images/projects/portfolio2/portfolio1.png",
   },
   {
-    projectName: "Random Card Game App",
+    projectName: "Weather App (React – Next.js)",
     description:
-      "A simple iOS card game built with Swift, UIKit, and Storyboards using Xcode. The app continuously displays random card images from a deck until the user presses the 'Stop' button, which then changes to 'Reset' to restart the card rotation. A 'Rules' button provides the game’s instructions. Card assets are stored in the Assets catalog and displayed dynamically with UIImageView. The project was developed to practice storyboard-based UI creation, working with UIKit components such as UIImageView and UIButton, and managing dynamic images. It also served as a comparison between Storyboard-driven interfaces and code-based UI development, highlighting the advantages and limitations of each approach.",
-    image: "/images/projects/randomCardGame/RandomCardGame1.png",
+      "A simple weather application built with React, Next.js, and TypeScript that fetches real-time weather data using the OpenWeatherMap API. Users can search for cities across different countries and view current weather conditions, including temperature, humidity, and wind speed. The app demonstrates how to perform API GET requests, handle JSON responses, and display the results in a clean and responsive React UI. TypeScript was used throughout the project to define types and interfaces for the API responses, ensuring type safety. This project was developed to practice React + Next.js development, REST API integration, and responsive UI design.",
+    image: "/images/projects/weatherNextApp/WeatherNextApp1.png",
   },
+
+  // 📱 React Native (Cross-Platform) Projects
   {
-    projectName: "Random Card Game App (UIKit – Code-Based UI)",
+    projectName: "Movie App",
     description:
-      "A simple iOS card game built entirely with Swift, UIKit, and programmatic UI using Xcode. The app displays random card images from a deck in a continuous loop until the 'Stop' button is pressed, which then changes to 'Reset' to restart the cycle. A 'Rules' button provides the game’s instructions. All card assets are stored in the Assets catalog and displayed dynamically using UIImageView. The purpose of this project was to gain experience building interfaces purely in code without Storyboards, practicing UIKit components such as UIImageView and UIButton, and learning to handle dynamic image rendering and user interactions programmatically. This project serves as a direct comparison to the storyboard-based version, highlighting the advantages and challenges of code-based UI development.",
-    image: "/images/projects/randomCardGameCode/RandomCardGame1.png",
-  },
-  {
-    projectName: "Random Color Table App (UIKit)",
-    description:
-      "A simple iOS app built with Swift, UIKit, and Xcode that displays a list of dynamically generated random colors in a table view. Each cell shows a unique color, and tapping a cell navigates to a detail screen where the background color matches the selected cell. The app demonstrates the use of UITableView for rendering custom cells, navigation between view controllers, and passing data using segues. It also includes a UIColor extension for random color generation. The project was developed to practice UIKit fundamentals such as table views, navigation flows, and data passing between controllers.",
-    image: "/images/projects/randomColorTable/RandomColorTable1.png",
-  },
-  {
-    projectName: "Movie App (UIKit – VIPER Architecture)",
-    description:
-      "An iOS movie application built with Swift, UIKit, and Xcode, structured using the VIPER architecture for modularity and maintainability. The app fetches popular movies from an external API and displays them in a UITableView with custom cells showing images and titles. Selecting a movie navigates to a detailed view with the movie’s image and summary. The project is organized into two main modules—ListOfMovies and DetailMovie—each following the VIPER pattern (View, Interactor, Presenter, Entity, Router). This approach ensures clear separation of concerns, easy scalability, and maintainable code. The app demonstrates networking with REST APIs, navigation via a router, data mapping into ViewModels, and the use of custom UITableViewCells to present movie data dynamically.",
-    image: "/images/projects/viperMovieApp/ViperMovieApp1.png",
-  },
-  {
-    projectName: "Coffee Shop App (SwiftUI)",
-    description:
-      "A customizable coffee shop app built with SwiftUI, allowing users to personalize drinks and view their order history. The menu and customization options are loaded locally from a JSON file (menu.json), without the use of external APIs or backends. Users can create new custom drinks by selecting a base drink and adjusting size, caffeine shots, decaf option, milk, and syrup, while viewing estimated caffeine and calorie values. Once customized, drinks can be saved to the order history for future reference. The app demonstrates SwiftUI concepts such as state management, dynamic UI updates, multi-view navigation, and local JSON data handling.",
-    image: "/images/projects/coffeeApp/CoffeeApp1.png",
-  },
-  {
-    projectName: "Places Information App (SwiftUI)",
-    description:
-      "A simple iOS application built with SwiftUI that displays information about various places across three main sections: Discover, Map, and Tips. The Discover view shows static information about a place, the Map view displays multiple locations from a local JSON file with interactive pins that navigate to detailed views, and the Tips view provides helpful guidance loaded from another JSON file. The project demonstrates working with multi-view navigation, MapKit integration, and local JSON data parsing. It was developed to practice core SwiftUI concepts such as navigation, map integration, and dynamic data handling without relying on external APIs or backends.",
-    image: "/images/projects/placesInfoApp/PlacesInfoApp1.png",
-  },
-  {
-    projectName: "Simple Login Interface (Android – Java)",
-    description:
-      "A basic Android Studio application developed with Java to demonstrate a simple login interface and navigation between multiple screens. The app includes a hardcoded username and password ('test' / 'test') for login validation, with an option to save the credentials. After a successful login, users can navigate between three blank screens as a way to practice screen-to-screen navigation. This project does not include backend integration or a specific architecture, as its main purpose was to focus on frontend development, UI creation, and basic navigation in Android Studio.",
-    image: "/images/projects/androidLogin/AndroidLogin1.png",
-  },
-  {
-    projectName: "Weather App (SwiftUI – VIPER Architecture)",
-    description:
-      "A weather application built with SwiftUI and structured using the VIPER architecture. The app allows users to view current weather conditions and a 5-day forecast for a selected city by integrating with a free weather API. To handle API request limits, the app can switch to a local mode that loads static weather data from a JSON file (WeatherTest.json). The SwiftUI interface provides a responsive and modern design, while the VIPER architecture ensures clear separation of concerns, maintainability, and scalability. This project demonstrates the practical use of SwiftUI for UI design, API integration for real-time data, and VIPER for modular architecture in a real-world scenario.",
-    image: "/images/projects/weatherApp/WeatherApp1.png",
+      "A mobile movie application built with React Native, Expo Go, and TypeScript as a practice project to explore React Native. The app features a bottom navigation bar with sections for Home, Search, Saved, and Profile. The main functionality focuses on Home and Search, both integrated with TMDB APIs. The Search screen allows users to look up movies and displays results dynamically. Selecting a movie opens a detailed view showing overview, votes, genres, budget, revenue, and production companies, all fetched from TMDB. The app uses fetch with async/await promises for API requests and custom hooks for data management. Strongly typed interfaces were created to handle the API responses and ensure type safety throughout the project.",
+    image: "/images/projects/movieApp/AppMovie.png",
   },
   {
     projectName: "Favorite Places App",
@@ -308,5 +263,59 @@ export const projectsData: Project[] = [
     description:
       "A mobile menu application built with React Native, Expo Go, and JavaScript, created to practice navigation patterns and parameter passing in React Native. The app features category-based browsing with an 'All Categories' screen that lists available meal categories. Selecting a category displays a list of meals, and choosing a meal opens a detailed view showing its ingredients and preparation steps. Users can also mark meals as favorites, which are displayed in a dedicated 'Favorites' screen accessible via the drawer. The app combines stack and drawer navigation, demonstrates passing parameters (such as meal IDs) through routes, and uses context for managing favorite meals. It was developed primarily to gain experience with navigation flows, nested navigators, and route parameter handling.",
     image: "/images/projects/menuApp/MenuApp1.png",
+  },
+
+  // 🍏 iOS UIKit Projects
+  {
+    projectName: "Random Card Game App",
+    description:
+      "A simple iOS card game built with Swift, UIKit, and Storyboards using Xcode. The app continuously displays random card images from a deck until the user presses the 'Stop' button, which then changes to 'Reset' to restart the card rotation. A 'Rules' button provides the game’s instructions. Card assets are stored in the Assets catalog and displayed dynamically with UIImageView. The project was developed to practice storyboard-based UI creation, working with UIKit components such as UIImageView and UIButton, and managing dynamic images. It also served as a comparison between Storyboard-driven interfaces and code-based UI development, highlighting the advantages and limitations of each approach.",
+    image: "/images/projects/randomCardGame/RandomCardGame1.png",
+  },
+  {
+    projectName: "Random Card Game App (UIKit – Code-Based UI)",
+    description:
+      "A simple iOS card game built entirely with Swift, UIKit, and programmatic UI using Xcode. The app displays random card images from a deck in a continuous loop until the 'Stop' button is pressed, which then changes to 'Reset' to restart the cycle. A 'Rules' button provides the game’s instructions. All card assets are stored in the Assets catalog and displayed dynamically using UIImageView. The purpose of this project was to gain experience building interfaces purely in code without Storyboards, practicing UIKit components such as UIImageView and UIButton, and learning to handle dynamic image rendering and user interactions programmatically. This project serves as a direct comparison to the storyboard-based version, highlighting the advantages and challenges of code-based UI development.",
+    image: "/images/projects/randomCardGameCode/RandomCardGame1.png",
+  },
+  {
+    projectName: "Random Color Table App (UIKit)",
+    description:
+      "A simple iOS app built with Swift, UIKit, and Xcode that displays a list of dynamically generated random colors in a table view. Each cell shows a unique color, and tapping a cell navigates to a detail screen where the background color matches the selected cell. The app demonstrates the use of UITableView for rendering custom cells, navigation between view controllers, and passing data using segues. It also includes a UIColor extension for random color generation. The project was developed to practice UIKit fundamentals such as table views, navigation flows, and data passing between controllers.",
+    image: "/images/projects/randomColorTable/RandomColorTable1.png",
+  },
+  {
+    projectName: "Movie App (UIKit – VIPER Architecture)",
+    description:
+      "An iOS movie application built with Swift, UIKit, and Xcode, structured using the VIPER architecture for modularity and maintainability. The app fetches popular movies from an external API and displays them in a UITableView with custom cells showing images and titles. Selecting a movie navigates to a detailed view with the movie’s image and summary. The project is organized into two main modules—ListOfMovies and DetailMovie—each following the VIPER pattern (View, Interactor, Presenter, Entity, Router). This approach ensures clear separation of concerns, easy scalability, and maintainable code. The app demonstrates networking with REST APIs, navigation via a router, data mapping into ViewModels, and the use of custom UITableViewCells to present movie data dynamically.",
+    image: "/images/projects/viperMovieApp/ViperMovieApp1.png",
+  },
+
+  // 🍎 iOS SwiftUI Projects
+  {
+    projectName: "Coffee Shop App (SwiftUI)",
+    description:
+      "A customizable coffee shop app built with SwiftUI, allowing users to personalize drinks and view their order history. The menu and customization options are loaded locally from a JSON file (menu.json), without the use of external APIs or backends. Users can create new custom drinks by selecting a base drink and adjusting size, caffeine shots, decaf option, milk, and syrup, while viewing estimated caffeine and calorie values. Once customized, drinks can be saved to the order history for future reference. The app demonstrates SwiftUI concepts such as state management, dynamic UI updates, multi-view navigation, and local JSON data handling.",
+    image: "/images/projects/coffeeApp/CoffeeApp1.png",
+  },
+  {
+    projectName: "Places Information App (SwiftUI)",
+    description:
+      "A simple iOS application built with SwiftUI that displays information about various places across three main sections: Discover, Map, and Tips. The Discover view shows static information about a place, the Map view displays multiple locations from a local JSON file with interactive pins that navigate to detailed views, and the Tips view provides helpful guidance loaded from another JSON file. The project demonstrates working with multi-view navigation, MapKit integration, and local JSON data parsing. It was developed to practice core SwiftUI concepts such as navigation, map integration, and dynamic data handling without relying on external APIs or backends.",
+    image: "/images/projects/placesInfoApp/PlacesInfoApp1.png",
+  },
+  {
+    projectName: "Weather App (SwiftUI – VIPER Architecture)",
+    description:
+      "A weather application built with SwiftUI and structured using the VIPER architecture. The app allows users to view current weather conditions and a 5-day forecast for a selected city by integrating with a free weather API. To handle API request limits, the app can switch to a local mode that loads static weather data from a JSON file (WeatherTest.json). The SwiftUI interface provides a responsive and modern design, while the VIPER architecture ensures clear separation of concerns, maintainability, and scalability. This project demonstrates the practical use of SwiftUI for UI design, API integration for real-time data, and VIPER for modular architecture in a real-world scenario.",
+    image: "/images/projects/weatherApp/WeatherApp1.png",
+  },
+
+  // 🤖 Android Native Projects
+  {
+    projectName: "Simple Login Interface (Android – Java)",
+    description:
+      "A basic Android Studio application developed with Java to demonstrate a simple login interface and navigation between multiple screens. The app includes a hardcoded username and password ('test' / 'test') for login validation, with an option to save the credentials. After a successful login, users can navigate between three blank screens as a way to practice screen-to-screen navigation. This project does not include backend integration or a specific architecture, as its main purpose was to focus on frontend development, UI creation, and basic navigation in Android Studio.",
+    image: "/images/projects/androidLogin/AndroidLogin1.png",
   },
 ];
