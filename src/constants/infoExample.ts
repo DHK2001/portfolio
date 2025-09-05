@@ -249,4 +249,11 @@ export const projectsData: Project[] = [
       "A small mobile game built with React Native, Expo Go, and JavaScript. At the start of the app, a random number is generated, and the player must guess it by entering numbers until the correct one is found. Each attempt is logged in a list showing the guessed numbers and the current round. The game provides hints with 'Lower' or 'Higher' feedback until the random number is guessed. Once completed, the app displays the correct number and the total number of rounds it took. Compared to other projects, this one is more visually engaging, featuring a background image with a gradient overlay for a more polished look.",
     image: "/images/projects/miniGameApp/MiniGame1.png",
   },
+  {
+    projectName: "Meals App",
+    description:
+      "A mobile menu application built with React Native, Expo Go, and JavaScript, created to practice navigation patterns and parameter passing in React Native. The app features category-based browsing with an 'All Categories' screen that lists available meal categories. Selecting a category displays a list of meals, and choosing a meal opens a detailed view showing its ingredients and preparation steps. Users can also mark meals as favorites, which are displayed in a dedicated 'Favorites' screen accessible via the drawer. The app combines stack and drawer navigation, demonstrates passing parameters (such as meal IDs) through routes, and uses context for managing favorite meals. It was developed primarily to gain experience with navigation flows, nested navigators, and route parameter handling.",
+    image: "/images/projects/menuApp/menuApp1.png",
+  }
+  
 ];
