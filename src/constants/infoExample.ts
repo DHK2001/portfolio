@@ -219,4 +219,10 @@ export const projectsData: Project[] = [
       "A mobile movie application built with React Native, Expo Go, and TypeScript as a practice project to explore React Native. The app features a bottom navigation bar with sections for Home, Search, Saved, and Profile. The main functionality focuses on Home and Search, both integrated with TMDB APIs. The Search screen allows users to look up movies and displays results dynamically. Selecting a movie opens a detailed view showing overview, votes, genres, budget, revenue, and production companies, all fetched from TMDB. The app uses fetch with async/await promises for API requests and custom hooks for data management. Strongly typed interfaces were created to handle the API responses and ensure type safety throughout the project.",
     image: "/images/projects/movieApp/AppMovie.png",
   },
+  {
+    projectName: "Portfolio Website 2",
+    description:
+      "A second personal portfolio website built with Next.js and TypeScript as a simpler, more formal design tailored for a biomedical theme. Unlike the first portfolio, this version does not include an App Router or dark/light theme toggle. Navigation is handled through smooth scroll linking within a single-page layout. Each section features subtle animations using Framer Motion, and additional sections like Testimonials and Certificates are included. This project was created as practice to explore alternative approaches to portfolio design by building a single-page scroll-based site. The live version is deployed at https://portfolio-2-indol-seven.vercel.app/#home.",
+    image: "/images/projects/portfolio2/portfolio1.png",
+  },
 ];
