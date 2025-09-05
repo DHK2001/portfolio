@@ -226,6 +226,24 @@ export const projectsData: Project[] = [
     image: "/images/projects/portfolio2/portfolio1.png",
   },
   {
+    projectName: "Random Card Game App",
+    description:
+      "A simple iOS card game built with Swift, UIKit, and Storyboards using Xcode. The app continuously displays random card images from a deck until the user presses the 'Stop' button, which then changes to 'Reset' to restart the card rotation. A 'Rules' button provides the game’s instructions. Card assets are stored in the Assets catalog and displayed dynamically with UIImageView. The project was developed to practice storyboard-based UI creation, working with UIKit components such as UIImageView and UIButton, and managing dynamic images. It also served as a comparison between Storyboard-driven interfaces and code-based UI development, highlighting the advantages and limitations of each approach.",
+    image: "/images/projects/randomCardGame/RandomCardGame1.png",
+  },
+  {
+    projectName: "Random Card Game App (UIKit – Code-Based UI)",
+    description:
+      "A simple iOS card game built entirely with Swift, UIKit, and programmatic UI using Xcode. The app displays random card images from a deck in a continuous loop until the 'Stop' button is pressed, which then changes to 'Reset' to restart the cycle. A 'Rules' button provides the game’s instructions. All card assets are stored in the Assets catalog and displayed dynamically using UIImageView. The purpose of this project was to gain experience building interfaces purely in code without Storyboards, practicing UIKit components such as UIImageView and UIButton, and learning to handle dynamic image rendering and user interactions programmatically. This project serves as a direct comparison to the storyboard-based version, highlighting the advantages and challenges of code-based UI development.",
+    image: "/images/projects/randomCardGameCode/RandomCardGame1.png",
+  },
+  {
+    projectName: "Random Color Table App (UIKit)",
+    description:
+      "A simple iOS app built with Swift, UIKit, and Xcode that displays a list of dynamically generated random colors in a table view. Each cell shows a unique color, and tapping a cell navigates to a detail screen where the background color matches the selected cell. The app demonstrates the use of UITableView for rendering custom cells, navigation between view controllers, and passing data using segues. It also includes a UIColor extension for random color generation. The project was developed to practice UIKit fundamentals such as table views, navigation flows, and data passing between controllers.",
+    image: "/images/projects/randomColorTable/RandomColorTable1.png",
+  },
+  {
     projectName: "Favorite Places App",
     description:
       "A simple mobile application built with React Native, Expo Go, and JavaScript, created to practice the essentials of React Native and native device features. The app allows users to add favorite places by tapping the + icon, which opens a form to enter a title, capture a photo, and set a location. It integrates native mobile capabilities such as camera access for taking photos and geolocation. For location services, the app uses the free LocationIQ API to retrieve the user’s address when choosing 'Use Location,' or alternatively, users can pick a spot on a map with a live preview. Once saved, the place is added to the favorites list and displayed on the home screen. While small and simple in design, this project served as practice for working with native features like camera and location handling in both Android and iOS.",
@@ -253,7 +271,6 @@ export const projectsData: Project[] = [
     projectName: "Meals App",
     description:
       "A mobile menu application built with React Native, Expo Go, and JavaScript, created to practice navigation patterns and parameter passing in React Native. The app features category-based browsing with an 'All Categories' screen that lists available meal categories. Selecting a category displays a list of meals, and choosing a meal opens a detailed view showing its ingredients and preparation steps. Users can also mark meals as favorites, which are displayed in a dedicated 'Favorites' screen accessible via the drawer. The app combines stack and drawer navigation, demonstrates passing parameters (such as meal IDs) through routes, and uses context for managing favorite meals. It was developed primarily to gain experience with navigation flows, nested navigators, and route parameter handling.",
-    image: "/images/projects/menuApp/menuApp1.png",
-  }
-  
+    image: "/images/projects/menuApp/MenuApp1.png",
+  },
 ];
