@@ -237,4 +237,10 @@ export const projectsData: Project[] = [
       "A simple mobile application built with React Native, Expo Go, and JavaScript, designed to practice API integrations and database operations. The app features two main screens: 'Recent Expenses,' which displays expenses from the last 7 days, and 'All Expenses,' which lists all entries. Users can add new expenses via the + icon, entering a title, date, and description. Existing expenses can be selected to edit or delete. Data is displayed using FlatList for efficient rendering. The backend is powered by Firebase Realtime Database, allowing full CRUD functionality (GET, POST, PUT, DELETE) to add, update, and remove expense records. This project was created to gain hands-on experience working with remote databases and implementing CRUD operations in a mobile environment.",
     image: "/images/projects/expenseTracker/expenseTracker1.png",
   },
+  {
+    projectName: "Goals App",
+    description:
+      "A very simple mobile application built with React Native, Expo Go, and JavaScript as an introductory practice project. The app allows users to manage personal goals by tapping 'Add New Goal,' which opens a form to enter a goal description. Users can then add the goal to the list or cancel the action. Added goals are displayed in a scrollable list, providing a basic but effective exercise in working with user input, state management, and list rendering in React Native.",
+    image: "/images/projects/goalsApp/GoalsApp1.png",
+  },
 ];
