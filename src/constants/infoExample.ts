@@ -243,4 +243,10 @@ export const projectsData: Project[] = [
       "A very simple mobile application built with React Native, Expo Go, and JavaScript as an introductory practice project. The app allows users to manage personal goals by tapping 'Add New Goal,' which opens a form to enter a goal description. Users can then add the goal to the list or cancel the action. Added goals are displayed in a scrollable list, providing a basic but effective exercise in working with user input, state management, and list rendering in React Native.",
     image: "/images/projects/goalsApp/GoalsApp1.png",
   },
+  {
+    projectName: "Mini Game App",
+    description:
+      "A small mobile game built with React Native, Expo Go, and JavaScript. At the start of the app, a random number is generated, and the player must guess it by entering numbers until the correct one is found. Each attempt is logged in a list showing the guessed numbers and the current round. The game provides hints with 'Lower' or 'Higher' feedback until the random number is guessed. Once completed, the app displays the correct number and the total number of rounds it took. Compared to other projects, this one is more visually engaging, featuring a background image with a gradient overlay for a more polished look.",
+    image: "/images/projects/miniGameApp/MiniGame1.png",
+  },
 ];
