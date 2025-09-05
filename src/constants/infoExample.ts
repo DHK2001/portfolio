@@ -230,5 +230,11 @@ export const projectsData: Project[] = [
     description:
       "A simple mobile application built with React Native, Expo Go, and JavaScript, created to practice the essentials of React Native and native device features. The app allows users to add favorite places by tapping the + icon, which opens a form to enter a title, capture a photo, and set a location. It integrates native mobile capabilities such as camera access for taking photos and geolocation. For location services, the app uses the free LocationIQ API to retrieve the user’s address when choosing 'Use Location,' or alternatively, users can pick a spot on a map with a live preview. Once saved, the place is added to the favorites list and displayed on the home screen. While small and simple in design, this project served as practice for working with native features like camera and location handling in both Android and iOS.",
     image: "/images/projects/FavoritePlacesApp/FavoritePlaces1.png",
-  }
+  },
+  {
+    projectName: "Expense Tracker App",
+    description:
+      "A simple mobile application built with React Native, Expo Go, and JavaScript, designed to practice API integrations and database operations. The app features two main screens: 'Recent Expenses,' which displays expenses from the last 7 days, and 'All Expenses,' which lists all entries. Users can add new expenses via the + icon, entering a title, date, and description. Existing expenses can be selected to edit or delete. Data is displayed using FlatList for efficient rendering. The backend is powered by Firebase Realtime Database, allowing full CRUD functionality (GET, POST, PUT, DELETE) to add, update, and remove expense records. This project was created to gain hands-on experience working with remote databases and implementing CRUD operations in a mobile environment.",
+    image: "/images/projects/expenseTracker/expenseTracker1.png",
+  },
 ];
