@@ -244,6 +244,36 @@ export const projectsData: Project[] = [
     image: "/images/projects/randomColorTable/RandomColorTable1.png",
   },
   {
+    projectName: "Movie App (UIKit – VIPER Architecture)",
+    description:
+      "An iOS movie application built with Swift, UIKit, and Xcode, structured using the VIPER architecture for modularity and maintainability. The app fetches popular movies from an external API and displays them in a UITableView with custom cells showing images and titles. Selecting a movie navigates to a detailed view with the movie’s image and summary. The project is organized into two main modules—ListOfMovies and DetailMovie—each following the VIPER pattern (View, Interactor, Presenter, Entity, Router). This approach ensures clear separation of concerns, easy scalability, and maintainable code. The app demonstrates networking with REST APIs, navigation via a router, data mapping into ViewModels, and the use of custom UITableViewCells to present movie data dynamically.",
+    image: "/images/projects/viperMovieApp/ViperMovieApp1.png",
+  },
+  {
+    projectName: "Coffee Shop App (SwiftUI)",
+    description:
+      "A customizable coffee shop app built with SwiftUI, allowing users to personalize drinks and view their order history. The menu and customization options are loaded locally from a JSON file (menu.json), without the use of external APIs or backends. Users can create new custom drinks by selecting a base drink and adjusting size, caffeine shots, decaf option, milk, and syrup, while viewing estimated caffeine and calorie values. Once customized, drinks can be saved to the order history for future reference. The app demonstrates SwiftUI concepts such as state management, dynamic UI updates, multi-view navigation, and local JSON data handling.",
+    image: "/images/projects/coffeeApp/CoffeeApp1.png",
+  },
+  {
+    projectName: "Places Information App (SwiftUI)",
+    description:
+      "A simple iOS application built with SwiftUI that displays information about various places across three main sections: Discover, Map, and Tips. The Discover view shows static information about a place, the Map view displays multiple locations from a local JSON file with interactive pins that navigate to detailed views, and the Tips view provides helpful guidance loaded from another JSON file. The project demonstrates working with multi-view navigation, MapKit integration, and local JSON data parsing. It was developed to practice core SwiftUI concepts such as navigation, map integration, and dynamic data handling without relying on external APIs or backends.",
+    image: "/images/projects/placesInfoApp/PlacesInfoApp1.png",
+  },
+  {
+    projectName: "Simple Login Interface (Android – Java)",
+    description:
+      "A basic Android Studio application developed with Java to demonstrate a simple login interface and navigation between multiple screens. The app includes a hardcoded username and password ('test' / 'test') for login validation, with an option to save the credentials. After a successful login, users can navigate between three blank screens as a way to practice screen-to-screen navigation. This project does not include backend integration or a specific architecture, as its main purpose was to focus on frontend development, UI creation, and basic navigation in Android Studio.",
+    image: "/images/projects/androidLogin/AndroidLogin1.png",
+  },
+  {
+    projectName: "Weather App (SwiftUI – VIPER Architecture)",
+    description:
+      "A weather application built with SwiftUI and structured using the VIPER architecture. The app allows users to view current weather conditions and a 5-day forecast for a selected city by integrating with a free weather API. To handle API request limits, the app can switch to a local mode that loads static weather data from a JSON file (WeatherTest.json). The SwiftUI interface provides a responsive and modern design, while the VIPER architecture ensures clear separation of concerns, maintainability, and scalability. This project demonstrates the practical use of SwiftUI for UI design, API integration for real-time data, and VIPER for modular architecture in a real-world scenario.",
+    image: "/images/projects/weatherApp/WeatherApp1.png",
+  },
+  {
     projectName: "Favorite Places App",
     description:
       "A simple mobile application built with React Native, Expo Go, and JavaScript, created to practice the essentials of React Native and native device features. The app allows users to add favorite places by tapping the + icon, which opens a form to enter a title, capture a photo, and set a location. It integrates native mobile capabilities such as camera access for taking photos and geolocation. For location services, the app uses the free LocationIQ API to retrieve the user’s address when choosing 'Use Location,' or alternatively, users can pick a spot on a map with a live preview. Once saved, the place is added to the favorites list and displayed on the home screen. While small and simple in design, this project served as practice for working with native features like camera and location handling in both Android and iOS.",
