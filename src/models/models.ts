@@ -19,7 +19,7 @@ export interface Profile {
 export interface Project {
   projectName: string;
   description: string;
-  image: string;
+  image: string[];
 }
 
 export interface Certificate {
