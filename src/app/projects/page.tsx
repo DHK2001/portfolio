@@ -47,7 +47,6 @@ export default function Projects() {
                 hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2`}
               >
                 <div className="w-full md:w-1/2 h-64 relative">
-                  {/* Loader mientras carga */}
                   {!loaded && (
                     <div className="absolute inset-0 flex items-center justify-center bg-[var(--bg)] rounded-lg animate-pulse">
                       <div className="h-10 w-10 border-4 border-[var(--primary)] border-t-transparent rounded-full animate-spin" />
@@ -61,7 +60,7 @@ export default function Projects() {
                     className={`object-contain rounded-lg transition-opacity duration-500 ${
                       loaded ? "opacity-100" : "opacity-0"
                     }`}
-                    priority={index < 2} // 👈 ayuda a cargar rápido las primeras
+                    priority={index < 2}
                     onLoadingComplete={() => setLoaded(true)}
                   />
                 </div>
