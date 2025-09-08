@@ -58,12 +58,12 @@ const ImageProjectsDisplay = ({
         )}
       </div>
       <div className="mt-4 text-center px-2">
-        <p className="text-[color:var(--primary-text)] font-semibold text-sm sm:text-base md:text-lg">
+        <p className="text-[color:var(--button-text)] font-semibold text-sm sm:text-base md:text-lg">
           {name}
         </p>
 
         {imageUrl.length > 1 && (
-          <p className="text-[color:var(--secondary-text)] text-xs mt-2">
+          <p className="text-[color:var(--button-text)] text-xs mt-2">
             {current + 1} / {imageUrl.length}
           </p>
         )}
