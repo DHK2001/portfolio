@@ -20,7 +20,7 @@ const IconButton = ({ icon, onClick, disabled }: Props) => {
         icon={icon}
         size="xl"
         color="var(--icon)"
-        className="h-6 w-6"
+        className="h-6 w-6 text-xl"
       />
     </button>
   );
