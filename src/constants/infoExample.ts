@@ -256,9 +256,9 @@ export const projectsData: Project[] = [
     description:
       "A simple mobile application built with React Native, Expo Go, and JavaScript, created to practice the essentials of React Native and native device features. The app allows users to add favorite places by tapping the + icon, which opens a form to enter a title, capture a photo, and set a location. It integrates native mobile capabilities such as camera access for taking photos and geolocation. For location services, the app uses the free LocationIQ API to retrieve the user’s address when choosing 'Use Location,' or alternatively, users can pick a spot on a map with a live preview. Once saved, the place is added to the favorites list and displayed on the home screen. While small and simple in design, this project served as practice for working with native features like camera and location handling in both Android and iOS.",
     image: [
-      "/images/projects/FavoritePlacesApp/home.png",
-      "/images/projects/FavoritePlacesApp/add.png",
-      "/images/projects/FavoritePlacesApp/map.png",
+      "/images/projects/favoritePlacesApp/home.png",
+      "/images/projects/favoritePlacesApp/add.png",
+      "/images/projects/favoritePlacesApp/map.png",
     ],
   },
   {
