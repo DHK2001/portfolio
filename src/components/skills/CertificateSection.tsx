@@ -21,7 +21,7 @@ const CertificateSection = () => {
 
   const currentCert = certificates[current];
 
-  function handleCloseDisplay () {
+  function handleCloseDisplay() {
     setOpenDisplay(false);
   }
 
@@ -54,7 +54,7 @@ const CertificateSection = () => {
         {certificates.length > 1 && (
           <button
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-90"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-80 cursor-pointer"
           >
             <FontAwesomeIcon icon={faArrowLeft} className="h-4 w-4" />
           </button>
@@ -63,7 +63,7 @@ const CertificateSection = () => {
         {certificates.length > 1 && (
           <button
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-90"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-80 cursor-pointer"
           >
             <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4" />
           </button>

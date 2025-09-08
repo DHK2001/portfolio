@@ -1,6 +1,6 @@
 "use client";
 
-import ImageProjectsDisplay from "@/components/projects/imageProjectsDisplay";
+import ImageProjectsDisplay from "@/components/projects/ImageProjectsDisplay";
 import Title from "@/components/Title";
 import { projectsData } from "@/constants/infoExample";
 import { Project } from "@/models/models";
