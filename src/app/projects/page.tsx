@@ -69,7 +69,7 @@ export default function Projects() {
                   <h3 className="text-xl font-bold text-[var(--primary)]">
                     {project.projectName}
                   </h3>
-                  <p className="text-base">{project.description}</p>
+                  <p className="text-base whitespace-pre-line">{project.description}</p>
                 </div>
               </div>
             </div>
