@@ -212,20 +212,20 @@ export const projectsData: Project[] = [
     projectName: "Portfolio Website",
     description:
       "A personal portfolio website built with Next.js (App Router) and TypeScript. Styled with TailwindCSS and featuring a global layout, responsive design, and a custom light/dark theme toggle. Includes smooth hover transitions for interactive elements, project showcase, and certificate viewer. Designed as my professional developer portfolio to highlight skills, experience, and projects.",
-    image: ["/images/projects/portfolio/portfolioHome.png"],
+    image: ["/images/projects/portfolio/home.png"],
   },
   {
     projectName: "Portfolio Website 2",
     description:
       "A second personal portfolio website built with Next.js and TypeScript as a simpler, more formal design tailored for a biomedical theme. Unlike the first portfolio, this version does not include an App Router or dark/light theme toggle. Navigation is handled through smooth scroll linking within a single-page layout. Each section features subtle animations using Framer Motion, and additional sections like Testimonials and Certificates are included. This project was created as practice to explore alternative approaches to portfolio design by building a single-page scroll-based site. The live version is deployed at https://portfolio-2-indol-seven.vercel.app/#home.",
     image: [
-      "/images/projects/portfolio2/portfolio1.png",
-      "/images/projects/portfolio2/portfolio2.png",
-      "/images/projects/portfolio2/portfolio3.png",
-      "/images/projects/portfolio2/portfolio4.png",
-      "/images/projects/portfolio2/portfolio5.png",
-      "/images/projects/portfolio2/portfolio6.png",
-      "/images/projects/portfolio2/portfolio7.png",
+      "/images/projects/portfolio2/home.png",
+      "/images/projects/portfolio2/about.png",
+      "/images/projects/portfolio2/experience.png",
+      "/images/projects/portfolio2/portfolio.png",
+      "/images/projects/portfolio2/testimonials.png",
+      "/images/projects/portfolio2/certificates.png",
+      "/images/projects/portfolio2/contact.png",
     ],
   },
   {
@@ -233,10 +233,10 @@ export const projectsData: Project[] = [
     description:
       "A simple weather application built with React, Next.js, and TypeScript that fetches real-time weather data using the OpenWeatherMap API. Users can search for cities across different countries and view current weather conditions, including temperature, humidity, and wind speed. The app demonstrates how to perform API GET requests, handle JSON responses, and display the results in a clean and responsive React UI. TypeScript was used throughout the project to define types and interfaces for the API responses, ensuring type safety. This project was developed to practice React + Next.js development, REST API integration, and responsive UI design.",
     image: [
-      "/images/projects/weatherNextApp/WeatherNextApp1.png",
-      "/images/projects/weatherNextApp/WeatherNextApp2.png",
-      "/images/projects/weatherNextApp/WeatherNextApp3.png",
-      "/images/projects/weatherNextApp/WeatherNextApp4.png",
+      "/images/projects/weatherNextApp/nyf.png",
+      "/images/projects/weatherNextApp/nyc.png",
+      "/images/projects/weatherNextApp/list.png",
+      "/images/projects/weatherNextApp/hours.png",
     ],
   },
 
@@ -246,9 +246,9 @@ export const projectsData: Project[] = [
     description:
       "A mobile movie application built with React Native, Expo Go, and TypeScript as a practice project to explore React Native. The app features a bottom navigation bar with sections for Home, Search, Saved, and Profile. The main functionality focuses on Home and Search, both integrated with TMDB APIs. The Search screen allows users to look up movies and displays results dynamically. Selecting a movie opens a detailed view showing overview, votes, genres, budget, revenue, and production companies, all fetched from TMDB. The app uses fetch with async/await promises for API requests and custom hooks for data management. Strongly typed interfaces were created to handle the API responses and ensure type safety throughout the project.",
     image: [
-      "/images/projects/movieApp/AppMovie.png",
-      "/images/projects/movieApp/AppMovieSearch.png",
-      "/images/projects/movieApp/MovieDetails.png",
+      "/images/projects/movieApp/home.png",
+      "/images/projects/movieApp/search.png",
+      "/images/projects/movieApp/details.png",
     ],
   },
   {
@@ -256,9 +256,9 @@ export const projectsData: Project[] = [
     description:
       "A simple mobile application built with React Native, Expo Go, and JavaScript, created to practice the essentials of React Native and native device features. The app allows users to add favorite places by tapping the + icon, which opens a form to enter a title, capture a photo, and set a location. It integrates native mobile capabilities such as camera access for taking photos and geolocation. For location services, the app uses the free LocationIQ API to retrieve the user’s address when choosing 'Use Location,' or alternatively, users can pick a spot on a map with a live preview. Once saved, the place is added to the favorites list and displayed on the home screen. While small and simple in design, this project served as practice for working with native features like camera and location handling in both Android and iOS.",
     image: [
-      "/images/projects/FavoritePlacesApp/FavoritePlaces1.png",
-      "/images/projects/FavoritePlacesApp/FavoritePlaces2.png",
-      "/images/projects/FavoritePlacesApp/FavoritePlaces3.png",
+      "/images/projects/FavoritePlacesApp/home.png",
+      "/images/projects/FavoritePlacesApp/add.png",
+      "/images/projects/FavoritePlacesApp/map.png",
     ],
   },
   {
@@ -266,10 +266,10 @@ export const projectsData: Project[] = [
     description:
       "A simple mobile application built with React Native, Expo Go, and JavaScript, designed to practice API integrations and database operations. The app features two main screens: 'Recent Expenses,' which displays expenses from the last 7 days, and 'All Expenses,' which lists all entries. Users can add new expenses via the + icon, entering a title, date, and description. Existing expenses can be selected to edit or delete. Data is displayed using FlatList for efficient rendering. The backend is powered by Firebase Realtime Database, allowing full CRUD functionality (GET, POST, PUT, DELETE) to add, update, and remove expense records. This project was created to gain hands-on experience working with remote databases and implementing CRUD operations in a mobile environment.",
     image: [
-      "/images/projects/expenseTracker/ExpenseTracker1.png",
-      "/images/projects/expenseTracker/ExpenseTracker2.png",
-      "/images/projects/expenseTracker/ExpenseTracker3.png",
-      "/images/projects/expenseTracker/ExpenseTracker4.png",
+      "/images/projects/expenseTracker/recent.png",
+      "/images/projects/expenseTracker/all.png",
+      "/images/projects/expenseTracker/add.png",
+      "/images/projects/expenseTracker/edit.png",
     ],
   },
   {
@@ -277,8 +277,8 @@ export const projectsData: Project[] = [
     description:
       "A very simple mobile application built with React Native, Expo Go, and JavaScript as an introductory practice project. The app allows users to manage personal goals by tapping 'Add New Goal,' which opens a form to enter a goal description. Users can then add the goal to the list or cancel the action. Added goals are displayed in a scrollable list, providing a basic but effective exercise in working with user input, state management, and list rendering in React Native.",
     image: [
-      "/images/projects/goalsApp/GoalsApp1.png",
-      "/images/projects/goalsApp/GoalsApp2.png",
+      "/images/projects/goalsApp/all.png",
+      "/images/projects/goalsApp/add.png",
     ],
   },
   {
@@ -286,9 +286,9 @@ export const projectsData: Project[] = [
     description:
       "A small mobile game built with React Native, Expo Go, and JavaScript. At the start of the app, a random number is generated, and the player must guess it by entering numbers until the correct one is found. Each attempt is logged in a list showing the guessed numbers and the current round. The game provides hints with 'Lower' or 'Higher' feedback until the random number is guessed. Once completed, the app displays the correct number and the total number of rounds it took. Compared to other projects, this one is more visually engaging, featuring a background image with a gradient overlay for a more polished look.",
     image: [
-      "/images/projects/miniGameApp/MiniGame1.png",
-      "/images/projects/miniGameApp/MiniGame2.png",
-      "/images/projects/miniGameApp/MiniGame3.png",
+      "/images/projects/miniGameApp/start.png",
+      "/images/projects/miniGameApp/guess.png",
+      "/images/projects/miniGameApp/end.png",
     ],
   },
   {
@@ -296,10 +296,10 @@ export const projectsData: Project[] = [
     description:
       "A mobile menu application built with React Native, Expo Go, and JavaScript, created to practice navigation patterns and parameter passing in React Native. The app features category-based browsing with an 'All Categories' screen that lists available meal categories. Selecting a category displays a list of meals, and choosing a meal opens a detailed view showing its ingredients and preparation steps. Users can also mark meals as favorites, which are displayed in a dedicated 'Favorites' screen accessible via the drawer. The app combines stack and drawer navigation, demonstrates passing parameters (such as meal IDs) through routes, and uses context for managing favorite meals. It was developed primarily to gain experience with navigation flows, nested navigators, and route parameter handling.",
     image: [
-      "/images/projects/menuApp/MenuApp1.png",
-      "/images/projects/menuApp/MenuApp2.png",
-      "/images/projects/menuApp/MenuApp3.png",
-      "/images/projects/menuApp/MenuApp4.png",
+      "/images/projects/menuApp/all.png",
+      "/images/projects/menuApp/details.png",
+      "/images/projects/menuApp/favorites.png",
+      "/images/projects/menuApp/list.png",
     ],
   },
 
@@ -309,8 +309,8 @@ export const projectsData: Project[] = [
     description:
       "A simple iOS card game built with Swift, UIKit, and Storyboards using Xcode. The app continuously displays random card images from a deck until the user presses the 'Stop' button, which then changes to 'Reset' to restart the card rotation. A 'Rules' button provides the game’s instructions. Card assets are stored in the Assets catalog and displayed dynamically with UIImageView. The project was developed to practice storyboard-based UI creation, working with UIKit components such as UIImageView and UIButton, and managing dynamic images. It also served as a comparison between Storyboard-driven interfaces and code-based UI development, highlighting the advantages and limitations of each approach.",
     image: [
-      "/images/projects/randomCardGame/RandomCardGame1.png",
-      "/images/projects/randomCardGame/RandomCardGame2.png",
+      "/images/projects/randomCardGame/home.png",
+      "/images/projects/randomCardGame/rules.png",
     ],
   },
   {
@@ -318,8 +318,8 @@ export const projectsData: Project[] = [
     description:
       "A simple iOS card game built entirely with Swift, UIKit, and programmatic UI using Xcode. The app displays random card images from a deck in a continuous loop until the 'Stop' button is pressed, which then changes to 'Reset' to restart the cycle. A 'Rules' button provides the game’s instructions. All card assets are stored in the Assets catalog and displayed dynamically using UIImageView. The purpose of this project was to gain experience building interfaces purely in code without Storyboards, practicing UIKit components such as UIImageView and UIButton, and learning to handle dynamic image rendering and user interactions programmatically. This project serves as a direct comparison to the storyboard-based version, highlighting the advantages and challenges of code-based UI development.",
     image: [
-      "/images/projects/randomCardGameCode/RandomCardGame1.png",
-      "/images/projects/randomCardGameCode/RandomCardGame2.png",
+      "/images/projects/randomCardGameCode/home.png",
+      "/images/projects/randomCardGameCode/rules.png",
     ],
   },
   {
@@ -327,8 +327,8 @@ export const projectsData: Project[] = [
     description:
       "A simple iOS app built with Swift, UIKit, and Xcode that displays a list of dynamically generated random colors in a table view. Each cell shows a unique color, and tapping a cell navigates to a detail screen where the background color matches the selected cell. The app demonstrates the use of UITableView for rendering custom cells, navigation between view controllers, and passing data using segues. It also includes a UIColor extension for random color generation. The project was developed to practice UIKit fundamentals such as table views, navigation flows, and data passing between controllers.",
     image: [
-      "/images/projects/randomColorTable/RandomColorTable1.png",
-      "/images/projects/randomColorTable/RandomColorTable2.png",
+      "/images/projects/randomColorTable/colors.png",
+      "/images/projects/randomColorTable/color.png",
     ],
   },
   {
@@ -336,8 +336,8 @@ export const projectsData: Project[] = [
     description:
       "An iOS movie application built with Swift, UIKit, and Xcode, structured using the VIPER architecture for modularity and maintainability. The app fetches popular movies from an external API and displays them in a UITableView with custom cells showing images and titles. Selecting a movie navigates to a detailed view with the movie’s image and summary. The project is organized into two main modules—ListOfMovies and DetailMovie—each following the VIPER pattern (View, Interactor, Presenter, Entity, Router). This approach ensures clear separation of concerns, easy scalability, and maintainable code. The app demonstrates networking with REST APIs, navigation via a router, data mapping into ViewModels, and the use of custom UITableViewCells to present movie data dynamically.",
     image: [
-      "/images/projects/viperMovieApp/ViperMovieApp1.png",
-      "/images/projects/viperMovieApp/ViperMovieApp2.png",
+      "/images/projects/viperMovieApp/all.png",
+      "/images/projects/viperMovieApp/details.png",
     ],
   },
 
@@ -347,10 +347,10 @@ export const projectsData: Project[] = [
     description:
       "A customizable coffee shop app built with SwiftUI, allowing users to personalize drinks and view their order history. The menu and customization options are loaded locally from a JSON file (menu.json), without the use of external APIs or backends. Users can create new custom drinks by selecting a base drink and adjusting size, caffeine shots, decaf option, milk, and syrup, while viewing estimated caffeine and calorie values. Once customized, drinks can be saved to the order history for future reference. The app demonstrates SwiftUI concepts such as state management, dynamic UI updates, multi-view navigation, and local JSON data handling.",
     image: [
-      "/images/projects/coffeeApp/CoffeeApp1.png",
-      "/images/projects/coffeeApp/CoffeeApp2.png",
-      "/images/projects/coffeeApp/CoffeeApp3.png",
-      "/images/projects/coffeeApp/CoffeeApp4.png",
+      "/images/projects/coffeeApp/home.png",
+      "/images/projects/coffeeApp/drinks.png",
+      "/images/projects/coffeeApp/add.png",
+      "/images/projects/coffeeApp/details.png",
     ],
   },
   {
@@ -358,11 +358,11 @@ export const projectsData: Project[] = [
     description:
       "A simple iOS application built with SwiftUI that displays information about various places across three main sections: Discover, Map, and Tips. The Discover view shows static information about a place, the Map view displays multiple locations from a local JSON file with interactive pins that navigate to detailed views, and the Tips view provides helpful guidance loaded from another JSON file. The project demonstrates working with multi-view navigation, MapKit integration, and local JSON data parsing. It was developed to practice core SwiftUI concepts such as navigation, map integration, and dynamic data handling without relying on external APIs or backends.",
     image: [
-      "/images/projects/placesInfoApp/PlacesInfoApp1.png",
-      "/images/projects/placesInfoApp/PlacesInfoApp2.png",
-      "/images/projects/placesInfoApp/PlacesInfoApp3.png",
-      "/images/projects/placesInfoApp/PlacesInfoApp4.png",
-      "/images/projects/placesInfoApp/PlacesInfoApp5.png",
+      "/images/projects/placesInfoApp/discover.png",
+      "/images/projects/placesInfoApp/locations.png",
+      "/images/projects/placesInfoApp/details.png",
+      "/images/projects/placesInfoApp/tips.png",
+      "/images/projects/placesInfoApp/info.png",
     ],
   },
   {
@@ -370,10 +370,10 @@ export const projectsData: Project[] = [
     description:
       "A weather application built with SwiftUI and structured using the VIPER architecture. The app allows users to view current weather conditions and a 5-day forecast for a selected city by integrating with a free weather API. To handle API request limits, the app can switch to a local mode that loads static weather data from a JSON file (WeatherTest.json). The SwiftUI interface provides a responsive and modern design, while the VIPER architecture ensures clear separation of concerns, maintainability, and scalability. This project demonstrates the practical use of SwiftUI for UI design, API integration for real-time data, and VIPER for modular architecture in a real-world scenario.",
     image: [
-      "/images/projects/weatherApp/WeatherApp1.png",
-      "/images/projects/weatherApp/WeatherApp2.png",
-      "/images/projects/weatherApp/WeatherApp3.png",
-      "/images/projects/weatherApp/WeatherApp4.png",
+      "/images/projects/weatherApp/ny.png",
+      "/images/projects/weatherApp/list.png",
+      "/images/projects/weatherApp/ak.png",
+      "/images/projects/weatherApp/ca.png",
     ],
   },
 
@@ -383,10 +383,10 @@ export const projectsData: Project[] = [
     description:
       "A basic Android Studio application developed with Java to demonstrate a simple login interface and navigation between multiple screens. The app includes a hardcoded username and password ('test' / 'test') for login validation, with an option to save the credentials. After a successful login, users can navigate between three blank screens as a way to practice screen-to-screen navigation. This project does not include backend integration or a specific architecture, as its main purpose was to focus on frontend development, UI creation, and basic navigation in Android Studio.",
     image: [
-      "/images/projects/androidLogin/AndroidLogin1.png",
-      "/images/projects/androidLogin/AndroidLogin2.png",
-      "/images/projects/androidLogin/AndroidLogin3.png",
-      "/images/projects/androidLogin/AndroidLogin4.png",
+      "/images/projects/androidLogin/login.png",
+      "/images/projects/androidLogin/home.png",
+      "/images/projects/androidLogin/profile.png",
+      "/images/projects/androidLogin/trash.png",
     ],
   },
 ];
