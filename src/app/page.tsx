@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 max-w-11/12 mx-auto">
       {openDisplay ? (
         <ImageDisplay
           imageUrl={profileData.degree.src}

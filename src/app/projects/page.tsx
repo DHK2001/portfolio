@@ -10,7 +10,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="h-full w-full flex flex-col justify-center items-center gap-10 px-4">
+    <div className="h-full w-full flex flex-col justify-center items-center gap-10 px-4 max-w-11/12 mx-auto">
       <Title text="My Projects" />
 
       <div className="flex flex-col gap-12 w-full max-w-6xl">

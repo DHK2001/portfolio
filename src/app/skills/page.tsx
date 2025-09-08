@@ -30,7 +30,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <div className="h-full w-full flex flex-col">
+    <div className="h-full w-full flex flex-col max-w-11/12 mx-auto">
       <Title text="My Skills" />
 
       {sections.map(({ title, category }) => {

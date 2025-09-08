@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Contact() {
   return (
-    <div className="h-full w-full flex flex-col justify-center items-center px-4">
+    <div className="h-full w-full flex flex-col justify-center items-center max-w-11/12 mx-auto">
       <Title text="Contact Me" />
 
       <div className="mt-8 flex flex-col gap-6 w-full max-w-md">

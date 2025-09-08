@@ -6,7 +6,7 @@ import { workExperienceData } from "@/constants/infoExample";
 
 const WorkExperience = () => {
   return (
-    <section className="w-full flex flex-col items-center">
+    <section className="w-full flex flex-col items-center max-w-11/12 mx-auto">
       <Title text="Work Experience" classname="mb-8" />
 
       <div className="relative border-l-4 border-[color:var(--primary)] pl-6 space-y-10 w-full max-w-3xl">
