@@ -26,12 +26,10 @@ const ThemeToggle = () => {
 
   if (!theme) {
     return (
-      <div className="flex h-11 w-11 items-center justify-center rounded-md border border-[var(--border)] bg-[color:var(--cards)] sm:w-35 sm:rounded-full sm:border-2 sm:border-[var(--primary)] sm:px-4">
-        <h2 className="hidden whitespace-nowrap sm:block">Loading...</h2>
+      <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[var(--border)] bg-[color:var(--cards)]">
         <FontAwesomeIcon
           icon={faSpinner}
-          size="lg"
-          className="text-[var(--primary)]"
+          className="h-4 w-4 text-[var(--primary)]"
           spin
         />
       </div>
@@ -43,31 +41,11 @@ const ThemeToggle = () => {
   return (
     <button
       aria-label={`Switch to ${isLight ? "dark" : "light"} mode`}
+      title={`Switch to ${isLight ? "dark" : "light"} mode`}
       onClick={toggleTheme}
-      className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] transition-colors duration-300 sm:block sm:h-12 sm:w-35 sm:rounded-full sm:border-2 sm:border-[var(--primary)] sm:bg-transparent"
+      className="flex h-10 w-10 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] transition duration-200 hover:border-[color:var(--primary)] hover:text-[color:var(--highlight)]"
     >
-      <div
-        className="absolute top-0 left-0 hidden h-full w-fit transition-transform duration-500 sm:flex"
-        style={{
-          transform: isLight ? "translateX(0%)" : "translateX(-50%)",
-        }}
-      >
-        {/* Light Mode */}
-        <div className="flex items-center justify-between gap-1 w-1/2 px-4">
-          <h2 className="whitespace-nowrap">Light Mode</h2>
-          <div className="rounded-full flex items-center justify-center h-8 w-8 bg-[var(--primary)]">
-            <FontAwesomeIcon icon={faSun} size="lg" color="white" />
-          </div>
-        </div>
-
-        {/* Dark Mode */}
-        <div className="flex items-center justify-between gap-1 w-1/2 px-4">
-          <h2 className="whitespace-nowrap">Dark Mode</h2>
-          <div className="rounded-full flex items-center justify-center h-8 w-8 bg-[var(--primary)]">
-            <FontAwesomeIcon icon={faMoon} size="lg" color="black" />
-          </div>
-        </div>
-      </div>
+      <FontAwesomeIcon icon={isLight ? faSun : faMoon} className="h-4 w-4" />
     </button>
   );
 };

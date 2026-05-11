@@ -16,24 +16,30 @@ const NavBar = () => {
   }, []);
 
   const navButtons = (link: string, name: string) => {
+    const isActive = pathname === link;
+
     return (
       <li
         key={name}
-        className={`rounded-md px-3 py-3 text-base font-semibold transition-colors duration-200 hover:bg-[color:var(--muted-surface)] hover:text-[var(--highlight)] md:px-0 md:py-0 md:text-sm md:font-medium md:hover:bg-transparent ${
-          pathname === link
-            ? "text-[var(--highlight)]"
-            : "text-[var(--secondary-text)]"
-        } `}
         onClick={() => setIsOpen(false)}
       >
-        <a href={link}>{name}</a>
+        <a
+          href={link}
+          className={`block rounded-md px-3 py-3 text-base font-semibold transition-colors duration-200 hover:bg-[color:var(--muted-surface)] hover:text-[var(--highlight)] md:px-3 md:py-2 md:text-sm md:font-medium ${
+            isActive
+              ? "bg-[color:var(--muted-surface)] text-[var(--highlight)]"
+              : "text-[var(--secondary-text)]"
+          }`}
+        >
+          {name}
+        </a>
       </li>
     );
   };
 
   return (
     <nav className="w-fit">
-      <ul className="hidden items-center gap-5 md:flex">
+      <ul className="hidden items-center rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-1 shadow-sm md:flex">
         {navBarRouterList.map((item) => navButtons(item.path, item.name))}
       </ul>
 
@@ -41,7 +47,7 @@ const NavBar = () => {
         aria-label="Open menu"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
-        className="relative z-[70] flex h-11 w-11 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] md:hidden"
+        className="relative z-[70] flex h-10 w-10 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] md:hidden"
         onClick={() => setIsOpen((v) => !v)}
       >
         <FontAwesomeIcon
@@ -68,6 +74,11 @@ const NavBar = () => {
         role="dialog"
         aria-modal="true"
       >
+        <div className="border-b border-[color:var(--border)] px-4 py-4">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--secondary-text)]">
+            Navigation
+          </p>
+        </div>
         <ul className="flex flex-col gap-1 p-4">
           {navBarRouterList.map((item) => navButtons(item.path, item.name))}
         </ul>
