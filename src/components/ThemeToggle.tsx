@@ -18,8 +18,8 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
 
-    document.body.classList.remove(`${theme}-theme`);
-    document.body.classList.add(`${newTheme}-theme`);
+    document.documentElement.classList.remove(`${theme}-theme`);
+    document.documentElement.classList.add(`${newTheme}-theme`);
     setTheme(newTheme);
     localStorageSetTheme(newTheme);
   };

@@ -26,8 +26,13 @@ const CertificateSection = () => {
   }
 
   return (
-    <section className="w-full p-6 flex flex-col items-center">
-      <Title text="Certificates" />
+    <section className="flex w-full flex-col gap-5">
+      <div className="border-b border-[color:var(--border)] pb-4">
+        <Title text="Certificates" classname="text-left" />
+        <p className="mt-2 text-sm text-[color:var(--secondary-text)]">
+          Certifications and academic documents that support my learning path.
+        </p>
+      </div>
       {openDisplay ? (
         <ImageDisplay
           imageUrl={currentCert.src}
@@ -37,9 +42,7 @@ const CertificateSection = () => {
       ) : null}
 
       <div
-        className="mt-5 relative w-full max-w-[600px] h-[250px] sm:h-[300px] md:h-[400px] rounded-lg  shadow-md
-      transition-transform duration-300 ease-in-out
-    hover:shadow-[0_6px_20px_var(--shadow-color)] overflow-hidden bg-[color:var(--cards)]"
+        className="relative h-[250px] w-full overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] shadow-sm transition duration-200 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] sm:h-[340px] md:h-[420px]"
       >
         <Image
           src={currentCert.src}
@@ -54,7 +57,7 @@ const CertificateSection = () => {
         {certificates.length > 1 && (
           <button
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-80 cursor-pointer"
+            className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)] shadow-md transition hover:opacity-85"
           >
             <FontAwesomeIcon icon={faArrowLeft} className="h-4 w-4" />
           </button>
@@ -63,14 +66,14 @@ const CertificateSection = () => {
         {certificates.length > 1 && (
           <button
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-80 cursor-pointer"
+            className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)] shadow-md transition hover:opacity-85"
           >
             <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4" />
           </button>
         )}
       </div>
 
-      <div className="mt-4 text-center px-2">
+      <div className="px-2">
         <p className="text-[color:var(--primary-text)] font-semibold text-sm sm:text-base md:text-lg">
           {currentCert.name}
         </p>

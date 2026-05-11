@@ -1,6 +1,10 @@
 "use client";
 
-import { faX, faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faX,
+  faArrowRight,
+  faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,16 +32,16 @@ const ImageProjectsDisplay = ({
   }, [currentProject]);
 
   return (
-    <div className="fixed inset-0 z-[900] bg-[color:var(--display)] flex flex-col items-center justify-center p-4 sm:p-10">
+    <div className="fixed inset-0 z-[900] flex flex-col items-center justify-center bg-[color:var(--display)] p-4 sm:p-8">
       <button
         onClick={closeDisplay}
-        className="absolute top-4 right-4 z-[1000] h-10 w-10 flex items-center justify-center rounded-full bg-black/40 hover:opacity-60 transition cursor-pointer"
+        className="absolute right-4 top-4 z-[1000] flex h-10 w-10 items-center justify-center rounded-md border border-white/15 bg-black/50 text-white transition hover:bg-black/70"
       >
-        <FontAwesomeIcon icon={faX} size="lg" color="white" />
+        <FontAwesomeIcon icon={faX} className="h-4 w-4" />
       </button>
 
-      <div className="w-full flex flex-row items-center justify-center relative">
-        <div className="relative w-full max-w-5xl h-[80vh]">
+      <div className="relative flex w-full flex-row items-center justify-center">
+        <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-lg border border-white/10 bg-black/20">
           <Image
             src={currentProject}
             alt={name}
@@ -58,7 +62,7 @@ const ImageProjectsDisplay = ({
         {imageUrl.length > 1 && (
           <button
             onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-80 cursor-pointer"
+            className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)] shadow-md transition hover:opacity-85"
           >
             <FontAwesomeIcon icon={faArrowLeft} className="h-4 w-4" />
           </button>
@@ -67,18 +71,18 @@ const ImageProjectsDisplay = ({
         {imageUrl.length > 1 && (
           <button
             onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-[color:var(--primary)] text-[color:var(--button-text)] p-2 rounded-full shadow-md hover:opacity-80 cursor-pointer"
+            className="absolute right-2 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)] shadow-md transition hover:opacity-85"
           >
             <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4" />
           </button>
         )}
       </div>
-      <div className="mt-4 text-center px-2">
-        <p className="text-[color:var(--button-text)] font-semibold text-sm sm:text-base md:text-lg">
+      <div className="mt-4 rounded-lg border border-white/10 bg-black/30 px-4 py-3 text-center">
+        <p className="text-sm font-semibold text-white sm:text-base md:text-lg">
           {name}
         </p>
         {imageUrl.length > 1 && (
-          <p className="text-[color:var(--button-text)] text-xs mt-2">
+          <p className="mt-1 text-xs text-white/70">
             {current + 1} / {imageUrl.length}
           </p>
         )}
