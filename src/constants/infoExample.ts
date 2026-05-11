@@ -175,14 +175,14 @@ export const listSkillsData: Skill[] = [
     id: 14,
     skillName: "VS Code",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png",
+      "https://cdn.freebiesupply.com/logos/large/2x/visual-studio-code-logo-png-transparent.png",
     category: "Tool/IDE",
   },
   {
     id: 15,
     skillName: "Android Studio",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1200px-Android_Studio_icon_%282023%29.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/960px-Android_Studio_icon_%282023%29.svg.png",
     category: "Tool/IDE",
   },
   {
@@ -195,7 +195,7 @@ export const listSkillsData: Skill[] = [
     id: 17,
     skillName: "TailwindCSS",
     imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png",
+      "https://images.seeklogo.com/logo-png/43/1/tailwind-css-logo-png_seeklogo-434090.png",
     category: "Framework",
   },
   {
