@@ -43,14 +43,14 @@ export default function RootLayout({
         className={`flex min-h-dvh flex-col ${geistSans.variable} ${geistMono.variable}`}
       >
         <header className="fixed left-0 top-0 z-50 w-full border-b border-[color:var(--border)] bg-[color:var(--header-footer)] backdrop-blur">
-          <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-6 px-4 sm:px-6">
+          <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-6">
             <a
               href="/"
               className="text-sm font-bold tracking-wide text-[color:var(--primary-text)]"
             >
               Derek Galeas
             </a>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <NavBar />
               <ThemeToggle />
             </div>

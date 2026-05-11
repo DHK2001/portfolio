@@ -9,7 +9,7 @@
   --secondary-text: #475569;
   --primary-text: #111827;
   --button-text: #ffffff;
-  --menu: rgba(255, 255, 255, 0.95);
+  --menu: #ffffff;
   --highlight: #1d4ed8;
   --icon: #1e293b;
   --cards: #ffffff;
@@ -30,7 +30,7 @@
   --secondary-text: #a8b3c7;
   --primary-text: #f8fafc;
   --button-text: #08111f;
-  --menu: rgba(15, 23, 42, 0.96);
+  --menu: #111827;
   --highlight: #7dd3fc;
   --icon: #f3f4f6;
   --cards: #111827;

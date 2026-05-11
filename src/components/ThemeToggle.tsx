@@ -26,11 +26,8 @@ const ThemeToggle = () => {
 
   if (!theme) {
     return (
-      <div
-        className={`relative w-35 h-12 border-2 overflow-hidden 
-           rounded-full bg-transparent border-[var(--primary)] flex items-center justify-between px-4 gap-1`}
-      >
-        <h2 className="whitespace-nowrap">Loading...</h2>
+      <div className="flex h-11 w-11 items-center justify-center rounded-md border border-[var(--border)] bg-[color:var(--cards)] sm:w-35 sm:rounded-full sm:border-2 sm:border-[var(--primary)] sm:px-4">
+        <h2 className="hidden whitespace-nowrap sm:block">Loading...</h2>
         <FontAwesomeIcon
           icon={faSpinner}
           size="lg"
@@ -45,12 +42,12 @@ const ThemeToggle = () => {
 
   return (
     <button
+      aria-label={`Switch to ${isLight ? "dark" : "light"} mode`}
       onClick={toggleTheme}
-      className="relative w-35 h-12 border-2 rounded-full overflow-hidden cursor-pointer
-        transition-colors duration-300 bg-transparent border-[var(--primary)]"
+      className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] transition-colors duration-300 sm:block sm:h-12 sm:w-35 sm:rounded-full sm:border-2 sm:border-[var(--primary)] sm:bg-transparent"
     >
       <div
-        className="absolute top-0 left-0 flex h-full w-fit transition-transform duration-500"
+        className="absolute top-0 left-0 hidden h-full w-fit transition-transform duration-500 sm:flex"
         style={{
           transform: isLight ? "translateX(0%)" : "translateX(-50%)",
         }}

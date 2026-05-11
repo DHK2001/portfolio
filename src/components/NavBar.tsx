@@ -19,7 +19,7 @@ const NavBar = () => {
     return (
       <li
         key={name}
-        className={`text-sm font-medium transition-colors duration-200 hover:text-[var(--highlight)] ${
+        className={`rounded-md px-3 py-3 text-base font-semibold transition-colors duration-200 hover:bg-[color:var(--muted-surface)] hover:text-[var(--highlight)] md:px-0 md:py-0 md:text-sm md:font-medium md:hover:bg-transparent ${
           pathname === link
             ? "text-[var(--highlight)]"
             : "text-[var(--secondary-text)]"
@@ -41,13 +41,12 @@ const NavBar = () => {
         aria-label="Open menu"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
-        className="rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] p-2 md:hidden"
+        className="relative z-[70] flex h-11 w-11 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] md:hidden"
         onClick={() => setIsOpen((v) => !v)}
       >
         <FontAwesomeIcon
           icon={isOpen ? faXmark : faBars}
-          size="xl"
-          className="hover:opacity-40"
+          className="h-5 w-5"
         />
       </button>
 
@@ -55,21 +54,21 @@ const NavBar = () => {
         <button
           aria-hidden
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0"
+          className="fixed inset-0 z-[55] bg-black/40 md:hidden"
         />
       )}
 
       <div
         id="mobile-menu"
-        className={`fixed top-16 left-0 h-full w-1/2 max-w-xs
-          border-r border-[color:var(--border)] bg-[var(--menu)] shadow-xl 
-          md:hidden z-50
+        className={`fixed left-0 top-16 z-[60] h-[calc(100dvh-4rem)] w-72 max-w-[82vw]
+          border-r border-[color:var(--border)] bg-[var(--menu)] shadow-2xl 
+          md:hidden
           transition-transform duration-300 ease-out
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
         role="dialog"
         aria-modal="true"
       >
-        <ul className="flex flex-col gap-4 p-4">
+        <ul className="flex flex-col gap-1 p-4">
           {navBarRouterList.map((item) => navButtons(item.path, item.name))}
         </ul>
       </div>
