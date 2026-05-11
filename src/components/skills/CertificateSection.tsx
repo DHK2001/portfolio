@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Title from "@/components/Title";
 import Image from "next/image";
-import { profileData } from "@/constants/infoExample";
+import { profileData } from "@/constants/portfolioData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ImageDisplay from "../ImageDisplay";

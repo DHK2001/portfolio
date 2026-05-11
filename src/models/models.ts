@@ -16,6 +16,20 @@ export interface Profile {
   degree: Degree;
 }
 
+export interface HomeHighlight {
+  title: string;
+  description: string;
+}
+
+export interface HomeData {
+  badge: string;
+  subtitle: string;
+  featuredTech: string[];
+  currentFocusTitle: string;
+  currentFocusDescription: string;
+  highlights: HomeHighlight[];
+}
+
 export interface Project {
   projectName: string;
   description: string;

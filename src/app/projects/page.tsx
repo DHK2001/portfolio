@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { projectsData } from "@/constants/infoExample";
+import { projectsData } from "@/constants/portfolioData";
 import Title from "@/components/Title";
 import ImageProjectsDisplay from "@/components/projects/ImageProjectsDisplay";
 import { Project } from "@/models/models";

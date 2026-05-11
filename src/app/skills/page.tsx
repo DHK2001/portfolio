@@ -4,7 +4,7 @@ import CertificateSection from "@/components/skills/CertificateSection";
 import GridTable from "@/components/skills/GridTable";
 import SkillContainer from "@/components/skills/SkillContainer";
 import Title from "@/components/Title";
-import { listSkillsData, profileData } from "@/constants/infoExample";
+import { listSkillsData, profileData } from "@/constants/portfolioData";
 import { Skill } from "@/models/models";
 import Image from "next/image";
 import { useMemo } from "react";

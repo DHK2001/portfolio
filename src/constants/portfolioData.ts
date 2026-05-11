@@ -1,4 +1,10 @@
-import { Profile, Project, Skill, WorkExperience } from "@/models/models";
+import {
+  HomeData,
+  Profile,
+  Project,
+  Skill,
+  WorkExperience,
+} from "@/models/models";
 
 export const profileData: Profile = {
   name: "Derek Galeas",
@@ -22,6 +28,30 @@ export const profileData: Profile = {
     issuer: "Unitec, San Pedro Sula, Honduras",
     date: "2024-06-15",
   },
+};
+
+export const homeData: HomeData = {
+  badge: "Mobile Developer · React Native / Expo",
+  subtitle:
+    "I build mobile and web experiences with a focus on clean UI, reliable app flows, and practical cross-platform development.",
+  featuredTech: ["React Native", "Expo", "Swift", "Next.js", "TypeScript"],
+  currentFocusTitle: "Current Focus",
+  currentFocusDescription:
+    "Shared iOS and Android apps with React Native, Expo, and JavaScript.",
+  highlights: [
+    {
+      title: "Mobile",
+      description: "React Native, Expo, Swift, Flutter",
+    },
+    {
+      title: "Web",
+      description: "React, Next.js, TailwindCSS",
+    },
+    {
+      title: "Backend",
+      description: "API integration, MongoDB, app data flows",
+    },
+  ],
 };
 
 export const workExperienceData: WorkExperience[] = [

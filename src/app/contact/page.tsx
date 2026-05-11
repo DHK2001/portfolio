@@ -1,5 +1,5 @@
 import Title from "@/components/Title";
-import { profileData } from "@/constants/infoExample";
+import { profileData } from "@/constants/portfolioData";
 import { getLinkedUser } from "@/utils/utils";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";

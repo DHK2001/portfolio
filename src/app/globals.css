@@ -2,45 +2,58 @@
 
 /* ===== Light Theme ===== */
 .light-theme {
-  --bg: #f3f8ff; /* azul muy suave para fondo */
-  --fg: #0f172a; /* texto general oscuro */
-  --header-footer: #e2e8f0cc; /* gris azulado translúcido */
-  --primary: #2563eb; /* azul brillante */
-  --secondary-text: #475569; /* gris azulado */
-  --primary-text: #1e293b; /* casi negro */
-  --button-text: #ffffff; /* blanco sobre botones */
+  --bg: #f8fafc;
+  --fg: #0f172a;
+  --header-footer: rgba(248, 250, 252, 0.88);
+  --primary: #2563eb;
+  --secondary-text: #475569;
+  --primary-text: #111827;
+  --button-text: #ffffff;
   --menu: rgba(255, 255, 255, 0.95);
-  --highlight: #1d4ed8; /* azul intenso */
-  --icon: #1e293b; /* gris azulado oscuro */
-  --cards: #ffffff; /* blanco puro para tarjetas */
-  --cards-text: #1e293b; /* gris oscuro con alto contraste */
-  --shadow-color: rgba(37, 99, 235, 0.35);
+  --highlight: #1d4ed8;
+  --icon: #1e293b;
+  --cards: #ffffff;
+  --cards-text: #1e293b;
+  --border: #dbe3ef;
+  --muted-surface: #eef4fb;
+  --shadow-color: rgba(15, 23, 42, 0.14);
   --image-bg: #f3f4f6;
   --display: #000000d1;
 }
 
 /* ===== Dark Theme ===== */
 .dark-theme {
-  --bg: #0e0a1a; /* morado casi negro */
-  --fg: #e5e7eb; /* texto claro */
-  --header-footer: #1c1630cc; /* morado oscuro translúcido */
-  --primary: #8b5cf6; /* morado brillante */
-  --secondary-text: #a1a1aa; /* gris claro */
-  --primary-text: #ffffff; /* blanco */
-  --button-text: #ffffff; /* blanco */
-  --menu: rgba(20, 16, 30, 0.95);
-  --highlight: #a78bfa; /* lavanda suave */
-  --icon: #f3f4f6; /* casi blanco */
-  --cards: #1f1b2e; /* morado grisáceo oscuro */
-  --cards-text: #f9fafb; /* gris muy claro para contraste */
-  --shadow-color: rgba(139, 92, 246, 0.45);
-  --image-bg: #f3f4f6;
+  --bg: #0b1120;
+  --fg: #e5e7eb;
+  --header-footer: rgba(11, 17, 32, 0.88);
+  --primary: #38bdf8;
+  --secondary-text: #a8b3c7;
+  --primary-text: #f8fafc;
+  --button-text: #08111f;
+  --menu: rgba(15, 23, 42, 0.96);
+  --highlight: #7dd3fc;
+  --icon: #f3f4f6;
+  --cards: #111827;
+  --cards-text: #f8fafc;
+  --border: #263449;
+  --muted-surface: #162033;
+  --shadow-color: rgba(56, 189, 248, 0.22);
+  --image-bg: #e5e7eb;
   --display: #000000d1;
 }
 
 /* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+a,
+button {
+  outline-color: var(--primary);
 }

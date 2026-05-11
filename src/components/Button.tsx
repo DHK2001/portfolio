@@ -4,14 +4,20 @@ type Props = {
   text: string;
   onClick?: () => void;
   disabled?: boolean;
+  variant?: "primary" | "secondary";
 };
 
-const Button = ({ text, onClick, disabled=false }: Props) => {
+const Button = ({ text, onClick, disabled = false, variant = "primary" }: Props) => {
+  const styles =
+    variant === "primary"
+      ? "bg-[color:var(--primary)] text-[var(--button-text)] border-[color:var(--primary)]"
+      : "bg-transparent text-[color:var(--primary-text)] border-[color:var(--border)]";
+
   return (
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`px-4 py-2 bg-[color:var(--primary)] text-[var(--button-text)] shadow-md transition-transform duration-300 ease-in-out hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-1  text-base font-bold rounded-md cursor-pointer`}
+      className={`min-h-11 rounded-md border px-5 py-2.5 text-sm font-semibold shadow-sm transition duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_10px_30px_var(--shadow-color)] disabled:cursor-not-allowed disabled:opacity-50 ${styles}`}
     >
       {text}
     </button>

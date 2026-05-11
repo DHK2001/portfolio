@@ -6,7 +6,7 @@ import IconButton from "@/components/IconButton";
 import ImageDisplay from "@/components/ImageDisplay";
 import Title from "@/components/Title";
 import UserAvatar from "@/components/UserAvatar";
-import { profileData } from "@/constants/infoExample";
+import { homeData, profileData } from "@/constants/portfolioData";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 max-w-11/12 mx-auto">
+    <section className="flex min-h-[calc(100dvh-10rem)] flex-col justify-center gap-12">
       {openDisplay ? (
         <ImageDisplay
           imageUrl={profileData.degree.src}
@@ -39,30 +39,96 @@ export default function Home() {
           closeDisplay={handleCloseDisplay}
         />
       ) : null}
-      <UserAvatar imageUrl={profileData.profilePicture} />
-      <Title text={`Hello, I'm ${profileData.name}`} />
-      <div className="max-w-2xl text-center pb-2">
-        <Description text={profileData.description} />
+
+      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="flex flex-col items-start gap-6">
+          <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
+            {homeData.badge}
+          </div>
+
+          <div className="space-y-4">
+            <Title
+              text={`Hello, I'm ${profileData.name}`}
+              classname="text-left sm:text-5xl"
+            />
+            <p className="max-w-2xl text-lg leading-8 text-[color:var(--secondary-text)]">
+              {homeData.subtitle}
+            </p>
+          </div>
+
+          <div className="max-w-2xl">
+            <Description text={profileData.description} />
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {homeData.featuredTech.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full border border-[color:var(--border)] bg-[color:var(--muted-surface)] px-3 py-1 text-sm font-medium text-[color:var(--primary-text)]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button
+              text="Download CV"
+              onClick={() =>
+                downloadPdf(
+                  "/docs/CV-Derek Galeas.pdf",
+                  `CV-${profileData.name}`
+                )
+              }
+            />
+            <Button
+              text="View Degree"
+              variant="secondary"
+              onClick={() => setOpenDisplay(true)}
+            />
+          </div>
+
+          <div className="flex gap-3">
+            <IconButton
+              icon={faGithub}
+              label="Open GitHub profile"
+              onClick={() => iconOnClick(profileData.githubUrl)}
+            />
+            <IconButton
+              icon={faLinkedin}
+              label="Open LinkedIn profile"
+              onClick={() => iconOnClick(profileData.linkedUrl)}
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative">
+            <UserAvatar imageUrl={profileData.profilePicture} />
+            <div className="absolute -bottom-5 left-4 right-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-3 shadow-lg">
+              <p className="text-xs font-semibold uppercase text-[color:var(--secondary-text)]">
+                {homeData.currentFocusTitle}
+              </p>
+              <p className="mt-1 text-sm font-semibold text-[color:var(--primary-text)]">
+                {homeData.currentFocusDescription}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-4">
-        <IconButton
-          icon={faGithub}
-          onClick={() => iconOnClick(profileData.githubUrl)}
-        />
-        <IconButton
-          icon={faLinkedin}
-          onClick={() => iconOnClick(profileData.linkedUrl)}
-        />
+
+      <div className="grid gap-4 border-t border-[color:var(--border)] pt-8 sm:grid-cols-3">
+        {homeData.highlights.map((item) => (
+          <div key={item.title}>
+            <p className="text-2xl font-bold text-[color:var(--primary-text)]">
+              {item.title}
+            </p>
+            <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
+              {item.description}
+            </p>
+          </div>
+        ))}
       </div>
-      <div className="flex gap-4">
-        <Button
-          text="Download CV"
-          onClick={() =>
-            downloadPdf("/docs/CV-Derek Galeas.pdf", `CV-${profileData.name}`)
-          }
-        />
-        <Button text="View Degree" onClick={() => setOpenDisplay(true)} />
-      </div>
-    </div>
+    </section>
   );
 }

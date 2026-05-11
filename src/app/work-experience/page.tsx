@@ -2,7 +2,7 @@
 
 import React from "react";
 import Title from "@/components/Title";
-import { workExperienceData } from "@/constants/infoExample";
+import { workExperienceData } from "@/constants/portfolioData";
 
 const WorkExperience = () => {
   return (

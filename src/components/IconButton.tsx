@@ -1,26 +1,28 @@
 "use client";
 
-import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 type Props = {
   icon: IconDefinition;
+  label?: string;
   onClick?: () => void;
   disabled?: boolean;
 };
 
-const IconButton = ({ icon, onClick, disabled }: Props) => {
+const IconButton = ({ icon, label = "Open link", onClick, disabled }: Props) => {
   return (
     <button
+      aria-label={label}
+      disabled={disabled}
       onClick={onClick}
-      className={`px-3 py-2 bg-transparent border-2 border-[color:var(--primary)] text-[var(--button-text)] shadow-md transition-transform duration-300 ease-in-out hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-1 text-base font-bold rounded-md cursor-pointer`}
+      className="flex h-11 w-11 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[var(--button-text)] shadow-sm transition duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] disabled:cursor-not-allowed disabled:opacity-50"
     >
       <FontAwesomeIcon
         icon={icon}
-        size="xl"
         color="var(--icon)"
-        className="h-6 w-6 text-xl"
+        className="h-5 w-5"
       />
     </button>
   );

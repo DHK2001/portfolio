@@ -19,8 +19,10 @@ const NavBar = () => {
     return (
       <li
         key={name}
-        className={`hover:text-[var(--highlight)] hover:font-bold transition-colors duration-300 ${
-          pathname === link ? "text-[var(--highlight)] font-bold" : ""
+        className={`text-sm font-medium transition-colors duration-200 hover:text-[var(--highlight)] ${
+          pathname === link
+            ? "text-[var(--highlight)]"
+            : "text-[var(--secondary-text)]"
         } `}
         onClick={() => setIsOpen(false)}
       >
@@ -31,7 +33,7 @@ const NavBar = () => {
 
   return (
     <nav className="w-fit">
-      <ul className="hidden sm:flex items-center gap-6">
+      <ul className="hidden items-center gap-5 md:flex">
         {navBarRouterList.map((item) => navButtons(item.path, item.name))}
       </ul>
 
@@ -39,7 +41,7 @@ const NavBar = () => {
         aria-label="Open menu"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
-        className="sm:hidden p-2 rounded hover:bg-[color:var(--header-footer)] cursor-pointer"
+        className="rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] p-2 md:hidden"
         onClick={() => setIsOpen((v) => !v)}
       >
         <FontAwesomeIcon
@@ -60,8 +62,8 @@ const NavBar = () => {
       <div
         id="mobile-menu"
         className={`fixed top-16 left-0 h-full w-1/2 max-w-xs
-          bg-[var(--menu)] shadow-xl 
-          sm:hidden z-50
+          border-r border-[color:var(--border)] bg-[var(--menu)] shadow-xl 
+          md:hidden z-50
           transition-transform duration-300 ease-out
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
         role="dialog"

@@ -10,7 +10,11 @@ const Title = ({
   classname?: string;
 }) => {
   return (
-    <h2 className={`font-bold text-4xl text-center ${classname}`}>{text}</h2>
+    <h2
+      className={`text-center text-3xl font-bold leading-tight text-[color:var(--primary-text)] sm:text-4xl ${classname}`}
+    >
+      {text}
+    </h2>
   );
 };
 

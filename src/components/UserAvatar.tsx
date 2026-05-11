@@ -6,7 +6,7 @@ import React from "react";
 
 const UserAvatar = ({ imageUrl }: { imageUrl: string }) => {
   return (
-    <div className="relative rounded-full overflow-hidden border-4 border-[var(--primary)] h-60 w-60 flex items-center justify-center bg-[var(--bg)]">
+    <div className="relative flex h-56 w-56 items-center justify-center overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--muted-surface)] shadow-[0_24px_60px_var(--shadow-color)] sm:h-72 sm:w-72">
       {imageUrl ? (
         <Image
           src={imageUrl}

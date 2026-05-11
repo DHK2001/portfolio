@@ -40,16 +40,26 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`flex h-dvh flex-col  ${geistSans.variable} ${geistMono.variable}`}
+        className={`flex min-h-dvh flex-col ${geistSans.variable} ${geistMono.variable}`}
       >
-        <header className="fixed top-0 left-0 w-full h-16 flex justify-between gap-6 items-center py-4 px-1  sm:px-12 bg-[color:var(--header-footer)] z-50">
-          <NavBar />
-          <ThemeToggle />
+        <header className="fixed left-0 top-0 z-50 w-full border-b border-[color:var(--border)] bg-[color:var(--header-footer)] backdrop-blur">
+          <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-6 px-4 sm:px-6">
+            <a
+              href="/"
+              className="text-sm font-bold tracking-wide text-[color:var(--primary-text)]"
+            >
+              Derek Galeas
+            </a>
+            <div className="flex items-center gap-3">
+              <NavBar />
+              <ThemeToggle />
+            </div>
+          </div>
         </header>
-        <main className="flex-1 p-4 sm:px-12 sm:py-8 pt-20 sm:pt-21">
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-10 pt-24 sm:px-6 sm:pt-28">
           {children}
         </main>
-        <footer className="p-4 bg-[color:var(--header-footer)]  bottom-0 left-0 w-full h-16 flex justify-center items-center text-[color:var(--secondary-text)] text-sm">
+        <footer className="flex h-16 w-full items-center justify-center border-t border-[color:var(--border)] bg-[color:var(--header-footer)] p-4 text-sm text-[color:var(--secondary-text)]">
           © 2025 Derek Galeas
         </footer>
       </body>
