@@ -3,6 +3,7 @@ import {
   Profile,
   Project,
   Skill,
+  SkillsPageData,
   WorkExperience,
 } from "@/models/models";
 
@@ -242,6 +243,59 @@ export const listSkillsData: Skill[] = [
     category: "Framework",
   },
 ];
+
+export const skillsPageData: SkillsPageData = {
+  badge: "Current Stack",
+  title: "Skills I Use To Build Mobile And Web Apps",
+  description:
+    "My main focus is mobile development with React Native and Expo, supported by native iOS experience and practical frontend skills.",
+  focusGroups: [
+    {
+      title: "Cross-platform Mobile",
+      description:
+        "The stack I currently use to build shared features for iOS and Android.",
+      skills: ["React Native", "Expo", "JavaScript", "TypeScript"],
+    },
+    {
+      title: "Native Mobile Foundation",
+      description:
+        "Native experience that helps me understand platform behavior and debug mobile issues.",
+      skills: ["Swift", "Xcode", "Android Studio"],
+    },
+    {
+      title: "Web And UI",
+      description:
+        "Frontend tools I use to build responsive interfaces and portfolio projects.",
+      skills: ["React", "Next.js", "TailwindCSS"],
+    },
+  ],
+  sections: [
+    {
+      title: "Languages",
+      description:
+        "Languages I use to build mobile apps, web interfaces, and application logic.",
+      category: "Language",
+    },
+    {
+      title: "Frameworks",
+      description:
+        "Frameworks I use for cross-platform mobile development and frontend work.",
+      category: "Framework",
+    },
+    {
+      title: "Tools And IDEs",
+      description:
+        "Tools I use to build, debug, test, and collaborate on projects.",
+      category: "Tool/IDE",
+    },
+    {
+      title: "Databases",
+      description:
+        "Database experience from app features, API integrations, and personal projects.",
+      category: "Database",
+    },
+  ],
+};
 
 export const projectsData: Project[] = [
   // 🌐 Web Projects

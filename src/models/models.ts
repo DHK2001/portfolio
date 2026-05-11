@@ -30,6 +30,26 @@ export interface HomeData {
   highlights: HomeHighlight[];
 }
 
+export interface SkillFocusGroup {
+  title: string;
+  description: string;
+  skills: string[];
+}
+
+export interface SkillSectionData {
+  title: string;
+  description: string;
+  category: string;
+}
+
+export interface SkillsPageData {
+  badge: string;
+  title: string;
+  description: string;
+  focusGroups: SkillFocusGroup[];
+  sections: SkillSectionData[];
+}
+
 export interface Project {
   projectName: string;
   description: string;

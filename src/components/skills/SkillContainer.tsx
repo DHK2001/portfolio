@@ -10,18 +10,13 @@ type Props = {
 const SkillContainer = ({ data }: Props) => {
   return (
     <div
-      className="flex flex-col items-center justify-center p-4 bg-[color:var(--cards)] rounded-lg shadow-md
-      transition-transform duration-300 ease-in-out
-    hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2"
+      className="flex min-h-36 flex-col items-center justify-center rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm transition duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)]"
     >
-      <div
-        className="w-20 h-20 flex items-center justify-center rounded-full 
-               bg-[color:var(--image-bg)] shadow-sm mb-3"
-      >
+      <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-md border border-slate-200 bg-white">
         <img
           src={data.imageUrl}
           alt={data.skillName}
-          className="w-12 h-12 object-contain"
+          className="h-10 w-10 object-contain"
         />
       </div>
       <p className="text-center text-sm font-medium text-[color:var(--cards-text)]">
