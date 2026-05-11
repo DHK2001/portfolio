@@ -50,6 +50,12 @@ export interface SkillsPageData {
   sections: SkillSectionData[];
 }
 
+export interface WorkExperiencePageData {
+  badge: string;
+  title: string;
+  description: string;
+}
+
 export interface Project {
   projectName: string;
   description: string;
@@ -69,6 +75,7 @@ export interface WorkExperience {
   startDate: string;
   endDate: string;
   description: string[];
+  tags: string[];
 }
 
 export interface Degree {

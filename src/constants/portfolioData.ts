@@ -5,6 +5,7 @@ import {
   Skill,
   SkillsPageData,
   WorkExperience,
+  WorkExperiencePageData,
 } from "@/models/models";
 
 export const profileData: Profile = {
@@ -55,6 +56,13 @@ export const homeData: HomeData = {
   ],
 };
 
+export const workExperiencePageData: WorkExperiencePageData = {
+  badge: "Professional Experience",
+  title: "Mobile And Frontend Work Experience",
+  description:
+    "My experience has been focused on building and maintaining mobile applications, with additional frontend work across React and Next.js projects.",
+};
+
 export const workExperienceData: WorkExperience[] = [
   {
     role: "Mobile Developer (React Native / Expo)",
@@ -67,6 +75,7 @@ export const workExperienceData: WorkExperience[] = [
       "Continue applying native mobile experience from Swift, Xcode, Android Studio, and platform-specific debugging when needed.",
       "Collaborate with cross-functional teams to improve app performance, UI quality, and user experience.",
     ],
+    tags: ["React Native", "Expo", "JavaScript", "iOS", "Android"],
   },
   {
     role: "Frontend Developer",
@@ -79,6 +88,7 @@ export const workExperienceData: WorkExperience[] = [
       "Debugged and fixed frontend issues to improve user experience in an existing web application.",
       "Collaborated remotely under the guidance of a lead freelancer working with multiple client contracts.",
     ],
+    tags: ["React", "Next.js", "TailwindCSS", "Frontend"],
   },
   {
     role: "Mobile Developer Intern",
@@ -90,6 +100,7 @@ export const workExperienceData: WorkExperience[] = [
       "Maintained iOS and Android applications, fixing bugs and improving UI.",
       "Collaborated with the development team using Android Studio and Xcode.",
     ],
+    tags: ["iOS", "Android", "Xcode", "Android Studio"],
   },
   {
     role: "Mobile Developer (Flutter)",
@@ -102,6 +113,7 @@ export const workExperienceData: WorkExperience[] = [
       "Implemented new UI designs provided by the design team, ensuring seamless integration with existing logic and structure.",
       "Managed and optimized the application's MongoDB database for efficiency and reliability.",
     ],
+    tags: ["Flutter", "Dart", "MongoDB", "Mobile"],
   },
 ];
 
