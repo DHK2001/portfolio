@@ -175,7 +175,7 @@ export const listSkillsData: Skill[] = [
     id: 14,
     skillName: "VS Code",
     imageUrl:
-      "https://cdn.freebiesupply.com/logos/large/2x/visual-studio-code-logo-png-transparent.png",
+      "https://w7.pngwing.com/pngs/512/824/png-transparent-visual-studio-code-hd-logo.png",
     category: "Tool/IDE",
   },
   {
