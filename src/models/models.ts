@@ -56,6 +56,21 @@ export interface WorkExperiencePageData {
   description: string;
 }
 
+export interface ProjectsPageData {
+  badge: string;
+  title: string;
+  description: string;
+  filters: string[];
+}
+
+export interface ContactPageData {
+  badge: string;
+  title: string;
+  description: string;
+  availabilityTitle: string;
+  availabilityDescription: string;
+}
+
 export interface Project {
   projectName: string;
   description: string;

@@ -1,44 +1,82 @@
 import Title from "@/components/Title";
-import { profileData } from "@/constants/portfolioData";
+import { contactPageData, profileData } from "@/constants/portfolioData";
 import { getLinkedUser } from "@/utils/utils";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const contactLinks = [
+  {
+    label: "Email",
+    value: profileData.email,
+    href: `mailto:${profileData.email}`,
+    icon: faEnvelope,
+  },
+  {
+    label: "LinkedIn",
+    value: `linkedin.com/in/${getLinkedUser(profileData.linkedUrl)}`,
+    href: profileData.linkedUrl,
+    icon: faLinkedin,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/DHK2001",
+    href: profileData.githubUrl,
+    icon: faGithub,
+  },
+];
+
 export default function Contact() {
   return (
-    <div className="h-full w-full flex flex-col justify-center items-center max-w-11/12 mx-auto">
-      <Title text="Contact Me" />
+    <section className="flex min-h-[calc(100dvh-10rem)] w-full flex-col justify-center gap-10">
+      <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="flex flex-col items-start gap-4">
+          <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
+            {contactPageData.badge}
+          </div>
+          <Title text={contactPageData.title} classname="text-left" />
+          <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
+            {contactPageData.description}
+          </p>
+        </div>
 
-      <div className="mt-8 flex flex-col gap-6 w-full max-w-md">
-        <a
-          href={`mailto:${profileData.email}`}
-          className="flex items-center gap-3 p-4 rounded-2xl bg-[var(--cards)] text-[var(--cards-text)] shadow-md
-              cursor-pointer transition-transform duration-300 ease-in-out
-              hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2"
-        >
-          <span className="flex items-center justify-center h-10 w-10 rounded-full bg-[var(--primary)] text-[var(--button-text)]">
-            <FontAwesomeIcon icon={faEnvelope} size="lg" className="h-5 w-5" />
-          </span>
-          <span className="whitespace-normal max-sm:w-60">{profileData.email}</span>
-        </a>
-
-        <a
-          href={profileData.linkedUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 p-4 rounded-2xl bg-[var(--cards)] text-[var(--cards-text)] shadow-md
-              cursor-pointer transition-transform duration-300 ease-in-out
-              hover:shadow-[0_6px_20px_var(--shadow-color)] hover:-translate-y-2"
-        >
-          <span className="flex items-center justify-center h-10 w-10 rounded-full bg-[var(--primary)] text-[var(--button-text)]">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" className="h-5 w-5" />
-          </span>
-          <span className="whitespace-normal max-sm:w-60">
-            linkedin.com/in/{getLinkedUser(profileData.linkedUrl)}
-          </span>
-        </a>
+        <div className="grid gap-4">
+          {contactLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+              rel={
+                link.href.startsWith("mailto:")
+                  ? undefined
+                  : "noopener noreferrer"
+              }
+              className="group flex items-center gap-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)]"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)]">
+                <FontAwesomeIcon icon={link.icon} className="h-5 w-5" />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold text-[color:var(--secondary-text)]">
+                  {link.label}
+                </span>
+                <span className="block truncate text-base font-bold text-[color:var(--primary-text)] group-hover:text-[color:var(--highlight)]">
+                  {link.value}
+                </span>
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-5 shadow-sm">
+        <p className="text-sm font-semibold uppercase text-[color:var(--secondary-text)]">
+          {contactPageData.availabilityTitle}
+        </p>
+        <p className="mt-2 text-base leading-7 text-[color:var(--primary-text)]">
+          {contactPageData.availabilityDescription}
+        </p>
+      </div>
+    </section>
   );
 }

@@ -1,7 +1,9 @@
 import {
+  ContactPageData,
   HomeData,
   Profile,
   Project,
+  ProjectsPageData,
   Skill,
   SkillsPageData,
   WorkExperience,
@@ -307,6 +309,24 @@ export const skillsPageData: SkillsPageData = {
       category: "Database",
     },
   ],
+};
+
+export const projectsPageData: ProjectsPageData = {
+  badge: "Selected Work",
+  title: "Projects Built Across Mobile And Web",
+  description:
+    "A collection of practice and portfolio projects focused on mobile development, API integration, navigation flows, and responsive interfaces.",
+  filters: ["All", "React Native", "Web", "iOS", "Android"],
+};
+
+export const contactPageData: ContactPageData = {
+  badge: "Contact",
+  title: "Let’s Talk About Mobile Or Frontend Work",
+  description:
+    "The best way to reach me is by email or LinkedIn. I am open to conversations about mobile development, React Native, Expo, and frontend opportunities.",
+  availabilityTitle: "Current Focus",
+  availabilityDescription:
+    "I am currently focused on React Native and Expo while continuing to grow my native mobile and frontend experience.",
 };
 
 export const projectsData: Project[] = [
