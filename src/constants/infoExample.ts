@@ -3,7 +3,7 @@ import { Profile, Project, Skill, WorkExperience } from "@/models/models";
 export const profileData: Profile = {
   name: "Derek Galeas",
   description:
-    "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and ensuring seamless integration of designs using technologies such as Flutter, React, Next.js, and MongoDB.\n\nBachelor’s degree in Computer Systems Engineering, Unitec (2019 - 2024)",
+    "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and integrating designs using technologies such as React Native, Expo, Swift, Flutter, React, Next.js, and MongoDB.\n\nBachelor’s degree in Computer Systems Engineering, Unitec (2019 - 2024)",
   profilePicture: "/images/userImage.jpg",
   email: "dhenrygk12@gmail.com",
   githubUrl: "https://github.com/DHK2001?tab=repositories",
@@ -26,14 +26,15 @@ export const profileData: Profile = {
 
 export const workExperienceData: WorkExperience[] = [
   {
-    role: "iOS Developer",
+    role: "Mobile Developer (React Native / Expo)",
     company: "Sans Services",
     startDate: "April 2025",
-    endDate: "Current",
+    endDate: "Present",
     description: [
-      "Hired as a full-time iOS Developer while continuing to contribute to Android development.",
-      "Responsible for building and maintaining iOS features in Swift and Xcode.",
-      "Collaborated with cross-functional teams to enhance app performance and user experience.",
+      "Started as a full-time iOS Developer and later transitioned with the team to cross-platform development using React Native, Expo, and JavaScript.",
+      "Build and maintain mobile features for iOS and Android from a shared React Native codebase.",
+      "Continue applying native mobile experience from Swift, Xcode, Android Studio, and platform-specific debugging when needed.",
+      "Collaborate with cross-functional teams to improve app performance, UI quality, and user experience.",
     ],
   },
   {
@@ -202,6 +203,12 @@ export const listSkillsData: Skill[] = [
     id: 18,
     skillName: "React Native",
     imageUrl: "https://www.cdnlogo.com/logos/r/18/react-native.svg",
+    category: "Framework",
+  },
+  {
+    id: 19,
+    skillName: "Expo",
+    imageUrl: "https://www.svgrepo.com/show/353722/expo.svg",
     category: "Framework",
   },
 ];
