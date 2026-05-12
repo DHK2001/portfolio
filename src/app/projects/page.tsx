@@ -104,7 +104,7 @@ function ProjectCard({
       </div>
 
       <div className="flex flex-1 flex-col gap-4 p-5">
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between">
           <h3 className="text-lg font-bold text-[color:var(--primary-text)]">
             {project.projectName}
           </h3>
@@ -175,13 +175,13 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2 lg:justify-end">
+        <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 lg:justify-end">
           {projectsPageData.filters.map((filter) => (
             <button
               key={filter}
               type="button"
               onClick={() => setActiveFilter(filter)}
-              className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+              className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition ${
                 activeFilter === filter
                   ? "border-[color:var(--primary)] bg-[color:var(--primary)] text-[color:var(--button-text)]"
                   : "border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--secondary-text)] hover:border-[color:var(--primary)]"

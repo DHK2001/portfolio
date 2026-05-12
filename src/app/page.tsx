@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <section className="flex min-h-[calc(100dvh-10rem)] flex-col justify-center gap-12">
+    <section className="flex min-h-[calc(100dvh-10rem)] flex-col justify-start gap-8 lg:justify-center lg:gap-12">
       {openDisplay ? (
         <ImageDisplay
           imageUrl={profileData.degree.src}
@@ -40,8 +40,8 @@ export default function Home() {
         />
       ) : null}
 
-      <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="flex flex-col items-start gap-6">
+      <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+        <div className="flex flex-col items-start gap-5 sm:gap-6">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {homeData.badge}
           </div>
@@ -51,7 +51,7 @@ export default function Home() {
               text={`Hello, I'm ${profileData.name}`}
               classname="text-left sm:text-5xl"
             />
-            <p className="max-w-2xl text-lg leading-8 text-[color:var(--secondary-text)]">
+            <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)] sm:text-lg sm:leading-8">
               {homeData.subtitle}
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="grid w-full grid-cols-1 gap-3 sm:flex sm:w-auto sm:flex-row">
             <Button
               text="Download CV"
               onClick={() =>
@@ -103,9 +103,9 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="relative">
+          <div className="flex w-full max-w-xs flex-col items-center sm:relative sm:max-w-none">
             <UserAvatar imageUrl={profileData.profilePicture} />
-            <div className="absolute -bottom-5 left-4 right-4 rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-3 shadow-lg">
+            <div className="mt-3 w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-3 shadow-lg sm:absolute sm:-bottom-5 sm:left-4 sm:right-4 sm:mt-0 sm:w-auto">
               <p className="text-xs font-semibold uppercase text-[color:var(--secondary-text)]">
                 {homeData.currentFocusTitle}
               </p>
@@ -117,7 +117,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid gap-4 border-t border-[color:var(--border)] pt-8 sm:grid-cols-3">
+      <div className="grid gap-4 border-t border-[color:var(--border)] pt-6 sm:grid-cols-3 sm:pt-8">
         {homeData.highlights.map((item) => (
           <div key={item.title}>
             <p className="text-2xl font-bold text-[color:var(--primary-text)]">

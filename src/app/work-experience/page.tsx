@@ -9,7 +9,7 @@ import {
 
 const WorkExperience = () => {
   return (
-    <section className="flex w-full flex-col gap-10">
+    <section className="flex w-full flex-col gap-8 sm:gap-10">
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <div className="flex flex-col items-start gap-4">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
@@ -27,7 +27,7 @@ const WorkExperience = () => {
               4
             </p>
             <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
-              professional roles
+              Professional roles
             </p>
           </div>
           <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm">
@@ -35,7 +35,7 @@ const WorkExperience = () => {
               Mobile
             </p>
             <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
-              strongest focus
+              Strongest focus
             </p>
           </div>
           <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm">
@@ -43,27 +43,27 @@ const WorkExperience = () => {
               Present
             </p>
             <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
-              active role
+              Active role
             </p>
           </div>
         </div>
       </div>
 
-      <div className="relative space-y-6 border-l border-[color:var(--border)] pl-5 sm:pl-8">
+      <div className="relative space-y-5 border-l border-[color:var(--border)] pl-4 sm:space-y-6 sm:pl-8">
         {workExperienceData.map((exp, index) => (
           <div key={index} className="relative">
-            <div className="absolute -left-[29px] top-6 h-4 w-4 rounded-full border-4 border-[color:var(--bg)] bg-[color:var(--primary)] sm:-left-10"></div>
-            <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-5 shadow-sm transition duration-200 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] sm:p-6">
+            <div className="absolute -left-[25px] top-5 h-4 w-4 rounded-full border-4 border-[color:var(--bg)] bg-[color:var(--primary)] sm:-left-10 sm:top-6"></div>
+            <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm transition duration-200 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] sm:p-6">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-[color:var(--primary-text)]">
+                  <h3 className="text-lg font-bold text-[color:var(--primary-text)] sm:text-xl">
                     {exp.role}
                   </h3>
                   <p className="mt-1 text-sm font-semibold text-[color:var(--highlight)]">
                     {exp.company}
                   </p>
                 </div>
-                <p className="rounded-full border border-[color:var(--border)] bg-[color:var(--muted-surface)] px-3 py-1 text-sm font-medium text-[color:var(--secondary-text)]">
+                <p className="w-fit rounded-full border border-[color:var(--border)] bg-[color:var(--muted-surface)] px-3 py-1 text-xs font-medium text-[color:var(--secondary-text)] sm:text-sm">
                   {exp.startDate} - {exp.endDate}
                 </p>
               </div>
