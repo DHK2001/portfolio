@@ -11,11 +11,14 @@ const WorkExperience = () => {
   return (
     <section className="flex w-full flex-col gap-8 sm:gap-10">
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {workExperiencePageData.badge}
           </div>
-          <Title text={workExperiencePageData.title} classname="text-left" />
+          <Title
+            text={workExperiencePageData.title}
+            classname="text-center lg:text-left"
+          />
           <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
             {workExperiencePageData.description}
           </p>

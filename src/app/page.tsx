@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <section className="flex min-h-[calc(100dvh-10rem)] flex-col justify-start gap-8 lg:justify-center lg:gap-12">
+    <section className="flex min-h-0 flex-col justify-start gap-6 sm:gap-8 lg:min-h-[calc(100dvh-10rem)] lg:justify-center lg:gap-12">
       {openDisplay ? (
         <ImageDisplay
           imageUrl={profileData.degree.src}
@@ -40,8 +40,8 @@ export default function Home() {
         />
       ) : null}
 
-      <div className="grid items-center gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-        <div className="flex flex-col items-start gap-5 sm:gap-6">
+      <div className="grid items-center gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+        <div className="order-2 flex flex-col items-center gap-5 text-center sm:gap-6 lg:order-1 lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {homeData.badge}
           </div>
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="space-y-4">
             <Title
               text={`Hello, I'm ${profileData.name}`}
-              classname="text-left sm:text-5xl"
+              classname="text-center sm:text-5xl lg:text-left"
             />
             <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)] sm:text-lg sm:leading-8">
               {homeData.subtitle}
@@ -60,7 +60,7 @@ export default function Home() {
             <Description text={profileData.description} />
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2 lg:justify-start">
             {homeData.featuredTech.map((tech) => (
               <span
                 key={tech}
@@ -88,7 +88,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex justify-center gap-3 lg:justify-start">
             <IconButton
               icon={faGithub}
               label={homeData.githubLabel}
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <div className="flex w-full max-w-xs flex-col items-center sm:relative sm:max-w-none">
             <UserAvatar
               imageUrl={profileData.profilePicture}
@@ -120,9 +120,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid gap-4 border-t border-[color:var(--border)] pt-6 sm:grid-cols-3 sm:pt-8">
+      <div className="grid gap-3 border-t border-[color:var(--border)] pt-5 sm:grid-cols-3 sm:gap-4 sm:pt-8">
         {homeData.highlights.map((item) => (
-          <div key={item.title}>
+          <div
+            key={item.title}
+            className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none"
+          >
             <p className="text-2xl font-bold text-[color:var(--primary-text)]">
               {item.title}
             </p>

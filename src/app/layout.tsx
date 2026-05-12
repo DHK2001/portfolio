@@ -57,7 +57,7 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-10 pt-24 sm:px-6 sm:pt-28">
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-8 pt-20 sm:px-6 sm:pb-10 sm:pt-28">
           {children}
         </main>
         <footer className="flex h-16 w-full items-center justify-center border-t border-[color:var(--border)] bg-[color:var(--header-footer)] p-4 text-sm text-[color:var(--secondary-text)]">

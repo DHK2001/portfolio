@@ -6,7 +6,7 @@ import {
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ImageProjectsDisplay = ({
@@ -19,17 +19,34 @@ const ImageProjectsDisplay = ({
   closeDisplay?: () => void;
 }) => {
   const [current, setCurrent] = useState(0);
-  const [imgLoaded, setImgLoaded] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const next = () => setCurrent((prev) => (prev + 1) % imageUrl.length);
-  const prev = () =>
-    setCurrent((prev) => (prev === 0 ? imageUrl.length - 1 : prev - 1));
+  const scrollToIndex = (index: number) => {
+    const nextIndex = (index + imageUrl.length) % imageUrl.length;
+    setCurrent(nextIndex);
+    scrollRef.current?.scrollTo({
+      left: scrollRef.current.clientWidth * nextIndex,
+      behavior: "smooth",
+    });
+  };
 
-  const currentProject = imageUrl[current];
+  const next = () => scrollToIndex(current + 1);
+  const prev = () => scrollToIndex(current - 1);
+
+  const handleScroll = () => {
+    const element = scrollRef.current;
+    if (!element) return;
+
+    const nextIndex = Math.round(element.scrollLeft / element.clientWidth);
+    if (nextIndex !== current) {
+      setCurrent(Math.min(Math.max(nextIndex, 0), imageUrl.length - 1));
+    }
+  };
 
   useEffect(() => {
-    setImgLoaded(false);
-  }, [currentProject]);
+    setCurrent(0);
+    scrollRef.current?.scrollTo({ left: 0 });
+  }, [imageUrl]);
 
   return (
     <div className="fixed inset-0 z-[900] flex flex-col items-center justify-center bg-[color:var(--display)] p-4 sm:p-8">
@@ -41,20 +58,38 @@ const ImageProjectsDisplay = ({
       </button>
 
       <div className="relative flex w-full flex-row items-center justify-center">
-        <div className="relative h-[78vh] w-full max-w-5xl overflow-hidden rounded-lg border border-white/10 bg-black/20">
-          <Image
-            src={currentProject}
-            alt={name}
-            fill
-            sizes="100vw"
-            className={`object-contain rounded-lg transition-opacity duration-300 ${
-              imgLoaded ? "opacity-100" : "opacity-0"
-            }`}
-            onLoad={() => setImgLoaded(true)}
-          />
-          {!imgLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-10 w-10 border-4 border-[var(--primary)] border-t-transparent rounded-full animate-spin" />
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="relative h-[76vh] w-full max-w-5xl snap-x snap-mandatory overflow-x-auto scroll-smooth rounded-lg border border-white/10 bg-black/20 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:h-[78vh]"
+        >
+          <div className="flex h-full">
+            {imageUrl.map((src, index) => (
+              <div
+                key={src}
+                className="relative h-full w-full shrink-0 snap-center"
+              >
+                <Image
+                  src={src}
+                  alt={`${name} ${index + 1}`}
+                  fill
+                  sizes="100vw"
+                  className="rounded-lg object-contain"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
+          </div>
+          {imageUrl.length > 1 && (
+            <div className="pointer-events-none absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5">
+              {imageUrl.map((src, index) => (
+                <span
+                  key={`${src}-dot`}
+                  className={`h-1.5 rounded-full transition-all ${
+                    index === current ? "w-5 bg-white" : "w-1.5 bg-white/45"
+                  }`}
+                />
+              ))}
             </div>
           )}
         </div>

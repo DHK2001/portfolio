@@ -18,13 +18,16 @@ const hrefByType = {
 
 export default function Contact() {
   return (
-    <section className="flex min-h-[calc(100dvh-10rem)] w-full flex-col justify-start gap-8 lg:justify-center lg:gap-10">
+    <section className="flex min-h-0 w-full flex-col justify-start gap-8 lg:min-h-[calc(100dvh-10rem)] lg:justify-center lg:gap-10">
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-8">
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {contactPageData.badge}
           </div>
-          <Title text={contactPageData.title} classname="text-left" />
+          <Title
+            text={contactPageData.title}
+            classname="text-center lg:text-left"
+          />
           <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
             {contactPageData.description}
           </p>

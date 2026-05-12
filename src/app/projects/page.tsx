@@ -2,10 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import {
-  projectsData,
-  projectsPageData,
-} from "@/constants/portfolioData";
+import { projectsData, projectsPageData } from "@/constants/portfolioData";
 import Title from "@/components/Title";
 import ImageProjectsDisplay from "@/components/projects/ImageProjectsDisplay";
 import { Project } from "@/models/models";
@@ -23,16 +20,20 @@ function getProjectStack(project: Project) {
   const content = `${project.projectName} ${project.description}`.toLowerCase();
 
   return projectsPageData.stackRules
-    .filter((rule) => rule.keywords.some((keyword) => content.includes(keyword)))
+    .filter((rule) =>
+      rule.keywords.some((keyword) => content.includes(keyword))
+    )
     .map((rule) => rule.label)
     .slice(0, 4);
 }
 
 function getProjectSummary(project: Project) {
-  return project.description
-    .split("\n")
-    .map((line) => line.trim())
-    .find((line) => line.length > 0 && !line.endsWith(":")) ?? "";
+  return (
+    project.description
+      .split("\n")
+      .map((line) => line.trim())
+      .find((line) => line.length > 0 && !line.endsWith(":")) ?? ""
+  );
 }
 
 function ProjectCard({
@@ -53,7 +54,7 @@ function ProjectCard({
     <button
       type="button"
       onClick={onClick}
-      className="group flex h-full flex-col overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)]"
+      className="cursor-pointer group flex h-full flex-col overflow-hidden rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)]"
     >
       <div className="relative aspect-[16/10] w-full bg-[color:var(--muted-surface)]">
         {!loaded && (
@@ -137,11 +138,14 @@ export default function Projects() {
       ) : null}
 
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {projectsPageData.badge}
           </div>
-          <Title text={projectsPageData.title} classname="text-left" />
+          <Title
+            text={projectsPageData.title}
+            classname="text-center lg:text-left"
+          />
           <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
             {projectsPageData.description}
           </p>
@@ -153,7 +157,7 @@ export default function Projects() {
               key={filter}
               type="button"
               onClick={() => setActiveFilter(filter)}
-              className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition ${
+              className={`cursor-pointer shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition ${
                 activeFilter === filter
                   ? "border-[color:var(--primary)] bg-[color:var(--primary)] text-[color:var(--button-text)]"
                   : "border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--secondary-text)] hover:border-[color:var(--primary)]"
