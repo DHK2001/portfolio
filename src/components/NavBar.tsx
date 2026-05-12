@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
 import { layoutData, navBarRouterList } from "@/constants/portfolioData";
+import Link from "next/link";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -23,7 +24,7 @@ const NavBar = () => {
         key={name}
         onClick={() => setIsOpen(false)}
       >
-        <a
+        <Link
           href={link}
           className={`block rounded-md px-3 py-3 text-base font-semibold transition-colors duration-200 hover:bg-[color:var(--muted-surface)] hover:text-[var(--highlight)] md:px-3 md:py-2 md:text-sm md:font-medium ${
             isActive
@@ -32,7 +33,7 @@ const NavBar = () => {
           }`}
         >
           {name}
-        </a>
+        </Link>
       </li>
     );
   };

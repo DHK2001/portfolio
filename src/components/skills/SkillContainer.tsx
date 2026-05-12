@@ -1,6 +1,7 @@
 "use client";
 
 import { Skill } from "@/models/models";
+import Image from "next/image";
 import React from "react";
 
 type Props = {
@@ -13,9 +14,12 @@ const SkillContainer = ({ data }: Props) => {
       className="flex min-h-36 flex-col items-center justify-center rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm transition duration-200 ease-in-out hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)]"
     >
       <div className="mb-3 flex h-16 w-16 items-center justify-center rounded-md border border-slate-200 bg-white">
-        <img
+        <Image
           src={data.imageUrl}
           alt={data.skillName}
+          width={40}
+          height={40}
+          unoptimized
           className="h-10 w-10 object-contain"
         />
       </div>

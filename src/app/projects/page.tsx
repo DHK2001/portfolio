@@ -71,7 +71,7 @@ function ProjectCard({
             loaded ? "opacity-100" : "opacity-0"
           }`}
           priority={priority}
-          onLoadingComplete={() => setLoaded(true)}
+          onLoad={() => setLoaded(true)}
         />
       </div>
 

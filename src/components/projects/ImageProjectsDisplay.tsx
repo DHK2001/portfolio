@@ -50,7 +50,7 @@ const ImageProjectsDisplay = ({
             className={`object-contain rounded-lg transition-opacity duration-300 ${
               imgLoaded ? "opacity-100" : "opacity-0"
             }`}
-            onLoadingComplete={() => setImgLoaded(true)}
+            onLoad={() => setImgLoaded(true)}
           />
           {!imgLoaded && (
             <div className="absolute inset-0 flex items-center justify-center">

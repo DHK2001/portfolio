@@ -25,7 +25,7 @@ const WorkExperience = () => {
           {workExperiencePageData.stats.map((stat) => (
             <div
               key={stat.title}
-              className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm"
+              className="rounded-lg border border-(--border) bg-(--cards) p-4 shadow-sm"
             >
               <p className="text-2xl font-bold text-[color:var(--primary-text)]">
                 {stat.title}

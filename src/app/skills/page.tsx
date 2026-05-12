@@ -5,6 +5,7 @@ import GridTable from "@/components/skills/GridTable";
 import SkillContainer from "@/components/skills/SkillContainer";
 import Title from "@/components/Title";
 import { listSkillsData, skillsPageData } from "@/constants/portfolioData";
+import Image from "next/image";
 import { useMemo } from "react";
 
 export default function Skills() {
@@ -58,9 +59,12 @@ export default function Skills() {
                     >
                       {skill ? (
                         <span className="flex h-5 w-5 items-center justify-center rounded bg-white">
-                          <img
+                          <Image
                             src={skill.imageUrl}
                             alt=""
+                            width={14}
+                            height={14}
+                            unoptimized
                             className="h-3.5 w-3.5 object-contain"
                           />
                         </span>

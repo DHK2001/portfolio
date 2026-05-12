@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import NavBar from "@/components/NavBar";
 import { layoutData } from "@/constants/portfolioData";
+import Link from "next/link";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -44,12 +45,12 @@ export default function RootLayout({
       >
         <header className="fixed left-0 top-0 z-50 w-full border-b border-[color:var(--border)] bg-[color:var(--header-footer)] backdrop-blur">
           <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
-            <a
+            <Link
               href="/"
               className="shrink-0 text-sm font-bold tracking-wide text-[color:var(--primary-text)] sm:text-base"
             >
               {layoutData.brandName}
-            </a>
+            </Link>
             <div className="flex items-center gap-2">
               <NavBar />
               <ThemeToggle />
