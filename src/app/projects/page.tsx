@@ -2,7 +2,11 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { projectsData, projectsPageData } from "@/constants/portfolioData";
+import {
+  portfolioLabels,
+  projectsData,
+  projectsPageData,
+} from "@/constants/portfolioData";
 import Title from "@/components/Title";
 import ImageProjectsDisplay from "@/components/projects/ImageProjectsDisplay";
 import { Project } from "@/models/models";
@@ -102,7 +106,7 @@ function ProjectCard({
         </div>
 
         <p className="text-sm font-semibold text-[color:var(--highlight)]">
-          {projectsPageData.viewScreenshotsLabel}
+          {portfolioLabels.projectActions.viewScreenshotsLabel}
         </p>
       </div>
     </button>

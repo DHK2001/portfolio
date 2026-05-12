@@ -1,1 +1,1 @@
-export { navBarRouterList } from "./portfolioData";
+export { portfolioLabels } from "./portfolioData";

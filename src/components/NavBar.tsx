@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
-import { layoutData, navBarRouterList } from "@/constants/portfolioData";
+import { portfolioLabels } from "@/constants/portfolioData";
 import Link from "next/link";
 
 const NavBar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const { navigation } = portfolioLabels;
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false);
@@ -41,11 +42,13 @@ const NavBar = () => {
   return (
     <nav className="w-fit">
       <ul className="hidden items-center rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-1 shadow-sm md:flex">
-        {navBarRouterList.map((item) => navButtons(item.path, item.name))}
+        {navigation.items.map((item) => navButtons(item.path, item.name))}
       </ul>
 
       <button
-        aria-label={isOpen ? layoutData.closeMenuLabel : layoutData.openMenuLabel}
+        aria-label={
+          isOpen ? navigation.closeMenuLabel : navigation.openMenuLabel
+        }
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         className="relative z-[70] flex h-10 w-10 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] md:hidden"
@@ -77,11 +80,11 @@ const NavBar = () => {
       >
         <div className="border-b border-[color:var(--border)] px-4 py-4">
           <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--secondary-text)]">
-            {layoutData.navigationLabel}
+            {navigation.navigationLabel}
           </p>
         </div>
         <ul className="flex flex-col gap-1 p-4">
-          {navBarRouterList.map((item) => navButtons(item.path, item.name))}
+          {navigation.items.map((item) => navButtons(item.path, item.name))}
         </ul>
       </div>
     </nav>

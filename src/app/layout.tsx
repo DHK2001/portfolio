@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import NavBar from "@/components/NavBar";
-import { layoutData } from "@/constants/portfolioData";
+import { portfolioLabels, profileData } from "@/constants/portfolioData";
 import Link from "next/link";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: layoutData.metadataTitle,
-  description: layoutData.metadataDescription,
+  title: portfolioLabels.site.metadataTitle,
+  description: portfolioLabels.site.metadataDescription,
 };
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
               href="/"
               className="shrink-0 text-sm font-bold tracking-wide text-[color:var(--primary-text)] sm:text-base"
             >
-              {layoutData.brandName}
+              {profileData.name}
             </Link>
             <div className="flex items-center gap-2">
               <NavBar />
@@ -61,7 +61,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="flex h-16 w-full items-center justify-center border-t border-[color:var(--border)] bg-[color:var(--header-footer)] p-4 text-sm text-[color:var(--secondary-text)]">
-          {layoutData.footerText}
+          {portfolioLabels.site.footerText}
         </footer>
       </body>
     </html>

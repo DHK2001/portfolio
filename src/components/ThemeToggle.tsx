@@ -3,7 +3,7 @@ import {
   localStorageGetTheme,
   localStorageSetTheme,
 } from "@/utils/local-storage-helpers";
-import { layoutData } from "@/constants/portfolioData";
+import { portfolioLabels } from "@/constants/portfolioData";
 import { faMoon, faSun, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
@@ -38,18 +38,19 @@ const ThemeToggle = () => {
   }
 
   const isLight = theme === "light";
+  const { theme: themeLabels } = portfolioLabels;
 
   return (
     <button
       aria-label={
         isLight
-          ? layoutData.switchToDarkModeLabel
-          : layoutData.switchToLightModeLabel
+          ? themeLabels.switchToDarkModeLabel
+          : themeLabels.switchToLightModeLabel
       }
       title={
         isLight
-          ? layoutData.switchToDarkModeLabel
-          : layoutData.switchToLightModeLabel
+          ? themeLabels.switchToDarkModeLabel
+          : themeLabels.switchToLightModeLabel
       }
       onClick={toggleTheme}
       className="flex h-10 w-10 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] transition duration-200 hover:border-[color:var(--primary)] hover:text-[color:var(--highlight)]"

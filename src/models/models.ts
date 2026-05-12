@@ -28,11 +28,6 @@ export interface HomeData {
   featuredTech: string[];
   currentFocusTitle: string;
   currentFocusDescription: string;
-  primaryActionLabel: string;
-  secondaryActionLabel: string;
-  githubLabel: string;
-  linkedInLabel: string;
-  cvFileNamePrefix: string;
   highlights: HomeHighlight[];
 }
 
@@ -76,7 +71,6 @@ export interface ProjectsPageData {
   defaultCategory: string;
   categoryRules: ProjectRule[];
   stackRules: ProjectRule[];
-  viewScreenshotsLabel: string;
 }
 
 export interface ContactLinkData {
@@ -104,16 +98,42 @@ export interface NavigationItem {
   name: string;
 }
 
-export interface LayoutData {
+export interface PortfolioLabels {
+  site: SiteLabels;
+  navigation: NavigationLabels;
+  theme: ThemeLabels;
+  homeActions: HomeActionLabels;
+  projectActions: ProjectActionLabels;
+}
+
+export interface SiteLabels {
   metadataTitle: string;
   metadataDescription: string;
-  brandName: string;
   footerText: string;
+}
+
+export interface NavigationLabels {
   navigationLabel: string;
   openMenuLabel: string;
   closeMenuLabel: string;
+  items: NavigationItem[];
+}
+
+export interface ThemeLabels {
   switchToLightModeLabel: string;
   switchToDarkModeLabel: string;
+}
+
+export interface HomeActionLabels {
+  primaryActionLabel: string;
+  secondaryActionLabel: string;
+  githubLabel: string;
+  linkedInLabel: string;
+  cvFileNamePrefix: string;
+}
+
+export interface ProjectActionLabels {
+  viewScreenshotsLabel: string;
 }
 
 export interface Project {

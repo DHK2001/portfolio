@@ -2,8 +2,7 @@ import {
   ContactPageData,
   CertificateSectionData,
   HomeData,
-  LayoutData,
-  NavigationItem,
+  PortfolioLabels,
   Profile,
   Project,
   ProjectsPageData,
@@ -38,41 +37,55 @@ export const profileData: Profile = {
   },
 };
 
-export const layoutData: LayoutData = {
-  metadataTitle: "Derek Galeas - Portfolio",
-  metadataDescription:
-    "Personal portfolio featuring my web and mobile development projects.",
-  brandName: "Derek Galeas",
-  footerText: "© 2025 Derek Galeas",
-  navigationLabel: "Navigation",
-  openMenuLabel: "Open navigation menu",
-  closeMenuLabel: "Close navigation menu",
-  switchToLightModeLabel: "Switch to light mode",
-  switchToDarkModeLabel: "Switch to dark mode",
+export const portfolioLabels: PortfolioLabels = {
+  site: {
+    metadataTitle: "Derek Galeas - Portfolio",
+    metadataDescription:
+      "Personal portfolio featuring my web and mobile development projects.",
+    footerText: "© 2025 Derek Galeas",
+  },
+  navigation: {
+    navigationLabel: "Navigation",
+    openMenuLabel: "Open navigation menu",
+    closeMenuLabel: "Close navigation menu",
+    items: [
+      {
+        path: "/",
+        name: "Home",
+      },
+      {
+        path: "/work-experience",
+        name: "Work Experience",
+      },
+      {
+        path: "/skills",
+        name: "Skills",
+      },
+      {
+        path: "/projects",
+        name: "Projects",
+      },
+      {
+        path: "/contact",
+        name: "Contact",
+      },
+    ],
+  },
+  theme: {
+    switchToLightModeLabel: "Switch to light mode",
+    switchToDarkModeLabel: "Switch to dark mode",
+  },
+  homeActions: {
+    primaryActionLabel: "Download CV",
+    secondaryActionLabel: "View Degree",
+    githubLabel: "Open GitHub profile",
+    linkedInLabel: "Open LinkedIn profile",
+    cvFileNamePrefix: "CV",
+  },
+  projectActions: {
+    viewScreenshotsLabel: "View screenshots",
+  },
 };
-
-export const navBarRouterList: NavigationItem[] = [
-  {
-    path: "/",
-    name: "Home",
-  },
-  {
-    path: "/work-experience",
-    name: "Work Experience",
-  },
-  {
-    path: "/skills",
-    name: "Skills",
-  },
-  {
-    path: "/projects",
-    name: "Projects",
-  },
-  {
-    path: "/contact",
-    name: "Contact",
-  },
-];
 
 export const homeData: HomeData = {
   badge: "Mobile Developer · React Native / Expo",
@@ -82,11 +95,6 @@ export const homeData: HomeData = {
   currentFocusTitle: "Current Focus",
   currentFocusDescription:
     "Shared iOS and Android apps with React Native, Expo, and JavaScript.",
-  primaryActionLabel: "Download CV",
-  secondaryActionLabel: "View Degree",
-  githubLabel: "Open GitHub profile",
-  linkedInLabel: "Open LinkedIn profile",
-  cvFileNamePrefix: "CV",
   highlights: [
     {
       title: "Mobile",
@@ -445,7 +453,6 @@ export const projectsPageData: ProjectsPageData = {
       keywords: ["firebase"],
     },
   ],
-  viewScreenshotsLabel: "View screenshots",
 };
 
 export const contactPageData: ContactPageData = {

@@ -6,12 +6,17 @@ import IconButton from "@/components/IconButton";
 import ImageDisplay from "@/components/ImageDisplay";
 import Title from "@/components/Title";
 import UserAvatar from "@/components/UserAvatar";
-import { homeData, profileData } from "@/constants/portfolioData";
+import {
+  homeData,
+  portfolioLabels,
+  profileData,
+} from "@/constants/portfolioData";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
 export default function Home() {
   const [openDisplay, setOpenDisplay] = useState(false);
+  const { homeActions } = portfolioLabels;
 
   function iconOnClick(url: string) {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -73,16 +78,16 @@ export default function Home() {
 
           <div className="grid w-full grid-cols-1 gap-3 sm:flex sm:w-auto sm:flex-row">
             <Button
-              text={homeData.primaryActionLabel}
+              text={homeActions.primaryActionLabel}
               onClick={() =>
                 downloadPdf(
                   "/docs/CV-Derek Galeas.pdf",
-                  `${homeData.cvFileNamePrefix}-${profileData.name}`
+                  `${homeActions.cvFileNamePrefix}-${profileData.name}`
                 )
               }
             />
             <Button
-              text={homeData.secondaryActionLabel}
+              text={homeActions.secondaryActionLabel}
               variant="secondary"
               onClick={() => setOpenDisplay(true)}
             />
@@ -91,12 +96,12 @@ export default function Home() {
           <div className="flex justify-center gap-3 lg:justify-start">
             <IconButton
               icon={faGithub}
-              label={homeData.githubLabel}
+              label={homeActions.githubLabel}
               onClick={() => iconOnClick(profileData.githubUrl)}
             />
             <IconButton
               icon={faLinkedin}
-              label={homeData.linkedInLabel}
+              label={homeActions.linkedInLabel}
               onClick={() => iconOnClick(profileData.linkedUrl)}
             />
           </div>
