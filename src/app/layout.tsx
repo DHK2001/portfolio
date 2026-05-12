@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import NavBar from "@/components/NavBar";
+import { layoutData } from "@/constants/portfolioData";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -11,9 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Derek Galeas - Portfolio",
-  description:
-    "Personal portfolio featuring my web and mobile development projects.",
+  title: layoutData.metadataTitle,
+  description: layoutData.metadataDescription,
 };
 
 export default function RootLayout({
@@ -48,7 +48,7 @@ export default function RootLayout({
               href="/"
               className="shrink-0 text-sm font-bold tracking-wide text-[color:var(--primary-text)] sm:text-base"
             >
-              Derek Galeas
+              {layoutData.brandName}
             </a>
             <div className="flex items-center gap-2">
               <NavBar />
@@ -60,7 +60,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="flex h-16 w-full items-center justify-center border-t border-[color:var(--border)] bg-[color:var(--header-footer)] p-4 text-sm text-[color:var(--secondary-text)]">
-          © 2025 Derek Galeas
+          {layoutData.footerText}
         </footer>
       </body>
     </html>

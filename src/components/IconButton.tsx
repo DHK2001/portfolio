@@ -6,12 +6,12 @@ import React from "react";
 
 type Props = {
   icon: IconDefinition;
-  label?: string;
+  label: string;
   onClick?: () => void;
   disabled?: boolean;
 };
 
-const IconButton = ({ icon, label = "Open link", onClick, disabled }: Props) => {
+const IconButton = ({ icon, label, onClick, disabled }: Props) => {
   return (
     <button
       aria-label={label}

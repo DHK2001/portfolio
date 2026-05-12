@@ -46,6 +46,7 @@ const ImageProjectsDisplay = ({
             src={currentProject}
             alt={name}
             fill
+            sizes="100vw"
             className={`object-contain rounded-lg transition-opacity duration-300 ${
               imgLoaded ? "opacity-100" : "opacity-0"
             }`}

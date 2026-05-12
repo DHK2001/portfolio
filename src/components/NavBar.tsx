@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
-import { navBarRouterList } from "@/constants/constants";
+import { layoutData, navBarRouterList } from "@/constants/portfolioData";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -44,7 +44,7 @@ const NavBar = () => {
       </ul>
 
       <button
-        aria-label="Open menu"
+        aria-label={isOpen ? layoutData.closeMenuLabel : layoutData.openMenuLabel}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         className="relative z-[70] flex h-10 w-10 items-center justify-center rounded-md border border-[color:var(--border)] bg-[color:var(--cards)] text-[color:var(--primary-text)] md:hidden"
@@ -76,7 +76,7 @@ const NavBar = () => {
       >
         <div className="border-b border-[color:var(--border)] px-4 py-4">
           <p className="text-sm font-semibold uppercase tracking-wide text-[color:var(--secondary-text)]">
-            Navigation
+            {layoutData.navigationLabel}
           </p>
         </div>
         <ul className="flex flex-col gap-1 p-4">

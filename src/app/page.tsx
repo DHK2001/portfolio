@@ -73,16 +73,16 @@ export default function Home() {
 
           <div className="grid w-full grid-cols-1 gap-3 sm:flex sm:w-auto sm:flex-row">
             <Button
-              text="Download CV"
+              text={homeData.primaryActionLabel}
               onClick={() =>
                 downloadPdf(
                   "/docs/CV-Derek Galeas.pdf",
-                  `CV-${profileData.name}`
+                  `${homeData.cvFileNamePrefix}-${profileData.name}`
                 )
               }
             />
             <Button
-              text="View Degree"
+              text={homeData.secondaryActionLabel}
               variant="secondary"
               onClick={() => setOpenDisplay(true)}
             />
@@ -91,12 +91,12 @@ export default function Home() {
           <div className="flex gap-3">
             <IconButton
               icon={faGithub}
-              label="Open GitHub profile"
+              label={homeData.githubLabel}
               onClick={() => iconOnClick(profileData.githubUrl)}
             />
             <IconButton
               icon={faLinkedin}
-              label="Open LinkedIn profile"
+              label={homeData.linkedInLabel}
               onClick={() => iconOnClick(profileData.linkedUrl)}
             />
           </div>
@@ -104,7 +104,10 @@ export default function Home() {
 
         <div className="flex justify-center lg:justify-end">
           <div className="flex w-full max-w-xs flex-col items-center sm:relative sm:max-w-none">
-            <UserAvatar imageUrl={profileData.profilePicture} />
+            <UserAvatar
+              imageUrl={profileData.profilePicture}
+              alt={profileData.profilePictureAlt}
+            />
             <div className="mt-3 w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-3 shadow-lg sm:absolute sm:-bottom-5 sm:left-4 sm:right-4 sm:mt-0 sm:w-auto">
               <p className="text-xs font-semibold uppercase text-[color:var(--secondary-text)]">
                 {homeData.currentFocusTitle}

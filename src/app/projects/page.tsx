@@ -12,48 +12,19 @@ import { Project } from "@/models/models";
 
 function getProjectCategory(project: Project) {
   const content = `${project.projectName} ${project.description}`.toLowerCase();
+  const match = projectsPageData.categoryRules.find((rule) =>
+    rule.keywords.some((keyword) => content.includes(keyword))
+  );
 
-  if (content.includes("react native") || content.includes("expo")) {
-    return "React Native";
-  }
-
-  if (
-    content.includes("swift") ||
-    content.includes("uikit") ||
-    content.includes("swiftui") ||
-    content.includes("xcode")
-  ) {
-    return "iOS";
-  }
-
-  if (content.includes("android")) {
-    return "Android";
-  }
-
-  return "Web";
+  return match?.label ?? projectsPageData.defaultCategory;
 }
 
 function getProjectStack(project: Project) {
   const content = `${project.projectName} ${project.description}`.toLowerCase();
-  const stackMap = [
-    ["React Native", "react native"],
-    ["Expo", "expo"],
-    ["TypeScript", "typescript"],
-    ["JavaScript", "javascript"],
-    ["Next.js", "next.js"],
-    ["React", "react"],
-    ["SwiftUI", "swiftui"],
-    ["UIKit", "uikit"],
-    ["Swift", "swift"],
-    ["Flutter", "flutter"],
-    ["Java", "java"],
-    ["MongoDB", "mongodb"],
-    ["Firebase", "firebase"],
-  ];
 
-  return stackMap
-    .filter(([, needle]) => content.includes(needle))
-    .map(([label]) => label)
+  return projectsPageData.stackRules
+    .filter((rule) => rule.keywords.some((keyword) => content.includes(keyword)))
+    .map((rule) => rule.label)
     .slice(0, 4);
 }
 
@@ -95,6 +66,7 @@ function ProjectCard({
           src={project.image[0]}
           alt={project.projectName}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           className={`object-contain p-4 transition duration-300 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
@@ -129,7 +101,7 @@ function ProjectCard({
         </div>
 
         <p className="text-sm font-semibold text-[color:var(--highlight)]">
-          View screenshots
+          {projectsPageData.viewScreenshotsLabel}
         </p>
       </div>
     </button>
@@ -141,7 +113,7 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState(projectsPageData.filters[0]);
 
   const filteredProjects = useMemo(() => {
-    if (activeFilter === "All") {
+    if (activeFilter === projectsPageData.filters[0]) {
       return projectsData;
     }
 

@@ -22,30 +22,19 @@ const WorkExperience = () => {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-3">
-          <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm">
-            <p className="text-2xl font-bold text-[color:var(--primary-text)]">
-              4
-            </p>
-            <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
-              Professional roles
-            </p>
-          </div>
-          <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm">
-            <p className="text-2xl font-bold text-[color:var(--primary-text)]">
-              Mobile
-            </p>
-            <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
-              Strongest focus
-            </p>
-          </div>
-          <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm">
-            <p className="text-2xl font-bold text-[color:var(--primary-text)]">
-              Present
-            </p>
-            <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
-              Active role
-            </p>
-          </div>
+          {workExperiencePageData.stats.map((stat) => (
+            <div
+              key={stat.title}
+              className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm"
+            >
+              <p className="text-2xl font-bold text-[color:var(--primary-text)]">
+                {stat.title}
+              </p>
+              <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
+                {stat.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 

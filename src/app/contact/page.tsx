@@ -1,30 +1,20 @@
 import Title from "@/components/Title";
 import { contactPageData, profileData } from "@/constants/portfolioData";
-import { getLinkedUser } from "@/utils/utils";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const contactLinks = [
-  {
-    label: "Email",
-    value: profileData.email,
-    href: `mailto:${profileData.email}`,
-    icon: faEnvelope,
-  },
-  {
-    label: "LinkedIn",
-    value: `linkedin.com/in/${getLinkedUser(profileData.linkedUrl)}`,
-    href: profileData.linkedUrl,
-    icon: faLinkedin,
-  },
-  {
-    label: "GitHub",
-    value: "github.com/DHK2001",
-    href: profileData.githubUrl,
-    icon: faGithub,
-  },
-];
+const iconByType = {
+  email: faEnvelope,
+  linkedin: faLinkedin,
+  github: faGithub,
+};
+
+const hrefByType = {
+  email: `mailto:${profileData.email}`,
+  linkedin: profileData.linkedUrl,
+  github: profileData.githubUrl,
+};
 
 export default function Contact() {
   return (
@@ -41,31 +31,40 @@ export default function Contact() {
         </div>
 
         <div className="grid gap-4">
-          {contactLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-              rel={
-                link.href.startsWith("mailto:")
-                  ? undefined
-                  : "noopener noreferrer"
-              }
-              className="group flex items-center gap-3 rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] sm:gap-4 sm:p-5"
-            >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)] sm:h-12 sm:w-12">
-                <FontAwesomeIcon icon={link.icon} className="h-4 w-4 sm:h-5 sm:w-5" />
-              </span>
-              <span className="min-w-0">
-                <span className="block text-sm font-semibold text-[color:var(--secondary-text)]">
-                  {link.label}
+          {contactPageData.links.map((link) => {
+            const href = hrefByType[link.type as keyof typeof hrefByType];
+            const icon = iconByType[link.type as keyof typeof iconByType];
+            if (!href || !icon) return null;
+
+            return (
+              <a
+                key={link.label}
+                href={href}
+                target={href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={
+                  href.startsWith("mailto:")
+                    ? undefined
+                    : "noopener noreferrer"
+                }
+                className="group flex items-center gap-3 rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] sm:gap-4 sm:p-5"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[color:var(--primary)] text-[color:var(--button-text)] sm:h-12 sm:w-12">
+                  <FontAwesomeIcon
+                    icon={icon}
+                    className="h-4 w-4 sm:h-5 sm:w-5"
+                  />
                 </span>
-                <span className="block truncate text-sm font-bold text-[color:var(--primary-text)] group-hover:text-[color:var(--highlight)] sm:text-base">
-                  {link.value}
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-[color:var(--secondary-text)]">
+                    {link.label}
+                  </span>
+                  <span className="block truncate text-sm font-bold text-[color:var(--primary-text)] group-hover:text-[color:var(--highlight)] sm:text-base">
+                    {link.value}
+                  </span>
                 </span>
-              </span>
-            </a>
-          ))}
+              </a>
+            );
+          })}
         </div>
       </div>
 

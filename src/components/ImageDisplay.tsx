@@ -28,6 +28,7 @@ const ImageDisplay = ({
           src={imageUrl}
           alt={name}
           fill
+          sizes="100vw"
           className="object-contain rounded-lg"
         />
       </div>

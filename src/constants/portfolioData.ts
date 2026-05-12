@@ -1,6 +1,9 @@
 import {
   ContactPageData,
+  CertificateSectionData,
   HomeData,
+  LayoutData,
+  NavigationItem,
   Profile,
   Project,
   ProjectsPageData,
@@ -15,6 +18,7 @@ export const profileData: Profile = {
   description:
     "Software Engineer with experience in mobile and web development. Skilled in implementing new features, maintaining applications, and integrating designs using technologies such as React Native, Expo, Swift, Flutter, React, Next.js, and MongoDB.\n\nBachelor’s degree in Computer Systems Engineering, Unitec (2019 - 2024)",
   profilePicture: "/images/userImage.jpg",
+  profilePictureAlt: "Derek Galeas profile photo",
   email: "dhenrygk12@gmail.com",
   githubUrl: "https://github.com/DHK2001?tab=repositories",
   linkedUrl: "https://www.linkedin.com/in/derek-galeas-00ba83358",
@@ -34,6 +38,42 @@ export const profileData: Profile = {
   },
 };
 
+export const layoutData: LayoutData = {
+  metadataTitle: "Derek Galeas - Portfolio",
+  metadataDescription:
+    "Personal portfolio featuring my web and mobile development projects.",
+  brandName: "Derek Galeas",
+  footerText: "© 2025 Derek Galeas",
+  navigationLabel: "Navigation",
+  openMenuLabel: "Open navigation menu",
+  closeMenuLabel: "Close navigation menu",
+  switchToLightModeLabel: "Switch to light mode",
+  switchToDarkModeLabel: "Switch to dark mode",
+};
+
+export const navBarRouterList: NavigationItem[] = [
+  {
+    path: "/",
+    name: "Home",
+  },
+  {
+    path: "/work-experience",
+    name: "Work Experience",
+  },
+  {
+    path: "/skills",
+    name: "Skills",
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+  },
+];
+
 export const homeData: HomeData = {
   badge: "Mobile Developer · React Native / Expo",
   subtitle:
@@ -42,6 +82,11 @@ export const homeData: HomeData = {
   currentFocusTitle: "Current Focus",
   currentFocusDescription:
     "Shared iOS and Android apps with React Native, Expo, and JavaScript.",
+  primaryActionLabel: "Download CV",
+  secondaryActionLabel: "View Degree",
+  githubLabel: "Open GitHub profile",
+  linkedInLabel: "Open LinkedIn profile",
+  cvFileNamePrefix: "CV",
   highlights: [
     {
       title: "Mobile",
@@ -63,6 +108,20 @@ export const workExperiencePageData: WorkExperiencePageData = {
   title: "Mobile And Frontend Work Experience",
   description:
     "My experience has been focused on building and maintaining mobile applications, with additional frontend work across React and Next.js projects.",
+  stats: [
+    {
+      title: "4",
+      description: "professional roles",
+    },
+    {
+      title: "Mobile",
+      description: "strongest focus",
+    },
+    {
+      title: "Present",
+      description: "active role",
+    },
+  ],
 };
 
 export const workExperienceData: WorkExperience[] = [
@@ -317,6 +376,76 @@ export const projectsPageData: ProjectsPageData = {
   description:
     "A collection of practice and portfolio projects focused on mobile development, API integration, navigation flows, and responsive interfaces.",
   filters: ["All", "React Native", "Web", "iOS", "Android"],
+  defaultCategory: "Web",
+  categoryRules: [
+    {
+      label: "React Native",
+      keywords: ["react native", "expo"],
+    },
+    {
+      label: "iOS",
+      keywords: ["swift", "uikit", "swiftui", "xcode"],
+    },
+    {
+      label: "Android",
+      keywords: ["android"],
+    },
+  ],
+  stackRules: [
+    {
+      label: "React Native",
+      keywords: ["react native"],
+    },
+    {
+      label: "Expo",
+      keywords: ["expo"],
+    },
+    {
+      label: "TypeScript",
+      keywords: ["typescript"],
+    },
+    {
+      label: "JavaScript",
+      keywords: ["javascript"],
+    },
+    {
+      label: "Next.js",
+      keywords: ["next.js"],
+    },
+    {
+      label: "React",
+      keywords: ["react"],
+    },
+    {
+      label: "SwiftUI",
+      keywords: ["swiftui"],
+    },
+    {
+      label: "UIKit",
+      keywords: ["uikit"],
+    },
+    {
+      label: "Swift",
+      keywords: ["swift"],
+    },
+    {
+      label: "Flutter",
+      keywords: ["flutter"],
+    },
+    {
+      label: "Java",
+      keywords: ["java"],
+    },
+    {
+      label: "MongoDB",
+      keywords: ["mongodb"],
+    },
+    {
+      label: "Firebase",
+      keywords: ["firebase"],
+    },
+  ],
+  viewScreenshotsLabel: "View screenshots",
 };
 
 export const contactPageData: ContactPageData = {
@@ -327,6 +456,29 @@ export const contactPageData: ContactPageData = {
   availabilityTitle: "Current Focus",
   availabilityDescription:
     "I am currently focused on React Native and Expo while continuing to grow my native mobile and frontend experience.",
+  links: [
+    {
+      type: "email",
+      label: "Email",
+      value: profileData.email,
+    },
+    {
+      type: "linkedin",
+      label: "LinkedIn",
+      value: "linkedin.com/in/derek-galeas-00ba83358",
+    },
+    {
+      type: "github",
+      label: "GitHub",
+      value: "github.com/DHK2001",
+    },
+  ],
+};
+
+export const certificateSectionData: CertificateSectionData = {
+  title: "Certificates",
+  description:
+    "Certifications and academic documents that support my learning path.",
 };
 
 export const projectsData: Project[] = [

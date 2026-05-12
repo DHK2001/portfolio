@@ -3,7 +3,10 @@
 import { useState } from "react";
 import Title from "@/components/Title";
 import Image from "next/image";
-import { profileData } from "@/constants/portfolioData";
+import {
+  certificateSectionData,
+  profileData,
+} from "@/constants/portfolioData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ImageDisplay from "../ImageDisplay";
@@ -28,9 +31,9 @@ const CertificateSection = () => {
   return (
     <section className="flex w-full flex-col gap-5">
       <div className="border-b border-[color:var(--border)] pb-4">
-        <Title text="Certificates" classname="text-left" />
+        <Title text={certificateSectionData.title} classname="text-left" />
         <p className="mt-2 text-sm text-[color:var(--secondary-text)]">
-          Certifications and academic documents that support my learning path.
+          {certificateSectionData.description}
         </p>
       </div>
       {openDisplay ? (
@@ -48,6 +51,7 @@ const CertificateSection = () => {
           src={currentCert.src}
           alt={currentCert.name}
           fill
+          sizes="(max-width: 768px) 100vw, 600px"
           className="object-contain p-4 cursor-pointer"
           onClick={() => {
             setOpenDisplay(true);

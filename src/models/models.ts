@@ -9,6 +9,7 @@ export interface Profile {
   name: string;
   description: string;
   profilePicture: string;
+  profilePictureAlt: string;
   email: string;
   githubUrl: string;
   linkedUrl: string;
@@ -27,6 +28,11 @@ export interface HomeData {
   featuredTech: string[];
   currentFocusTitle: string;
   currentFocusDescription: string;
+  primaryActionLabel: string;
+  secondaryActionLabel: string;
+  githubLabel: string;
+  linkedInLabel: string;
+  cvFileNamePrefix: string;
   highlights: HomeHighlight[];
 }
 
@@ -54,6 +60,12 @@ export interface WorkExperiencePageData {
   badge: string;
   title: string;
   description: string;
+  stats: HomeHighlight[];
+}
+
+export interface ProjectRule {
+  label: string;
+  keywords: string[];
 }
 
 export interface ProjectsPageData {
@@ -61,6 +73,16 @@ export interface ProjectsPageData {
   title: string;
   description: string;
   filters: string[];
+  defaultCategory: string;
+  categoryRules: ProjectRule[];
+  stackRules: ProjectRule[];
+  viewScreenshotsLabel: string;
+}
+
+export interface ContactLinkData {
+  type: string;
+  label: string;
+  value: string;
 }
 
 export interface ContactPageData {
@@ -69,6 +91,29 @@ export interface ContactPageData {
   description: string;
   availabilityTitle: string;
   availabilityDescription: string;
+  links: ContactLinkData[];
+}
+
+export interface CertificateSectionData {
+  title: string;
+  description: string;
+}
+
+export interface NavigationItem {
+  path: string;
+  name: string;
+}
+
+export interface LayoutData {
+  metadataTitle: string;
+  metadataDescription: string;
+  brandName: string;
+  footerText: string;
+  navigationLabel: string;
+  openMenuLabel: string;
+  closeMenuLabel: string;
+  switchToLightModeLabel: string;
+  switchToDarkModeLabel: string;
 }
 
 export interface Project {
