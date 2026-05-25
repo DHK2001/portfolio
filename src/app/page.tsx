@@ -139,7 +139,7 @@ export default function Home() {
             <p className="text-2xl font-bold text-[color:var(--primary-text)]">
               {item.title}
             </p>
-            <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
+            <p className="mt-1 text-sm text-(--secondary-text)">
               {item.description}
             </p>
           </ScrollReveal>

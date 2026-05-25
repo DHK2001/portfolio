@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "generate:cv": "node scripts/generate-cv.mjs",
     "start": "next start",
     "lint": "eslint ."
   },
