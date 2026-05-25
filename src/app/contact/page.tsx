@@ -1,3 +1,4 @@
+import ScrollReveal from "@/components/ScrollReveal";
 import Title from "@/components/Title";
 import { contactPageData, profileData } from "@/constants/portfolioData";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -20,7 +21,7 @@ export default function Contact() {
   return (
     <section className="flex min-h-0 w-full flex-col justify-start gap-8 lg:min-h-[calc(100dvh-10rem)] lg:justify-center lg:gap-10">
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-8">
-        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
+        <ScrollReveal className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {contactPageData.badge}
           </div>
@@ -31,17 +32,17 @@ export default function Contact() {
           <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
             {contactPageData.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid gap-4">
-          {contactPageData.links.map((link) => {
+          {contactPageData.links.map((link, index) => {
             const href = hrefByType[link.type as keyof typeof hrefByType];
             const icon = iconByType[link.type as keyof typeof iconByType];
             if (!href || !icon) return null;
 
             return (
+              <ScrollReveal key={link.label} delay={index * 90}>
               <a
-                key={link.label}
                 href={href}
                 target={href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={
@@ -66,19 +67,23 @@ export default function Contact() {
                   </span>
                 </span>
               </a>
+              </ScrollReveal>
             );
           })}
         </div>
       </div>
 
-      <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-5 shadow-sm">
+      <ScrollReveal
+        delay={120}
+        className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-5 shadow-sm"
+      >
         <p className="text-sm font-semibold uppercase text-[color:var(--secondary-text)]">
           {contactPageData.availabilityTitle}
         </p>
         <p className="mt-2 text-base leading-7 text-[color:var(--primary-text)]">
           {contactPageData.availabilityDescription}
         </p>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import ScrollReveal from "@/components/ScrollReveal";
 import Title from "@/components/Title";
 import {
   workExperienceData,
@@ -11,7 +12,7 @@ const WorkExperience = () => {
   return (
     <section className="flex w-full flex-col gap-8 sm:gap-10">
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
+        <ScrollReveal className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {workExperiencePageData.badge}
           </div>
@@ -22,12 +23,13 @@ const WorkExperience = () => {
           <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
             {workExperiencePageData.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid gap-3 sm:grid-cols-3">
-          {workExperiencePageData.stats.map((stat) => (
-            <div
+          {workExperiencePageData.stats.map((stat, index) => (
+            <ScrollReveal
               key={stat.title}
+              delay={index * 90}
               className="rounded-lg border border-(--border) bg-(--cards) p-4 shadow-sm"
             >
               <p className="text-2xl font-bold text-[color:var(--primary-text)]">
@@ -36,14 +38,14 @@ const WorkExperience = () => {
               <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
                 {stat.description}
               </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
 
       <div className="relative space-y-5 border-l border-[color:var(--border)] pl-4 sm:space-y-6 sm:pl-8">
         {workExperienceData.map((exp, index) => (
-          <div key={index} className="relative">
+          <ScrollReveal key={index} delay={(index % 3) * 90} className="relative">
             <div className="absolute -left-[25px] top-5 h-4 w-4 rounded-full border-4 border-[color:var(--bg)] bg-[color:var(--primary)] sm:-left-10 sm:top-6"></div>
             <div className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm transition duration-200 hover:border-[color:var(--primary)] hover:shadow-[0_10px_30px_var(--shadow-color)] sm:p-6">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
@@ -80,7 +82,7 @@ const WorkExperience = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>

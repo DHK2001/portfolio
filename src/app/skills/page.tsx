@@ -2,6 +2,7 @@
 
 import CertificateSection from "@/components/skills/CertificateSection";
 import GridTable from "@/components/skills/GridTable";
+import ScrollReveal from "@/components/ScrollReveal";
 import SkillContainer from "@/components/skills/SkillContainer";
 import Title from "@/components/Title";
 import { listSkillsData, skillsPageData } from "@/constants/portfolioData";
@@ -26,7 +27,7 @@ export default function Skills() {
   return (
     <div className="flex h-full w-full flex-col gap-8 sm:gap-10">
       <section className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-end lg:gap-8">
-        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
+        <ScrollReveal className="flex flex-col items-center gap-4 text-center lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {skillsPageData.badge}
           </div>
@@ -37,12 +38,14 @@ export default function Skills() {
           <p className="max-w-2xl text-base leading-7 text-[color:var(--secondary-text)]">
             {skillsPageData.description}
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid gap-3 sm:grid-cols-3">
-          {skillsPageData.focusGroups.map((group) => (
-            <article
+          {skillsPageData.focusGroups.map((group, index) => (
+            <ScrollReveal
               key={group.title}
+              as="article"
+              delay={index * 90}
               className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm"
             >
               <h3 className="text-base font-bold text-[color:var(--primary-text)]">
@@ -77,7 +80,7 @@ export default function Skills() {
                   );
                 })}
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -87,7 +90,7 @@ export default function Skills() {
         if (!items.length) return null;
 
         return (
-          <section key={category} className="w-full">
+          <ScrollReveal key={category} as="section" className="w-full">
             <div className="mb-5 flex flex-col gap-1 border-b border-[color:var(--border)] pb-4">
               <h2 className="text-2xl font-bold text-[color:var(--primary-text)]">
                 {title}
@@ -102,7 +105,7 @@ export default function Skills() {
                 <SkillContainer key={skill.id} data={skill} />
               ))}
             </GridTable>
-          </section>
+          </ScrollReveal>
         );
       })}
 

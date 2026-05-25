@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import Description from "@/components/Description";
 import IconButton from "@/components/IconButton";
 import ImageDisplay from "@/components/ImageDisplay";
+import ScrollReveal from "@/components/ScrollReveal";
 import Title from "@/components/Title";
 import UserAvatar from "@/components/UserAvatar";
 import {
@@ -46,7 +47,7 @@ export default function Home() {
       ) : null}
 
       <div className="grid items-center gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-        <div className="order-2 flex flex-col items-center gap-5 text-center sm:gap-6 lg:order-1 lg:items-start lg:text-left">
+        <ScrollReveal className="order-2 flex flex-col items-center gap-5 text-center sm:gap-6 lg:order-1 lg:items-start lg:text-left">
           <div className="inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--cards)] px-4 py-2 text-sm font-medium text-[color:var(--secondary-text)] shadow-sm">
             {homeData.badge}
           </div>
@@ -105,9 +106,12 @@ export default function Home() {
               onClick={() => iconOnClick(profileData.linkedUrl)}
             />
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+        <ScrollReveal
+          delay={120}
+          className="order-1 flex justify-center lg:order-2 lg:justify-end"
+        >
           <div className="flex w-full max-w-xs flex-col items-center sm:relative sm:max-w-none">
             <UserAvatar
               imageUrl={profileData.profilePicture}
@@ -122,13 +126,14 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
       <div className="grid gap-3 border-t border-[color:var(--border)] pt-5 sm:grid-cols-3 sm:gap-4 sm:pt-8">
-        {homeData.highlights.map((item) => (
-          <div
+        {homeData.highlights.map((item, index) => (
+          <ScrollReveal
             key={item.title}
+            delay={index * 90}
             className="rounded-lg border border-[color:var(--border)] bg-[color:var(--cards)] p-4 shadow-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none"
           >
             <p className="text-2xl font-bold text-[color:var(--primary-text)]">
@@ -137,7 +142,7 @@ export default function Home() {
             <p className="mt-1 text-sm text-[color:var(--secondary-text)]">
               {item.description}
             </p>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>
