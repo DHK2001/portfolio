@@ -76,7 +76,7 @@ export const portfolioLabels: PortfolioLabels = {
     switchToDarkModeLabel: "Switch to dark mode",
   },
   homeActions: {
-    primaryActionLabel: "Download CV",
+    primaryActionLabel: "View CV",
     secondaryActionLabel: "View Degree",
     githubLabel: "Open GitHub profile",
     linkedInLabel: "Open LinkedIn profile",

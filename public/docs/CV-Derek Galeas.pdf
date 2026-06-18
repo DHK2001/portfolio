@@ -3,7 +3,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+<< /Type /Pages /Kids [9 0 R 11 0 R] /Count 2 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -79,9 +79,18 @@ BT /F1 9.8 Tf 0 0 0 rg 70 76.99999999999966 Td (Bachelor's Degree in Computer Sy
 endstream
 endobj
 6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+<< /Type /Annot /Subtype /Link /Rect [179.41 701 283.44 714.5] /Border [0 0 0] /A << /S /URI /URI (mailto:dhenrygk12@gmail.com) >> >>
 endobj
 7 0 obj
+<< /Type /Annot /Subtype /Link /Rect [292.18 701 475.24 714.5] /Border [0 0 0] /A << /S /URI /URI (https://www.linkedin.com/in/derek-galeas-00ba83358) >> >>
+endobj
+8 0 obj
+<< /Type /Annot /Subtype /Link /Rect [483.98 701 574.33 714.5] /Border [0 0 0] /A << /S /URI /URI (https://github.com/DHK2001) >> >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R /Annots [6 0 R 7 0 R 8 0 R] >>
+endobj
+10 0 obj
 << /Length 2753 >>
 stream
 BT /F2 15.5 Tf 0.08 0.16 0.30 rg 52 733 Td (SKILLS) Tj ET
@@ -120,22 +129,25 @@ BT /F1 9.6 Tf 0 0 0 rg 70 421.80000000000007 Td (Spanish: Native) Tj ET
 BT /F1 9.6 Tf 0 0 0 rg 70 407.20000000000005 Td (English: Professional working proficiency) Tj ET
 endstream
 endobj
-8 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
 endobj
 xref
-0 9
+0 12
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000121 00000 n 
-0000000191 00000 n 
-0000000266 00000 n 
-0000006181 00000 n 
-0000006317 00000 n 
-0000009122 00000 n 
+0000000122 00000 n 
+0000000192 00000 n 
+0000000267 00000 n 
+0000006182 00000 n 
+0000006331 00000 n 
+0000006503 00000 n 
+0000006651 00000 n 
+0000006815 00000 n 
+0000009621 00000 n 
 trailer
-<< /Size 9 /Root 1 0 R >>
+<< /Size 12 /Root 1 0 R >>
 startxref
-9258
+9759
 %%EOF

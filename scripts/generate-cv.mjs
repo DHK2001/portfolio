@@ -13,6 +13,20 @@ const cv = {
   title: "Mobile Developer (React Native / Expo) | Software Engineer",
   contact:
     "El Progreso, Yoro | 9671-3155 | dhenrygk12@gmail.com | linkedin.com/in/derek-galeas-00ba83358 | github.com/DHK2001",
+  contactLinks: [
+    {
+      text: "dhenrygk12@gmail.com",
+      url: "mailto:dhenrygk12@gmail.com",
+    },
+    {
+      text: "linkedin.com/in/derek-galeas-00ba83358",
+      url: "https://www.linkedin.com/in/derek-galeas-00ba83358",
+    },
+    {
+      text: "github.com/DHK2001",
+      url: "https://github.com/DHK2001",
+    },
+  ],
   summary:
     "Software Engineer focused on mobile and frontend development. Experienced building and maintaining iOS and Android applications with React Native, Expo, Swift, Flutter, React, Next.js, API integrations, responsive UI, and application data flows.",
   skills: [
@@ -143,11 +157,13 @@ function wrapText(text, size, maxWidth) {
 function createRenderer() {
   const pages = [];
   let commands = [];
+  let links = [];
   let y = pageHeight - marginTop;
 
   function newPage() {
-    if (commands.length) pages.push(commands.join("\n"));
+    if (commands.length) pages.push({ content: commands.join("\n"), links });
     commands = [];
+    links = [];
     y = pageHeight - marginTop;
   }
 
@@ -166,6 +182,39 @@ function createRenderer() {
   function centeredText(line, lineY, size = 10, font = "F1", color = "0 0 0") {
     const textWidth = estimateWidth(line, size);
     text(line, (pageWidth - textWidth) / 2, lineY, size, font, color);
+  }
+
+  function addLink(x, lineY, width, size, url) {
+    links.push({
+      rect: [
+        Number(x.toFixed(2)),
+        Number((lineY - 2).toFixed(2)),
+        Number((x + width).toFixed(2)),
+        Number((lineY + size + 2).toFixed(2)),
+      ],
+      url,
+    });
+  }
+
+  function centeredLinkedText(
+    line,
+    lineY,
+    linkItems,
+    size = 10,
+    font = "F1",
+    color = "0 0 0"
+  ) {
+    const textWidth = estimateWidth(line, size);
+    const startX = (pageWidth - textWidth) / 2;
+    text(line, startX, lineY, size, font, color);
+
+    for (const item of linkItems) {
+      const index = line.indexOf(item.text);
+      if (index === -1) continue;
+      const before = line.slice(0, index);
+      const x = startX + estimateWidth(before, size);
+      addLink(x, lineY, estimateWidth(item.text, size), size, item.url);
+    }
   }
 
   function rule() {
@@ -228,7 +277,7 @@ function createRenderer() {
   }
 
   function finish() {
-    if (commands.length) pages.push(commands.join("\n"));
+    if (commands.length) pages.push({ content: commands.join("\n"), links });
     return pages;
   }
 
@@ -241,6 +290,7 @@ function createRenderer() {
     },
     text,
     centeredText,
+    centeredLinkedText,
     paragraph,
     heading,
     roleHeader,
@@ -255,7 +305,14 @@ function buildPages() {
   renderer.y -= 26;
   renderer.centeredText(cv.title, renderer.y, 11, "F2", "0.10 0.22 0.42");
   renderer.y -= 17;
-  renderer.centeredText(cv.contact, renderer.y, 9.5, "F1", "0.24 0.29 0.37");
+  renderer.centeredLinkedText(
+    cv.contact,
+    renderer.y,
+    cv.contactLinks,
+    9.5,
+    "F1",
+    "0.24 0.29 0.37"
+  );
   renderer.y -= 20;
 
   renderer.heading("Professional Summary");
@@ -332,11 +389,21 @@ function pdfString(pages) {
   const fontBoldId = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>");
 
   const pageIds = [];
-  for (const pageContent of pages) {
-    const stream = `<< /Length ${Buffer.byteLength(pageContent)} >>\nstream\n${pageContent}\nendstream`;
+  for (const page of pages) {
+    const stream = `<< /Length ${Buffer.byteLength(page.content)} >>\nstream\n${page.content}\nendstream`;
     const contentId = add(stream);
+    const annotationIds = page.links.map((link) =>
+      add(
+        `<< /Type /Annot /Subtype /Link /Rect [${link.rect.join(
+          " "
+        )}] /Border [0 0 0] /A << /S /URI /URI (${escapePdfText(link.url)}) >> >>`
+      )
+    );
+    const annotationEntry = annotationIds.length
+      ? ` /Annots [${annotationIds.map((id) => `${id} 0 R`).join(" ")}]`
+      : "";
     const pageId = add(
-      `<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] /Resources << /Font << /F1 ${fontRegularId} 0 R /F2 ${fontBoldId} 0 R >> >> /Contents ${contentId} 0 R >>`
+      `<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] /Resources << /Font << /F1 ${fontRegularId} 0 R /F2 ${fontBoldId} 0 R >> >> /Contents ${contentId} 0 R${annotationEntry} >>`
     );
     pageIds.push(pageId);
   }

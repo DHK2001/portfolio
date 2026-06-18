@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
+import CvPreviewDisplay from "@/components/CvPreviewDisplay";
 import Description from "@/components/Description";
 import IconButton from "@/components/IconButton";
 import ImageDisplay from "@/components/ImageDisplay";
@@ -16,29 +17,33 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
 export default function Home() {
-  const [openDisplay, setOpenDisplay] = useState(false);
+  const [openDegreeDisplay, setOpenDegreeDisplay] = useState(false);
+  const [openCvDisplay, setOpenCvDisplay] = useState(false);
   const { homeActions } = portfolioLabels;
+  const cvFileUrl = "/docs/CV-Derek Galeas.pdf";
+  const cvFileName = `${homeActions.cvFileNamePrefix}-${profileData.name}.pdf`;
 
   function iconOnClick(url: string) {
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
   function handleCloseDisplay() {
-    setOpenDisplay(false);
-  }
-
-  function downloadPdf(url: string, filename: string) {
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    setOpenDegreeDisplay(false);
+    setOpenCvDisplay(false);
   }
 
   return (
     <section className="flex min-h-0 flex-col justify-start gap-6 sm:gap-8 lg:min-h-[calc(100dvh-10rem)] lg:justify-center lg:gap-12">
-      {openDisplay ? (
+      {openCvDisplay ? (
+        <CvPreviewDisplay
+          fileUrl={cvFileUrl}
+          fileName={cvFileName}
+          title={`${profileData.name} CV`}
+          closeDisplay={handleCloseDisplay}
+        />
+      ) : null}
+
+      {openDegreeDisplay ? (
         <ImageDisplay
           imageUrl={profileData.degree.src}
           name={profileData.degree.name}
@@ -80,17 +85,12 @@ export default function Home() {
           <div className="grid w-full grid-cols-1 gap-3 sm:flex sm:w-auto sm:flex-row">
             <Button
               text={homeActions.primaryActionLabel}
-              onClick={() =>
-                downloadPdf(
-                  "/docs/CV-Derek Galeas.pdf",
-                  `${homeActions.cvFileNamePrefix}-${profileData.name}`
-                )
-              }
+              onClick={() => setOpenCvDisplay(true)}
             />
             <Button
               text={homeActions.secondaryActionLabel}
               variant="secondary"
-              onClick={() => setOpenDisplay(true)}
+              onClick={() => setOpenDegreeDisplay(true)}
             />
           </div>
 
